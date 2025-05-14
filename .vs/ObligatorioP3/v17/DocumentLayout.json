@@ -1,0 +1,829 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadeaplicacion\\mapper\\mappershipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|solutionrelative:libreria.logicadeaplicacion\\mapper\\mappershipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\ef\\seedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\seedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\ef\\config\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\config\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\ef\\config\\shipmentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\config\\shipmentconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\ef\\config\\trackingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\config\\trackingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadeaplicacion\\casouso\\user\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|solutionrelative:libreria.logicadeaplicacion\\casouso\\user\\adduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\interfacesrepositorio\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\interfacesrepositorio\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\ef\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\interfacesrepositorio\\iagencyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\interfacesrepositorio\\iagencyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\interfacesrepositorio\\iaddrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\interfacesrepositorio\\iaddrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\agency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\agency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.casousocompartida\\dtos\\users\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|solutionrelative:libreria.casousocompartida\\dtos\\users\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.casousocompartida\\dtos\\shipment\\shipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|solutionrelative:libreria.casousocompartida\\dtos\\shipment\\shipmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.casousocompartida\\dtos\\users\\dtolisteduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|solutionrelative:libreria.casousocompartida\\dtos\\users\\dtolisteduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.casousocompartida\\dtos\\users\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|solutionrelative:libreria.casousocompartida\\dtos\\users\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\migrations\\20250514174324_primermigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\migrations\\20250514174324_primermigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\ef\\shipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\shipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\ef\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\libreriacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.casousocompartida\\ucinterfaces\\iremove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|solutionrelative:libreria.casousocompartida\\ucinterfaces\\iremove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Libreria/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Libreria/True/SqlTable/dbo.Shipments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Desktop\\asd\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\Migrations\\20250514171606_primeramigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.casousocompartida\\ucinterfaces\\iadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|solutionrelative:libreria.casousocompartida\\ucinterfaces\\iadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.casousocompartida\\dtos\\shipment\\dtolistedshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02EB571D-F075-4B1C-905B-A6C23AEFFC30}|Libreria.CasoUsoCompartida\\Libreria.CasoUsoCompartida.csproj|solutionrelative:libreria.casousocompartida\\dtos\\shipment\\dtolistedshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\controllers\\shipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\controllers\\shipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\urgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\urgent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\tracking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\tracking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\entities\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\views\\shipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\views\\shipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\views\\shipment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\views\\shipment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\models\\vmshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\models\\vmshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\libreria.webapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\libreria.webapp.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadenegocio\\interfacesrepositorio\\ishipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\interfacesrepositorio\\ishipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.logicadeaplicacion\\casouso\\shipment\\addshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|solutionrelative:libreria.logicadeaplicacion\\casouso\\shipment\\addshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\libreria.infraestructura\\accesodatos\\excepciones\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\excepciones\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAddRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAddRepository.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAddRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAddRepository.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAddRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:02:43.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Program.cs",
+              "RelativeToolTip": "Libreria.WebApp\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T17:39:55.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SeeData.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBwAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T00:02:19.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShipmentConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\ShipmentConfig.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\ShipmentConfig.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\ShipmentConfig.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\ShipmentConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:04:21.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\UserConfig.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\UserConfig.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\UserConfig.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\UserConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:04:18.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:46:47.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwDcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T23:19:25.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MapperShipment.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
+              "RelativeToolTip": "Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:46:22.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250514174324_primermigracion.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\Migrations\\20250514174324_primermigracion.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\Migrations\\20250514174324_primermigracion.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\Migrations\\20250514174324_primermigracion.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\Migrations\\20250514174324_primermigracion.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAgwBwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:43:24.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\UserRepository.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\UserRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAewAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:04:05.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Users\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Libreria.CasoUsoCompartida\\DTOS\\Users\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Users\\LoginDto.cs",
+              "RelativeToolTip": "Libreria.CasoUsoCompartida\\DTOS\\Users\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:18:07.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TrackingConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\TrackingConfig.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\TrackingConfig.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\TrackingConfig.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\Config\\TrackingConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T19:35:50.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Users\\UserDto.cs",
+              "RelativeDocumentMoniker": "Libreria.CasoUsoCompartida\\DTOS\\Users\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Users\\UserDto.cs",
+              "RelativeToolTip": "Libreria.CasoUsoCompartida\\DTOS\\Users\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:18:08.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DtoListedUser.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Users\\DtoListedUser.cs",
+              "RelativeDocumentMoniker": "Libreria.CasoUsoCompartida\\DTOS\\Users\\DtoListedUser.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Users\\DtoListedUser.cs",
+              "RelativeToolTip": "Libreria.CasoUsoCompartida\\DTOS\\Users\\DtoListedUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:18:16.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\User.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:24:41.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Employee.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Employee.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:24:49.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Admin.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Admin.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Admin.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:24:54.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Agency.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Agency.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Agency.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Agency.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Agency.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:25:01.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IUserRepository.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:26:56.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddUser.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeAplicacion\\CasoUso\\User\\AddUser.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeAplicacion\\CasoUso\\User\\AddUser.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeAplicacion\\CasoUso\\User\\AddUser.cs",
+              "RelativeToolTip": "Libreria.LogicaDeAplicacion\\CasoUso\\User\\AddUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:30:52.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAgencyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAgencyRepository.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAgencyRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAgencyRepository.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IAgencyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:27:38.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ShipmentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Shipment\\ShipmentDto.cs",
+              "RelativeDocumentMoniker": "Libreria.CasoUsoCompartida\\DTOS\\Shipment\\ShipmentDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Shipment\\ShipmentDto.cs",
+              "RelativeToolTip": "Libreria.CasoUsoCompartida\\DTOS\\Shipment\\ShipmentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:01:11.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Shipment.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:02:20.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LibreriaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\LibreriaContext.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\LibreriaContext.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\LibreriaContext.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\LibreriaContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T00:27:23.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20250514171606_primeramigracion.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\asd\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\Migrations\\20250514171606_primeramigracion.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\asd\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\Migrations\\20250514171606_primeramigracion.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\asd\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\Migrations\\20250514171606_primeramigracion.cs",
+              "RelativeToolTip": "..\\..\\..\\asd\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\Migrations\\20250514171606_primeramigracion.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:16:06.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ShipmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwBwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:02:10.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Libreria.WebApp\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAawDIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:50:57.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IRemove.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\UCInterfaces\\IRemove.cs",
+              "RelativeDocumentMoniker": "Libreria.CasoUsoCompartida\\UCInterfaces\\IRemove.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\UCInterfaces\\IRemove.cs",
+              "RelativeToolTip": "Libreria.CasoUsoCompartida\\UCInterfaces\\IRemove.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:01:26.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Libreria/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Libreria/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-14T17:16:50.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IAdd.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\UCInterfaces\\IAdd.cs",
+              "RelativeDocumentMoniker": "Libreria.CasoUsoCompartida\\UCInterfaces\\IAdd.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\UCInterfaces\\IAdd.cs",
+              "RelativeToolTip": "Libreria.CasoUsoCompartida\\UCInterfaces\\IAdd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:01:22.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DtoListedShipment.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Shipment\\DtoListedShipment.cs",
+              "RelativeDocumentMoniker": "Libreria.CasoUsoCompartida\\DTOS\\Shipment\\DtoListedShipment.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.CasoUsoCompartida\\DTOS\\Shipment\\DtoListedShipment.cs",
+              "RelativeToolTip": "Libreria.CasoUsoCompartida\\DTOS\\Shipment\\DtoListedShipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:01:10.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "dbo.Shipments.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Libreria/True/SqlTable/dbo.Shipments.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Libreria/True/SqlTable/dbo.Shipments.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-14T17:16:40.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Libreria.WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T16:18:32.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "Libreria.WebApp\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T16:18:04.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ShipmentController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Controllers\\ShipmentController.cs",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Controllers\\ShipmentController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Controllers\\ShipmentController.cs",
+              "RelativeToolTip": "Libreria.WebApp\\Controllers\\ShipmentController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T23:39:51.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Tracking.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Tracking.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Tracking.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Tracking.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Tracking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:51:01.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shipment\\Create.cshtml",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Views\\Shipment\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shipment\\Create.cshtml",
+              "RelativeToolTip": "Libreria.WebApp\\Views\\Shipment\\Create.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T16:43:27.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Client.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Client.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Client.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:58:25.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Common.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Common.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Common.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Common.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Common.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:50:25.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "VMShipment.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Models\\VMShipment.cs",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Models\\VMShipment.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Models\\VMShipment.cs",
+              "RelativeToolTip": "Libreria.WebApp\\Models\\VMShipment.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:44:00.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Urgent.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Urgent.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Urgent.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\Entities\\Urgent.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Urgent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T16:51:05.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shipment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Views\\Shipment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shipment\\Index.cshtml",
+              "RelativeToolTip": "Libreria.WebApp\\Views\\Shipment\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T16:13:02.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Libreria.WebApp\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T16:18:45.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Libreria.WebApp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Libreria.WebApp.csproj",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Libreria.WebApp.csproj",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Libreria.WebApp.csproj",
+              "RelativeToolTip": "Libreria.WebApp\\Libreria.WebApp.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-14T16:40:31.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Libreria.WebApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T16:18:45.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "AddShipment.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\AddShipment.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\AddShipment.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\AddShipment.cs",
+              "RelativeToolTip": "Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\AddShipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:01:47.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IShipmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
+              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
+              "RelativeToolTip": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:02:28.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.WebApp\\appsettings.json",
+              "RelativeToolTip": "Libreria.WebApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-14T16:11:33.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\Excepciones\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\Excepciones\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\Libreria.Infraestructura\\AccesoDatos\\Excepciones\\NotFoundException.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\Excepciones\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T23:58:24.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\appsettings.json",
+              "RelativeToolTip": "WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T23:19:03.231Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

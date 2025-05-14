@@ -1,0 +1,125 @@
+﻿@model Libreria.WebApp.Models.VMShipment
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Shipment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <div class="form-group">
+                <label asp-for="TrackingNumber" class="control-label"></label>
+                <input asp-for="TrackingNumber" class="form-control" />
+                <span asp-validation-for="TrackingNumber" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <input asp-for="EmployeeId" class="form-control" />
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="DeliveryDate" class="control-label"></label>
+                <input asp-for="DeliveryDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="DeliveryDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CurrentStatus" class="control-label"></label>
+                <select asp-for="CurrentStatus" class="form-control">
+                    <option value="">Seleccione un estado</option>
+                    @foreach (var status in Enum.GetValues(typeof(Libreria.LogicaDeNegocio.Entities.Shipment.Status)).Cast<Libreria.LogicaDeNegocio.Entities.Shipment.Status>())
+                    {
+                        <option value="@((int)status)">@status.ToString()</option>
+                    }
+                </select>
+                <span asp-validation-for="CurrentStatus" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="CustomerEmail" class="control-label"></label>
+                <input asp-for="CustomerEmail" class="form-control" />
+                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="TipoEnvio" class="control-label"></label>
+                <select asp-for="TipoEnvio" class="form-control">
+                    <option value="COMMON">Común</option>
+                    <option value="URGENT">Urgente</option>
+                </select>
+                <span asp-validation-for="TipoEnvio" class="text-danger"></span>
+            </div>
+
+
+            <div id="pickupAgencyDiv" class="form-group" style="display:none;">
+                <label asp-for="PickupAgency" class="control-label"></label>
+                <input asp-for="PickupAgency" class="form-control" />
+                <span asp-validation-for="PickupAgency" class="text-danger"></span>
+            </div>
+
+            <div id="postalAddressDiv" class="form-group" style="display:none;">
+                <label asp-for="PostalAddress" class="control-label"></label>
+                <input asp-for="PostalAddress" class="form-control" />
+                <span asp-validation-for="PostalAddress" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        // Lógica para mostrar u ocultar los campos según el tipo de envío
+        document.querySelector('select[name="TipoEnvio"]').addEventListener('change', function () {
+            var tipoEnvio = this.value;
+            if (tipoEnvio === 'COMMON') {
+                document.getElementById('pickupAgencyDiv').style.display = 'block';
+                document.getElementById('postalAddressDiv').style.display = 'none';
+            } else if (tipoEnvio === 'URGENT') {
+                document.getElementById('pickupAgencyDiv').style.display = 'none';
+                document.getElementById('postalAddressDiv').style.display = 'block';
+            }
+        });
+
+        // Trigger initial change event to set the correct view on page load
+        document.querySelector('select[name="TipoEnvio"]').dispatchEvent(new Event('change'));
+    </script>
+}

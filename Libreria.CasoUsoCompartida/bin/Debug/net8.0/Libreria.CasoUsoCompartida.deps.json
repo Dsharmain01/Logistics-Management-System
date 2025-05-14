@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Libreria.CasoUsoCompartida/1.0.0": {
+        "dependencies": {
+          "Libreria.LogicaDeNegocio": "1.0.0"
+        },
+        "runtime": {
+          "Libreria.CasoUsoCompartida.dll": {}
+        }
+      },
+      "Libreria.LogicaDeNegocio/1.0.0": {
+        "runtime": {
+          "Libreria.LogicaDeNegocio.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Libreria.CasoUsoCompartida/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Libreria.LogicaDeNegocio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

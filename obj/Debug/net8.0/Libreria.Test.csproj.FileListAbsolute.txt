@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\bin\Debug\net8.0\Libreria.Test.exe
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\bin\Debug\net8.0\Libreria.Test.deps.json
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\bin\Debug\net8.0\Libreria.Test.runtimeconfig.json
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\bin\Debug\net8.0\Libreria.Test.dll
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\bin\Debug\net8.0\Libreria.Test.pdb
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\Libreria.Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\Libreria.Test.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\Libreria.Test.AssemblyInfo.cs
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\Libreria.Test.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\Libreria.Test.dll
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\refint\Libreria.Test.dll
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\Libreria.Test.pdb
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\Libreria.Test.genruntimeconfig.cache
+C:\Users\user\Desktop\ObligatorioP3\ObligatorioP3\ObligatorioP3\obj\Debug\net8.0\ref\Libreria.Test.dll

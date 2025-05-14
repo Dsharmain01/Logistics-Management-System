@@ -1,0 +1,34 @@
+﻿@using Libreria.CasoUsoCompartida.DTOS.Shipment
+@model IEnumerable<DtoListedShipment>
+
+@{
+    ViewData["Title"] = "Envíos en proceso";
+}
+
+<h1>Envíos en proceso</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.TrackingNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.Weight)</th>
+            <th>@Html.DisplayNameFor(model => model.CurrentStatus)</th>
+            <th>@Html.DisplayNameFor(model => model.DeliveryDate)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shipment in Model.Where(s => s.CurrentStatus == Libreria.LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS))
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => shipment.TrackingNumber)</td>
+                <td>@Html.DisplayFor(modelItem => shipment.Weight)</td>
+                <td>@Html.DisplayFor(modelItem => shipment.CurrentStatus)</td>
+                <td>@Html.DisplayFor(modelItem => shipment.DeliveryDate)</td>
+                <td>
+                    @Html.ActionLink("Finalizar", "Finalize", "Shipment", new { id = shipment.Id }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
