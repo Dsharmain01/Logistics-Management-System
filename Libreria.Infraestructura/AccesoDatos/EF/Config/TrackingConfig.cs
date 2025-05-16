@@ -8,8 +8,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
     {
         public void Configure(EntityTypeBuilder<Tracking> builder)
         {
-
-            builder.HasOne(shipment => shipment.Employee)
+            builder.HasOne<Employee>()
                 .WithMany()
                 .HasForeignKey(shipment => shipment.EmployeeId)
                 .OnDelete(DeleteBehavior.NoAction);

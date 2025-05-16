@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Libreria.WebApp.Filtros
 {
-    public class Admin : Attribute, IAuthorizationFilter
+    public class AdminFilter : Attribute, IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationFilterContext context)
         {

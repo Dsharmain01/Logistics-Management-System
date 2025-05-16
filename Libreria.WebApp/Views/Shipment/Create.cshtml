@@ -1,4 +1,5 @@
-﻿@model Libreria.WebApp.Models.VMShipment
+﻿@using Libreria.CasoUsoCompartida.DTOS.Users
+@model Libreria.WebApp.Models.VMShipment
 
 @{
     ViewData["Title"] = "Create";
@@ -27,39 +28,25 @@
                 <span asp-validation-for="Weight" class="text-danger"></span>
             </div>
 
+            @{
+                var usersSelectList = ViewBag.Users != null
+                ? ((List<DtoListedUser>)ViewBag.Users).Select(u => new SelectListItem
+            {
+
+                Value = u.Id.ToString(),
+                Text = $"{u.Id} - {u.Name} {u.LastName}"
+            }).ToList()
+                : new List<SelectListItem>();
+
+            }
 
             <div class="form-group">
-                <label asp-for="EmployeeId" class="control-label"></label>
-                <input asp-for="EmployeeId" class="form-control" />
-            </div>
-
-
-            <div class="form-group">
-                <label asp-for="StartDate" class="control-label"></label>
-                <input asp-for="StartDate" class="form-control" type="datetime-local" />
-                <span asp-validation-for="StartDate" class="text-danger"></span>
-            </div>
-
-
-            <div class="form-group">
-                <label asp-for="DeliveryDate" class="control-label"></label>
-                <input asp-for="DeliveryDate" class="form-control" type="datetime-local" />
-                <span asp-validation-for="DeliveryDate" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="CurrentStatus" class="control-label"></label>
-                <select asp-for="CurrentStatus" class="form-control">
-                    <option value="">Seleccione un estado</option>
-                    @foreach (var status in Enum.GetValues(typeof(Libreria.LogicaDeNegocio.Entities.Shipment.Status)).Cast<Libreria.LogicaDeNegocio.Entities.Shipment.Status>())
-                    {
-                        <option value="@((int)status)">@status.ToString()</option>
-                    }
+                <label asp-for="EmployeeId">Empleado asignado</label>
+                <select asp-for="EmployeeId" class="form-control" asp-items="usersSelectList">
+                    <option value="">Select a user</option>
                 </select>
-                <span asp-validation-for="CurrentStatus" class="text-danger"></span>
+                <span asp-validation-for="EmployeeId" class="text-danger"></span>
             </div>
-
-
 
             <div class="form-group">
                 <label asp-for="CustomerEmail" class="control-label"></label>

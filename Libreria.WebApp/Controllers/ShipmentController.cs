@@ -2,8 +2,9 @@
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.WebApp.Models;
 using Libreria.CasoUsoCompartida.DTOS.Shipment;
-using Admin = Libreria.WebApp.Filtros.Admin;
 using Libreria.LogicaDeNegocio.Exceptions.Shipment;
+using Libreria.CasoUsoCompartida.DTOS.Users;
+using Libreria.WebApp.Filtros;
 
 namespace Libreria.WebApp.Controllers
 {
@@ -11,33 +12,40 @@ namespace Libreria.WebApp.Controllers
     {
         private IGetAll<DtoListedShipment> _getAll;
         private IAdd<ShipmentDto> _add;
+        private IGetAll<DtoListedUser> _getAllUsers;
         //private IRemove _remove;
-        //private IGetById<DtoListedShipment> _getById;
-        //private IModify<ShipmentDto> _modify;
+        private IGetById<DtoListedShipment> _getById;
+        private IModify<ShipmentDto> _modify;
 
         public ShipmentController(
             IGetAll<DtoListedShipment> getAll,
-            IAdd<ShipmentDto> add)
+            IAdd<ShipmentDto> add,
+            IGetAll<DtoListedUser> getAllUsers,
+
             //IRemove remove,
-            //IGetById<DtoListedShipment> getById,
-            //IModify<ShipmentDto> modify)
+            IGetById<DtoListedShipment> getById,
+            IModify<ShipmentDto> modify)
         {
             _getAll = getAll;
             _add = add;
+            _getAllUsers = getAllUsers;
             //_remove = remove;
-            //_getById = getById;
-            //_modify = modify;
+            _getById = getById;
+            _modify = modify;
         }
 
-        [Admin]
+        [AdminAndWorkerFilter]
         public IActionResult Index()
         {
             var shipments = _getAll.Execute();
             return View(shipments);
         }
 
+        [AdminAndWorkerFilter]
         public IActionResult Create()
         {
+            var users = _getAllUsers.Execute() ?? new List<DtoListedUser>();
+            ViewBag.Users = users;
             return View();
         }
 
@@ -54,9 +62,9 @@ namespace Libreria.WebApp.Controllers
                     shipment.TrackingNumber,
                     shipment.Weight,
                     shipment.EmployeeId,
-                    shipment.StartDate,
+                    shipment.StartDate = DateTime.Now,
                     shipment.DeliveryDate,
-                    shipment.CurrentStatus,
+                    LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS,
                     shipment.CustomerEmail,
                     shipment.TipoEnvio,
                     pickupAgency,
@@ -94,8 +102,13 @@ namespace Libreria.WebApp.Controllers
             {
                 ViewBag.Message = ex.Message;
             }
-            return View();
+
+            var users = _getAllUsers.Execute() ?? new List<DtoListedUser>();
+            ViewBag.Users = users;
+
+            return View(shipment); 
         }
+
 
         //    public IActionResult Detail(int id)
         //    {
@@ -113,51 +126,55 @@ namespace Libreria.WebApp.Controllers
         //        return RedirectToAction("Index");
         //    }
 
-        //    [HttpGet]
-        //    public IActionResult Modify(int id)
-        //    {
-        //        var shipment = _getById.Execute(id);
-        //        if (shipment == null)
-        //        {
-        //            return RedirectToAction("Index");
-        //        }
+        [HttpGet]
+        public IActionResult Modify()
+        {
+            return View(); 
+        }
 
-        //        var vmShipment = new VMShipment
-        //        {
-        //            Id = shipment.Id,
-        //            TrackingNumber = shipment.TrackingNumber,
-        //            Weight = shipment.Weight,
-        //            EmployeeId = shipment.EmployeeId,
-        //            DeliveryDate = shipment.DeliveryDate,
-        //            CurrentStatus = shipment.CurrentStatus
-        //        };
 
-        //        return View(vmShipment);
-        //    }
+        [HttpPost]
+        public IActionResult Modify(int id)
+        {
+            try
+            {
+                var existingShipment = _getById.Execute(id);
 
-        //    [HttpPost]
-        //    public IActionResult Modify(VMShipment shipment)
-        //    {
-        //        var shipmentDto = new ShipmentDto(
-        //            shipment.Id,
-        //            shipment.TrackingNumber,
-        //            shipment.Weight,
-        //            shipment.EmployeeId,
-        //            shipment.DeliveryDate,
-        //            shipment.CurrentStatus
-        //        );
+                if (existingShipment == null)
+                    return RedirectToAction("Index");
 
-        //        try
-        //        {
-        //            _modify.Execute(shipmentDto, shipment.Id);
-        //            return RedirectToAction("Index");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            ViewBag.ErrorMessage = ex.Message;
-        //            return View(shipment);
-        //        }
-        //    }
+                DateTime deliveryDate = DateTime.Now;
+                var status = LogicaDeNegocio.Entities.Shipment.Status.FINALIZED;
+
+                string? pickupAgency = existingShipment.TipoEnvio == TipoEnvio.COMMON ? existingShipment.PickupAgency : null;
+                string? postalAddress = existingShipment.TipoEnvio == TipoEnvio.URGENT ? existingShipment.PostalAddress : null;
+
+                var shipmentDto = new ShipmentDto(
+                    existingShipment.Id,
+                    existingShipment.TrackingNumber,
+                    existingShipment.Weight,
+                    existingShipment.EmployeeId,
+                    existingShipment.startDate,
+                    deliveryDate,
+                    status,
+                    existingShipment.CustomerEmail,
+                    existingShipment.TipoEnvio,
+                    pickupAgency,
+                    postalAddress
+                );
+
+                _modify.Execute(shipmentDto, id);
+
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = $"Ocurrió un error al modificar el envío: {ex.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
+
     }
 }
 

@@ -10,7 +10,7 @@ namespace Libreria.WebApp.Controllers
     public class LoginController : Controller
     {
         private ILogin _login;
-        
+
 
 
         public LoginController(ILogin login)
@@ -43,7 +43,19 @@ namespace Libreria.WebApp.Controllers
 
                 HttpContext.Session.SetString("rol", user.Rol);
 
-                return RedirectToAction("Index", "User");
+                HttpContext.Session.SetInt32("id", user.Id);
+
+                if (HttpContext.Session.GetString("rol") == "Worker")
+                {
+                    return RedirectToAction("Index", "Shipment");
+
+                }
+                else if (HttpContext.Session.GetString("rol") == "Admin")
+                {
+
+                    return RedirectToAction("Index", "User");
+                }
+
             }
             catch (EmailException)
             {

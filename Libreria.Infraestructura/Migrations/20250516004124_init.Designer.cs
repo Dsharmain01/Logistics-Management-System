@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Libreria.Infraestructura.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250514174324_primermigracion")]
-    partial class primermigracion
+    [Migration("20250516004124_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,6 +61,11 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<DateTime?>("DeliveryDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
+
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
@@ -78,6 +83,10 @@ namespace Libreria.Infraestructura.Migrations
                     b.HasIndex("EmployeeId");
 
                     b.ToTable("Shipments");
+
+                    b.HasDiscriminator().HasValue("Shipment");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Tracking", b =>
@@ -98,11 +107,14 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
+                    b.Property<int>("TrackNbr")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Tracking");
+                    b.ToTable("Trackings");
                 });
 
             modelBuilder.Entity("Libreria.LogicaNegocio.Entities.User", b =>
@@ -125,6 +137,28 @@ namespace Libreria.Infraestructura.Migrations
                     b.HasDiscriminator().HasValue("User");
 
                     b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Common", b =>
+                {
+                    b.HasBaseType("Libreria.LogicaDeNegocio.Entities.Shipment");
+
+                    b.Property<string>("PickupAgency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("Common");
+                });
+
+            modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Urgent", b =>
+                {
+                    b.HasBaseType("Libreria.LogicaDeNegocio.Entities.Shipment");
+
+                    b.Property<string>("PostalAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("Urgent");
                 });
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Client", b =>
@@ -235,13 +269,11 @@ namespace Libreria.Infraestructura.Migrations
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Tracking", b =>
                 {
-                    b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", "Employee")
+                    b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", null)
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.Navigation("Employee");
                 });
 
             modelBuilder.Entity("Libreria.LogicaNegocio.Entities.User", b =>

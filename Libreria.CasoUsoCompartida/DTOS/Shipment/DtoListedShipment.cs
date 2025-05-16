@@ -10,5 +10,7 @@ public record DtoListedShipment(
     DateTime? DeliveryDate,
     Status CurrentStatus,
     string CustomerEmail,
-    TipoEnvio TipoEnvio
+    TipoEnvio TipoEnvio,
+    string? PickupAgency,         
+    string? PostalAddress
 );

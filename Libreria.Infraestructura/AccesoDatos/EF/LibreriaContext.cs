@@ -14,6 +14,9 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Worker> Workers { get; set; }
         public DbSet<Shipment> Shipments { get; set; }
+        public DbSet<Common> Commons { get; set; }
+        public DbSet<Urgent> Urgents { get; set; }
+        public DbSet<Tracking> Trackings { get; set; }
         public DbSet<Agency> Agencies { get; set; }
 
 
