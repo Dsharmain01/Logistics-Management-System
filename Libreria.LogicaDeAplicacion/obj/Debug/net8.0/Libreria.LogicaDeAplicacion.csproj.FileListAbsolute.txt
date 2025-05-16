@@ -98,3 +98,23 @@ C:\Users\Usuario\Desktop\ObliP\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libre
 C:\Users\Usuario\Desktop\ObliP\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\refint\Libreria.LogicaDeAplicacion.dll
 C:\Users\Usuario\Desktop\ObliP\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.pdb
 C:\Users\Usuario\Desktop\ObliP\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\ref\Libreria.LogicaDeAplicacion.dll
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.LogicaDeAplicacion.deps.json
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.LogicaDeAplicacion.dll
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.LogicaDeAplicacion.pdb
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.CasoUsoCompartida.dll
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.Infraestructura.dll
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.LogicaDeNegocio.dll
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.CasoUsoCompartida.pdb
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.Infraestructura.pdb
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\bin\Debug\net8.0\Libreria.LogicaDeNegocio.pdb
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.AssemblyInfo.cs
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.sourcelink.json
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.E130447C.Up2Date
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.dll
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\refint\Libreria.LogicaDeAplicacion.dll
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\Libreria.LogicaDeAplicacion.pdb
+C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeAplicacion\obj\Debug\net8.0\ref\Libreria.LogicaDeAplicacion.dll

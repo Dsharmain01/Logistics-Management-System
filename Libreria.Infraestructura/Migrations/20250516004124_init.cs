@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Libreria.Infraestructura.Migrations
 {
     /// <inheritdoc />
-    public partial class primermigracion : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -62,7 +62,10 @@ namespace Libreria.Infraestructura.Migrations
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeliveryDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CurrentStatus = table.Column<int>(type: "int", nullable: false),
-                    CustomerEmail = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CustomerEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
+                    PickupAgency = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PostalAddress = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -81,20 +84,21 @@ namespace Libreria.Infraestructura.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tracking",
+                name: "Trackings",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    TrackNbr = table.Column<int>(type: "int", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CommentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EmployeeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tracking", x => x.Id);
+                    table.PrimaryKey("PK_Trackings", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Tracking_Users_EmployeeId",
+                        name: "FK_Trackings_Users_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Users",
                         principalColumn: "Id");
@@ -111,8 +115,8 @@ namespace Libreria.Infraestructura.Migrations
                 column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tracking_EmployeeId",
-                table: "Tracking",
+                name: "IX_Trackings_EmployeeId",
+                table: "Trackings",
                 column: "EmployeeId");
         }
 
@@ -126,7 +130,7 @@ namespace Libreria.Infraestructura.Migrations
                 name: "Shipments");
 
             migrationBuilder.DropTable(
-                name: "Tracking");
+                name: "Trackings");
 
             migrationBuilder.DropTable(
                 name: "Users");

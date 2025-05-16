@@ -32,7 +32,7 @@ namespace Libreria.WebApp.Controllers
             _getById = getById;
         }
 
-        [Admin]
+        [AdminFilter]
         public IActionResult Index()
         {
             var model = _getAll.Execute();

@@ -16,6 +16,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
         public void Run()
         {
+            Console.WriteLine("Ejecutando SeedData...");
             if (!_context.Users.Any()) Users();
             if (!_context.Shipments.Any()) Shipments();
         }
@@ -44,18 +45,19 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         private void Shipments()
         {
             var shipments = new List<Shipment>
-            {
-                new Shipment(0, 12345, 10.5m, 2, DateTime.Now, null, "lucia@gmail.com"), // Cliente: Lucía Méndez
-                new Shipment(0, 67890, 5.2m, 3, DateTime.Now, null, "javier@gmail.com"), // Cliente: Javier Santos
-                new Shipment(0, 11111, 7.8m, 4, DateTime.Now, null, "elena@gmail.com"), // Cliente: Elena Ruiz
-                new Shipment(0, 22222, 3.4m, 5, DateTime.Now, null, "pablo@gmail.com"), // Cliente: Pablo Gómez
-                new Shipment(0, 33333, 6.1m, 1, DateTime.Now, null, "lucia@gmail.com"), // Cliente: Lucía Méndez
-                new Shipment(0, 44444, 8.9m, 2, DateTime.Now, null, "javier@gmail.com"), // Cliente: Javier Santos
-                new Shipment(0, 55555, 4.7m, 3, DateTime.Now, null, "elena@gmail.com"), // Cliente: Elena Ruiz
-                new Shipment(0, 66666, 9.3m, 4, DateTime.Now, null, "pablo@gmail.com"), // Cliente: Pablo Gómez
-                new Shipment(0, 77777, 2.5m, 5, DateTime.Now, null, "lucia@gmail.com"), // Cliente: Lucía Méndez
-                new Shipment(0, 88888, 1.8m, 1, DateTime.Now, null, "javier@gmail.com")  // Cliente: Javier Santos
-            };
+{
+    new Common(0, 12345, 10.5m, 2, DateTime.Now, null, "lucia@gmail.com", "1"), // Cliente: Lucía Méndez
+    new Common(0, 67890, 5.2m, 3, DateTime.Now, null, "javier@gmail.com", "2"), // Cliente: Javier Santos
+    new Common(0, 11111, 7.8m, 4, DateTime.Now, null, "elena@gmail.com", "3"), // Cliente: Elena Ruiz
+    new Common(0, 22222, 3.4m, 5, DateTime.Now, null, "pablo@gmail.com", "4"), // Cliente: Pablo Gómez
+    new Common(0, 33333, 6.1m, 1, DateTime.Now, null, "lucia@gmail.com", "2"), // Cliente: Lucía Méndez
+    new Urgent(0, 44444, 8.9m, 2, DateTime.Now, null, "javier@gmail.com", postalAddress: "Calle Falsa 123"), // Cliente: Javier Santos
+    new Urgent(0, 55555, 4.7m, 3, DateTime.Now, null, "elena@gmail.com", postalAddress: "Av. Siempre Viva 742"), // Cliente: Elena Ruiz
+    new Urgent(0, 66666, 9.3m, 4, DateTime.Now, null, "pablo@gmail.com", postalAddress: "Boulevard Central 50"), // Cliente: Pablo Gómez
+    new Urgent(0, 77777, 2.5m, 5, DateTime.Now, null, "lucia@gmail.com", postalAddress: "Paseo de la Reforma 100"), // Cliente: Lucía Méndez
+    new Urgent(0, 88888, 1.8m, 1, DateTime.Now, null, "javier@gmail.com", postalAddress: "Calle 8 #45")  // Cliente: Javier Santos
+};
+
 
             _context.Shipments.AddRange(shipments);
             _context.SaveChanges();

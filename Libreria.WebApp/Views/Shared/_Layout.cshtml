@@ -41,7 +41,24 @@
 
                         }
 
+                        else if (Context.Session.GetString("rol") == "Worker")
+                        {
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Shipment" asp-action="Index">Shipment list</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Shipment" asp-action="Create">Create shipment</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Log out</a>
+                            </li>
+                        }
+
                         else
+
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Login</a>

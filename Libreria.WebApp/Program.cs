@@ -1,11 +1,13 @@
 
 using Libreria.CasoUsoCompartida.DTOS.Shipment;
+using Libreria.CasoUsoCompartida.DTOS.Tracking;
 using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.Infraestructura.AccesoDatos.EF;
 using Libreria.LogicaAplicacion.CasoUso.Shipments;
 using Libreria.LogicaAplicacion.CasoUso.Usuarios;
 using Libreria.LogicaDeAplicacion.CasoUso.Shipment;
+using Libreria.LogicaDeAplicacion.CasoUso.Tracking;
 using Libreria.LogicaDeAplicacion.CasoUso.User;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 using Libreria.LogicaNegocio.InterfacesRepositorio;
@@ -38,14 +40,19 @@ namespace Libreria.WebApp
             builder.Services.AddScoped<IGetAll<DtoListedShipment>, GetAllShipment>();
             builder.Services.AddScoped<IAdd<ShipmentDto>, AddShipment>();
             //builder.Services.AddScoped<IRemove, RemoveShipment>();
-            //builder.Services.AddScoped<IGetById<DtoListedShipment>, GetShipmentById>();
-            //builder.Services.AddScoped<IModify<ShipmentDto>, ModifyShipment>();
+            builder.Services.AddScoped<IGetById<DtoListedShipment>, GetByIdShipment>();
+            builder.Services.AddScoped<IModify<ShipmentDto>, ModifyShipment>();
+
+            //Inyectar casos de uso del tracking
+
+            builder.Services.AddScoped<IAdd<TrackingDto>, AddTracking>();
 
             //inyectar el repositorio 
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<ILogin, LoginUser>();
             builder.Services.AddScoped<IShipmentRepository, ShipmentRepository>();
+            builder.Services.AddScoped<ITrackingRepository, TrackingRepository>();
 
             //inyectar el contexto
             builder.Services.AddScoped<SeedData>();

@@ -45,18 +45,25 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             var existingShipment = GetById(id);
 
             if (existingShipment == null) throw new Exception("Shipment no encontrado");
-            
-            existingShipment.DeliveryDate = obj.DeliveryDate;
-          
-            if (obj.DeliveryDate.HasValue) 
+
+            existingShipment.TrackNbr = obj.TrackNbr;
+            existingShipment.Weight = obj.Weight;
+            existingShipment.EmployeeId = obj.EmployeeId;
+            existingShipment.CustomerEmail = obj.CustomerEmail;
+            existingShipment.DeliveryDate = DateTime.Now;
+
+            if (existingShipment.DeliveryDate.HasValue)
             {
                 existingShipment.CurrentStatus = Shipment.Status.FINALIZED;
             }
             else
-            {            
+            {
                 existingShipment.CurrentStatus = Shipment.Status.IN_PROGRESS;
             }
+
             _context.SaveChanges();
         }
+
+
     }
 }

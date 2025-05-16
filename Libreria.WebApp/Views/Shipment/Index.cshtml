@@ -1,8 +1,7 @@
-﻿@using Libreria.CasoUsoCompartida.DTOS.Shipment
-@model IEnumerable<DtoListedShipment>
+﻿@model IEnumerable<DtoListedShipment>
 
 @{
-    ViewData["Title"] = "Envíos en proceso";
+    ViewData["Title"] = "Shipments";
 }
 
 <h1>Envíos en proceso</h1>
@@ -10,23 +9,39 @@
 <table class="table">
     <thead>
         <tr>
-            <th>@Html.DisplayNameFor(model => model.TrackingNumber)</th>
-            <th>@Html.DisplayNameFor(model => model.Weight)</th>
-            <th>@Html.DisplayNameFor(model => model.CurrentStatus)</th>
-            <th>@Html.DisplayNameFor(model => model.DeliveryDate)</th>
+            <th>@Html.DisplayNameFor(model => model.First().TrackingNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Weight)</th>
+            <th>@Html.DisplayNameFor(model => model.First().CurrentStatus)</th>
+            <th>@Html.DisplayNameFor(model => model.First().startDate)</th>
+            <th>@Html.DisplayNameFor(model => model.First().DeliveryDate)</th>
+            <th>@Html.DisplayNameFor(model => model.First().TipoEnvio)</th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var shipment in Model.Where(s => s.CurrentStatus == Libreria.LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS))
+        @foreach (var shipment in Model)
         {
             <tr>
-                <td>@Html.DisplayFor(modelItem => shipment.TrackingNumber)</td>
-                <td>@Html.DisplayFor(modelItem => shipment.Weight)</td>
-                <td>@Html.DisplayFor(modelItem => shipment.CurrentStatus)</td>
-                <td>@Html.DisplayFor(modelItem => shipment.DeliveryDate)</td>
+                <td>@shipment.TrackingNumber</td>
+                <td>@shipment.Weight</td>
+                <td>@shipment.CurrentStatus</td>
+                <td>@shipment.startDate.Date.ToShortDateString()</td>
+                <td>@(shipment.DeliveryDate?.ToShortDateString() ?? "-")</td>
+                <td>@(shipment.TipoEnvio)</td>
                 <td>
-                    @Html.ActionLink("Finalizar", "Finalize", "Shipment", new { id = shipment.Id }, null)
+                    @if (shipment.CurrentStatus == Libreria.LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS) {
+                        <form asp-action="Modify" asp-controller="Shipment" method="post" style="display:inline">
+                            <input type="hidden" name="id" value="@shipment.Id" />
+                            <button type="submit" class="btn btn-primary btn-sm">Finalizar</button>
+                        </form>
+
+                        <form asp-action="AddTracking" asp-controller="Tracking" method="get" style="display:inline">
+                            <input type="hidden" name="TrackingNumber" value="@shipment.TrackingNumber" />
+                            <input type="hidden" name="EmployeeId" value="@shipment.EmployeeId" />
+                            <button type="submit" class="btn btn-primary btn-sm">Add tracking</button>
+                        </form>
+                    }
                 </td>
             </tr>
         }

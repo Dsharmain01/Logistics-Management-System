@@ -83,14 +83,39 @@ namespace Libreria.LogicaAplicacion.Mapper
                 throw new InvalidOperationException("Tipo de envío no reconocido");
             }
         }
+        public static DtoListedShipment ToListedDto(Shipment shipment)
+        {
+            TipoEnvio tipo = shipment is Urgent ? TipoEnvio.URGENT : TipoEnvio.COMMON;
+
+            string? pickupAgency = tipo == TipoEnvio.COMMON ? ((Common)shipment).PickupAgency : null;
+            string? postalAddress = tipo == TipoEnvio.URGENT ? ((Urgent)shipment).PostalAddress : null;
+
+            return new DtoListedShipment(
+                shipment.Id,
+                shipment.TrackNbr,
+                shipment.Weight,
+                shipment.EmployeeId,
+                shipment.StartDate,
+                shipment.DeliveryDate,
+                shipment.CurrentStatus,
+                shipment.CustomerEmail,
+                tipo,
+                pickupAgency,
+                postalAddress
+            );
+        }
 
 
         public static IEnumerable<DtoListedShipment> ToListaDto(IEnumerable<Shipment> shipments)
         {
             List<DtoListedShipment> shipmentDtos = new List<DtoListedShipment>();
+
             foreach (var shipment in shipments)
             {
                 TipoEnvio tipo = shipment is Urgent ? TipoEnvio.URGENT : TipoEnvio.COMMON;
+
+                string? pickupAgency = shipment is Common commonShipment ? commonShipment.PickupAgency : null;
+                string? postalAddress = shipment is Urgent urgentShipment ? urgentShipment.PostalAddress : null;
 
                 shipmentDtos.Add(new DtoListedShipment(
                     shipment.Id,
@@ -101,11 +126,15 @@ namespace Libreria.LogicaAplicacion.Mapper
                     shipment.DeliveryDate,
                     shipment.CurrentStatus,
                     shipment.CustomerEmail,
-                    tipo
+                    tipo,
+                    pickupAgency,
+                    postalAddress
                 ));
             }
+
             return shipmentDtos;
         }
+
 
 
 

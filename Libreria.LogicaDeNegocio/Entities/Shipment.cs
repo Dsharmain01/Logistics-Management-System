@@ -1,7 +1,7 @@
 ﻿
 namespace Libreria.LogicaDeNegocio.Entities
 {
-    public class Shipment
+    public abstract class Shipment
     {
 
         public int Id { get; set; }

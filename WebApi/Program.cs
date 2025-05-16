@@ -73,6 +73,13 @@ namespace WebApi
 
             app.MapControllers();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var seeder = services.GetRequiredService<SeedData>();
+                seeder.Run();
+            }
+
             app.Run();
         }
     }
