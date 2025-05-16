@@ -4,9 +4,9 @@ using Libreria.LogicaNegocio.Entities;
 
 namespace Libreria.LogicaDeNegocio.InterfacesRepositorio
 {
-    public interface IAgencyRepository:
-        IGetAllRepository<Agency>
-
-    {
-    }
+    public interface IAgencyRepository :
+           IAddRepository<Agency>,
+           IGetAllRepository<Agency>;
 }
+    
+

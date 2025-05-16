@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "WebApi.Controllers.TrackingController",
+    "Method": "GetByTrackNbr",
+    "RelativePath": "api/v1/Tracking/{trackNbr}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trackNbr",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.UsersController",
     "Method": "GetAll",
     "RelativePath": "api/v1/Users",

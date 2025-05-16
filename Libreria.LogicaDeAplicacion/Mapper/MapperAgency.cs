@@ -3,21 +3,40 @@
 using Libreria.CasoUsoCompartida.DTOS.Agency;
 using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.LogicaDeNegocio.Entities;
+using Libreria.LogicaDeNegocio.Vo;
 using Libreria.LogicaNegocio.Entities;
+using Libreria.LogicaNegocio.Vo;
 
 namespace Libreria.LogicaDeAplicacion.Mapper
 {
-    internal class MapperAgency
+    public class MapperAgency
     {
-        public static IEnumerable<DtoListedAgency> ToListaDto(IEnumerable<Agency> agency)
+
+        public static Agency FromDto(AgencyDto agencyDto)
         {
-            List<DtoListedAgency> dtoListedAgency = new List<DtoListedAgency>();
-            foreach (var item in agency)
+            return new Agency(
+                                0,
+                                new Name(agencyDto.Name),
+                                agencyDto.EmployeeId,
+                                new Ubication(
+                                         agencyDto.Ubication.Longitude,
+                                         agencyDto.Ubication.Latitude,
+                                         agencyDto.Ubication.PostalAddress)
+                            );
+        }
+
+        public static IEnumerable<DtoListedAgency> ToListaDto(IEnumerable<Agency> agencies)
+        {
+            List<DtoListedAgency> dtoListedAgencies = new List<DtoListedAgency>();
+            foreach (var item in agencies)
             {
-                dtoListedAgency.Add(new DtoListedAgency(item.Id,
-                                                        item.Name.Value));
+                dtoListedAgencies.Add(new DtoListedAgency(   item.Id,
+                                                             item.Name.Value,
+                                                             item.EmployeeId,
+                                                             item.Ubication
+                                                             ));
             }
-            return dtoListedAgency;
+            return dtoListedAgencies;
         }
     }
 }

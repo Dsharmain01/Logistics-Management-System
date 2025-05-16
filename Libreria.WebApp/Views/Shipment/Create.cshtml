@@ -1,4 +1,5 @@
-﻿@using Libreria.CasoUsoCompartida.DTOS.Users
+﻿@using Libreria.CasoUsoCompartida.DTOS.Agency
+@using Libreria.CasoUsoCompartida.DTOS.Users
 @model Libreria.WebApp.Models.VMShipment
 
 @{
@@ -58,16 +59,27 @@
             <div class="form-group">
                 <label asp-for="TipoEnvio" class="control-label"></label>
                 <select asp-for="TipoEnvio" class="form-control">
-                    <option value="COMMON">Común</option>
-                    <option value="URGENT">Urgente</option>
+                    <option value="COMMON">COMMON</option>
+                    <option value="URGENT">URGENT</option>
                 </select>
                 <span asp-validation-for="TipoEnvio" class="text-danger"></span>
             </div>
 
 
             <div id="pickupAgencyDiv" class="form-group" style="display:none;">
+                @{
+                    var agenciesSelectList = ViewBag.Agencies != null
+                    ? ((List<DtoListedAgency>)ViewBag.Agencies).Select(u => new SelectListItem
+            {
+                Value = u.id.ToString(),
+                Text = $"{u.id} - {u.name}"
+            }).ToList()
+                    : new List<SelectListItem>();
+                }
                 <label asp-for="PickupAgency" class="control-label"></label>
-                <input asp-for="PickupAgency" class="form-control" />
+                <select asp-for="PickupAgency" class="form-control" asp-items="agenciesSelectList">
+                    <option value="">Seleccione una agencia</option>
+                </select>
                 <span asp-validation-for="PickupAgency" class="text-danger"></span>
             </div>
 
@@ -94,7 +106,6 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     <script>
-        // Lógica para mostrar u ocultar los campos según el tipo de envío
         document.querySelector('select[name="TipoEnvio"]').addEventListener('change', function () {
             var tipoEnvio = this.value;
             if (tipoEnvio === 'COMMON') {
@@ -105,8 +116,6 @@
                 document.getElementById('postalAddressDiv').style.display = 'block';
             }
         });
-
-        // Trigger initial change event to set the correct view on page load
         document.querySelector('select[name="TipoEnvio"]').dispatchEvent(new Event('change'));
     </script>
 }

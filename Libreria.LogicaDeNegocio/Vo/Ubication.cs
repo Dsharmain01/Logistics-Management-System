@@ -4,14 +4,13 @@ namespace Libreria.LogicaDeNegocio.Vo
 {
     public record class Ubication
     {
-
-        public float? Length { get; }
+        public float? Longitude { get; }
         public float? Latitude { get; }
-        public float? PostalAddress { get; }
-        
-        public Ubication(float? length, float? latitude, float? postalAddress)
+        public string? PostalAddress { get; }
+
+        public Ubication(float? longitude, float? latitude, string? postalAddress)
         {
-            Length = length;
+            Longitude = longitude;
             Latitude = latitude;
             PostalAddress = postalAddress;
         }
