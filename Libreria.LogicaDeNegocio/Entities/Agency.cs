@@ -24,9 +24,13 @@ namespace Libreria.LogicaDeNegocio.Entities
 
         public int Id { get; set; }
        public Name Name { get; set; }
-       public Employee Employee { get; set; }
        public int EmployeeId { get; set; }
        public Ubication Ubication { get; set; }
+
+        public void Validar()
+        {
+           
+        }
 
     }
 }

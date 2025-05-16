@@ -1,4 +1,5 @@
 ﻿using Libreria.LogicaNegocio.Entities;
+using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaNegocio.InterfacesRepositorio;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
 

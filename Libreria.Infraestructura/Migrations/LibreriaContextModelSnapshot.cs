@@ -188,7 +188,7 @@ namespace Libreria.Infraestructura.Migrations
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Agency", b =>
                 {
-                    b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", "Employee")
+                    b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", null)
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -221,12 +221,12 @@ namespace Libreria.Infraestructura.Migrations
                                 .HasColumnType("real")
                                 .HasColumnName("Latitude");
 
-                            b1.Property<float?>("Length")
+                            b1.Property<float?>("Longitude")
                                 .HasColumnType("real")
-                                .HasColumnName("Length");
+                                .HasColumnName("Longitude");
 
-                            b1.Property<float?>("PostalAddress")
-                                .HasColumnType("real")
+                            b1.Property<string>("PostalAddress")
+                                .HasColumnType("nvarchar(max)")
                                 .HasColumnName("PostalAddress");
 
                             b1.HasKey("AgencyId");
@@ -236,8 +236,6 @@ namespace Libreria.Infraestructura.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("AgencyId");
                         });
-
-                    b.Navigation("Employee");
 
                     b.Navigation("Name")
                         .IsRequired();

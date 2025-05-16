@@ -1,4 +1,5 @@
 ﻿using Libreria.LogicaDeNegocio.Entities;
+using Libreria.LogicaNegocio.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -15,12 +16,12 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
 
             builder.OwnsOne(a => a.Ubication, Ubication =>
             {
-                Ubication.Property(n => n.Length).HasColumnName("Length");
+                Ubication.Property(n => n.Longitude).HasColumnName("Longitude");
                 Ubication.Property(n => n.Latitude).HasColumnName("Latitude");
                 Ubication.Property(n => n.PostalAddress).HasColumnName("PostalAddress");
             });
 
-            builder.HasOne(agency => agency.Employee)
+            builder.HasOne<Employee>()
                 .WithMany()
                 .HasForeignKey(agency => agency.EmployeeId)
                 .OnDelete(DeleteBehavior.NoAction);

@@ -1,4 +1,5 @@
-﻿using Libreria.LogicaDeNegocio.Entities;
+﻿using Libreria.Infraestructura.AccesoDatos.Excepciones;
+using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 using Libreria.LogicaNegocio.Entities;
 using System;
@@ -29,5 +30,21 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             _context.SaveChanges();
             return obj.Id;
         }
+
+        public IEnumerable<Tracking> GetByTrackNbr(int trackNbr)
+        {
+            List<Tracking> trackings = _context.Trackings
+                .Where(tracking => tracking.TrackNbr == trackNbr)
+                .ToList();
+
+            if (!trackings.Any())
+            {
+                throw new NotFoundException($"No se encontraron trackings para el número {trackNbr}");
+            }
+
+            return trackings;
+        }
+
+       
     }
 }

@@ -5,6 +5,8 @@ using Libreria.CasoUsoCompartida.DTOS.Shipment;
 using Libreria.LogicaDeNegocio.Exceptions.Shipment;
 using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.WebApp.Filtros;
+using Libreria.LogicaDeNegocio.Entities;
+using Libreria.CasoUsoCompartida.DTOS.Agency;
 
 namespace Libreria.WebApp.Controllers
 {
@@ -13,6 +15,8 @@ namespace Libreria.WebApp.Controllers
         private IGetAll<DtoListedShipment> _getAll;
         private IAdd<ShipmentDto> _add;
         private IGetAll<DtoListedUser> _getAllUsers;
+        private IGetAll<DtoListedAgency> _getAllAgency;
+
         //private IRemove _remove;
         private IGetById<DtoListedShipment> _getById;
         private IModify<ShipmentDto> _modify;
@@ -21,8 +25,9 @@ namespace Libreria.WebApp.Controllers
             IGetAll<DtoListedShipment> getAll,
             IAdd<ShipmentDto> add,
             IGetAll<DtoListedUser> getAllUsers,
+            IGetAll<DtoListedAgency> getAllAgency,
 
-            //IRemove remove,
+        //IRemove remove,
             IGetById<DtoListedShipment> getById,
             IModify<ShipmentDto> modify)
         {
@@ -32,6 +37,7 @@ namespace Libreria.WebApp.Controllers
             //_remove = remove;
             _getById = getById;
             _modify = modify;
+            _getAllAgency = getAllAgency;
         }
 
         [AdminAndWorkerFilter]
@@ -45,6 +51,8 @@ namespace Libreria.WebApp.Controllers
         public IActionResult Create()
         {
             var users = _getAllUsers.Execute() ?? new List<DtoListedUser>();
+            var agencies = _getAllAgency.Execute() ?? new List<DtoListedAgency>();
+            ViewBag.Agencies = agencies;
             ViewBag.Users = users;
             return View();
         }

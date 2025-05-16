@@ -36,9 +36,9 @@ namespace Libreria.Infraestructura.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EmployeeId = table.Column<int>(type: "int", nullable: false),
-                    Length = table.Column<float>(type: "real", nullable: true),
+                    Longitude = table.Column<float>(type: "real", nullable: true),
                     Latitude = table.Column<float>(type: "real", nullable: true),
-                    PostalAddress = table.Column<float>(type: "real", nullable: true)
+                    PostalAddress = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

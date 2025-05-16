@@ -1,5 +1,7 @@
 ﻿using Libreria.CasoUsoCompartida.DTOS.Tracking;
+using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.LogicaDeNegocio.Entities;
+using Libreria.LogicaNegocio.Entities;
 
 
 
@@ -17,6 +19,21 @@ namespace Libreria.LogicaDeAplicacion.Mapper
                             trackingDto.commentDate,         
                             trackingDto.employeeId
                              );
+        }
+
+        public static IEnumerable<DtoListedTracking> ToListaDto(IEnumerable<Tracking> trackings)
+        {
+            List<DtoListedTracking> dtoListedTracking = new List<DtoListedTracking>();
+            foreach (Tracking item in trackings)
+            {
+                dtoListedTracking.Add(new DtoListedTracking(item.Id,
+                                                             item.TrackNbr,
+                                                             item.Comment,
+                                                              item.CommentDate,
+                                                              item.EmployeeId
+                                                                ));
+            }
+            return dtoListedTracking;
         }
     }
 }
