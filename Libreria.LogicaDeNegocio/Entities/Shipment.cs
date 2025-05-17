@@ -1,4 +1,5 @@
-﻿
+﻿using Libreria.LogicaDeNegocio.Exceptions.Shipment;
+using Libreria.LogicaNegocio.Exceptions.User;
 using Libreria.LogicaNegocio.InterfacesDominio;
 
 namespace Libreria.LogicaDeNegocio.Entities
@@ -7,8 +8,7 @@ namespace Libreria.LogicaDeNegocio.Entities
     {
         public int TrackNbr { get; set; }
         public decimal Weight { get; set; }
-        public Employee Employee { get; set; }
-        public int EmployeeId { get; set; }
+        public int? EmployeeId { get; set; }
         public DateTime StartDate { get; set; }
 
         public DateTime? DeliveryDate { get; set; }
@@ -31,7 +31,7 @@ namespace Libreria.LogicaDeNegocio.Entities
         public Shipment(
             int trackNbr,
             decimal weight,
-            int employeeId,
+            int? employeeId,
             DateTime? startDate,
             DateTime? deliveryDate,
             string customerEmail)
@@ -44,6 +44,22 @@ namespace Libreria.LogicaDeNegocio.Entities
             CustomerEmail = customerEmail;
         }
 
-        public void Validar() { }
+        public void Validar() 
+        {     
+            if (Weight <= 0)
+            {
+                throw new WeightException("El peso del envío debe ser mayor a 0.");
+            }
+
+            if (string.IsNullOrWhiteSpace(CustomerEmail))
+            {
+                throw new ArgumentException("El correo del cliente no puede estar vacío.");
+            }
+
+            if (!CustomerEmail.Contains("@") || !CustomerEmail.Contains("."))
+            {
+                throw new EmailException("El correo del cliente no tiene un formato válido.");
+            }
+        }
     }
 }

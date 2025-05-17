@@ -19,7 +19,6 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         public DbSet<Tracking> Trackings { get; set; }
         public DbSet<Agency> Agencies { get; set; }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -41,6 +40,5 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             modelBuilder.ApplyConfiguration(new TrackingConfig());
 
         }
-
     }
 }

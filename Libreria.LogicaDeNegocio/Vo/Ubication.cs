@@ -1,6 +1,4 @@
-﻿
-
-namespace Libreria.LogicaDeNegocio.Vo
+﻿namespace Libreria.LogicaDeNegocio.Vo
 {
     public record class Ubication
     {

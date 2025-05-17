@@ -1,5 +1,4 @@
-﻿
-namespace Libreria.LogicaNegocio.Exceptions
+﻿namespace Libreria.LogicaNegocio.Exceptions
 {
     public class LogicaNegocioException : Exception
     {

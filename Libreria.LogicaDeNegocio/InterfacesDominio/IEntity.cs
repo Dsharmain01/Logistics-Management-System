@@ -1,5 +1,4 @@
-﻿
-namespace Libreria.LogicaNegocio.InterfacesDominio
+﻿namespace Libreria.LogicaNegocio.InterfacesDominio
 {
     internal interface IEntity
     {

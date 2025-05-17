@@ -3,7 +3,6 @@ using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaDeAplicacion.Mapper;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 
-
 namespace Libreria.LogicaDeAplicacion.CasoUso.Agency
 {
     public class GetAllAgencies : IGetAll<DtoListedAgency>

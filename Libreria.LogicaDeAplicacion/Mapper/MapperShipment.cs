@@ -41,7 +41,6 @@ namespace Libreria.LogicaAplicacion.Mapper
             throw new InvalidOperationException("Tipo de envío no reconocido.");
         }
 
-
         public static ShipmentDto ToDto(Shipment shipment)
         {
             if (shipment is Urgent urgent)
@@ -99,7 +98,6 @@ namespace Libreria.LogicaAplicacion.Mapper
                 postalAddress
             );
         }
-
 
         public static IEnumerable<DtoListedShipment> ToListaDto(IEnumerable<Shipment> shipments)
         {

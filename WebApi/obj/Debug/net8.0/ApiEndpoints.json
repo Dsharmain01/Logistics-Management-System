@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "WebApi.Controllers.TrackingController",
-    "Method": "GetByTrackNbr",
-    "RelativePath": "api/v1/Tracking/{trackNbr}",
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "GetById",
+    "RelativePath": "{trackNbr}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

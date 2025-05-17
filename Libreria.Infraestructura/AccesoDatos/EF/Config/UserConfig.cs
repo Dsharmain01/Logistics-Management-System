@@ -32,7 +32,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
             builder.HasMany<Shipment>()
              .WithOne()
             .HasForeignKey(s => s.EmployeeId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

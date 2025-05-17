@@ -1,10 +1,6 @@
-﻿
-
-using Libreria.CasoUsoCompartida.DTOS.Agency;
-using Libreria.CasoUsoCompartida.DTOS.Users;
+﻿using Libreria.CasoUsoCompartida.DTOS.Agency;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaDeNegocio.Vo;
-using Libreria.LogicaNegocio.Entities;
 using Libreria.LogicaNegocio.Vo;
 
 namespace Libreria.LogicaDeAplicacion.Mapper
@@ -17,7 +13,7 @@ namespace Libreria.LogicaDeAplicacion.Mapper
             return new Agency(
                                 0,
                                 new Name(agencyDto.Name),
-                                agencyDto.EmployeeId,
+                                 agencyDto.EmployeeId,
                                 new Ubication(
                                          agencyDto.Ubication.Longitude,
                                          agencyDto.Ubication.Latitude,

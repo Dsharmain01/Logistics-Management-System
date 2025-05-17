@@ -1,4 +1,5 @@
-﻿
+﻿using Libreria.LogicaDeNegocio.Exceptions.Tracking;
+
 namespace Libreria.LogicaDeNegocio.Entities
 {
     public class Tracking
@@ -7,7 +8,7 @@ namespace Libreria.LogicaDeNegocio.Entities
         public int TrackNbr { get; set; }
         public string Comment { get; set; }
         public DateTime CommentDate { get; set; }
-        public int EmployeeId { get; set; }
+        public int? EmployeeId { get; set; }
 
         protected Tracking()
         {
@@ -18,7 +19,7 @@ namespace Libreria.LogicaDeNegocio.Entities
             int trackNbr,
             string comment,
             DateTime commentDate,
-            int employeeId)
+            int? employeeId)
         {
             Id = id;
             TrackNbr = trackNbr;
@@ -27,6 +28,12 @@ namespace Libreria.LogicaDeNegocio.Entities
             EmployeeId = employeeId;
         }
 
-        public void Validar() { }
+        public void Validar() 
+        {
+            if (string.IsNullOrWhiteSpace(Comment))
+            {
+                throw new CommentException("El comentario no puede estar vacío.");
+            }
+        }
     }
 }

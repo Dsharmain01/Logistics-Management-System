@@ -5,9 +5,7 @@ namespace Libreria.WebApp.Models
 {
     public class VMShipment
     {
-        public int Id { get; set; }
 
-        [Required(ErrorMessage = "El número de seguimiento es obligatorio.")]
         public int TrackingNumber { get; set; }
 
         [Range(0.1, double.MaxValue, ErrorMessage = "El peso debe ser mayor a 0.")]

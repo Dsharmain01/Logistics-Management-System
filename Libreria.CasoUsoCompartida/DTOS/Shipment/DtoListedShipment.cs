@@ -4,7 +4,7 @@ using static Libreria.LogicaDeNegocio.Entities.Shipment;
 public record DtoListedShipment(
     int TrackingNumber,
     decimal Weight,
-    int EmployeeId,
+    int? EmployeeId,
     DateTime startDate,
     DateTime? DeliveryDate,
     Status CurrentStatus,

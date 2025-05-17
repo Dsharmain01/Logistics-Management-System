@@ -3,11 +3,12 @@ using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Libreria.WebApp.Filtros;
+using Libreria.LogicaDeNegocio.Exceptions.Tracking;
 
 
 namespace Libreria.WebApp.Controllers
 {
-        [AdminAndWorkerFilter]
+    [AdminAndWorkerFilter]
     public class TrackingController : Controller
     {
 
@@ -32,13 +33,20 @@ namespace Libreria.WebApp.Controllers
         [HttpPost]
         public IActionResult AddTracking(VMTracking tracking)
         {
-            _add.Execute(new TrackingDto(tracking.TrackNbr,
-                                          tracking.Comment,
-                                           DateTime.Now,
-                                          tracking.EmployeeId));
+            try
+            {
+                _add.Execute(new TrackingDto(tracking.TrackNbr,
+                                         tracking.Comment,
+                                          DateTime.Now,
+                                         tracking.EmployeeId));
 
-            TempData["SuccessMessage"] = "Tracking agregado correctamente.";
-
+                TempData["SuccessMessage"] = "Tracking agregado correctamente.";
+            }
+            catch (CommentException ex)
+            {
+                ViewBag.Message = ex.Message;
+                return View(tracking);
+            }
             return RedirectToAction("AddTracking", "Tracking");
         }
 }

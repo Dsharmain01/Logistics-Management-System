@@ -1,5 +1,4 @@
-﻿
-using Libreria.LogicaNegocio.Vo;
+﻿using Libreria.LogicaNegocio.Vo;
 
 namespace Libreria.LogicaDeNegocio.Entities
 {

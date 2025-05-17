@@ -8,7 +8,7 @@ namespace Libreria.LogicaDeNegocio.Entities
         public Agency(
             int id,
             Name name,
-            int employeeId, 
+            int? employeeId, 
             Ubication ubication
             )
         {
@@ -24,7 +24,7 @@ namespace Libreria.LogicaDeNegocio.Entities
 
         public int Id { get; set; }
        public Name Name { get; set; }
-       public int EmployeeId { get; set; }
+       public int? EmployeeId { get; set; }
        public Ubication Ubication { get; set; }
 
         public void Validar()

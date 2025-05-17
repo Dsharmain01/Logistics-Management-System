@@ -5,6 +5,13 @@
     ViewData["Title"] = "Add Tracking";
 }
 
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-danger mt-2">
+        @ViewBag.Message
+    </div>
+}
+
 @if (TempData["SuccessMessage"] != null)
 {
     <div class="alert alert-success">

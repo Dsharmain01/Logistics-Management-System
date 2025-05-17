@@ -1,7 +1,5 @@
-﻿
-using Libreria.LogicaDeNegocio.Entities;
+﻿using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
-
 
 namespace Libreria.Infraestructura.AccesoDatos.EF
 {

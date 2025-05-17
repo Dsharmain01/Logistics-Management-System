@@ -35,7 +35,7 @@ namespace Libreria.Infraestructura.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EmployeeId = table.Column<int>(type: "int", nullable: false),
+                    EmployeeId = table.Column<int>(type: "int", nullable: true),
                     Longitude = table.Column<float>(type: "real", nullable: true),
                     Latitude = table.Column<float>(type: "real", nullable: true),
                     PostalAddress = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -47,7 +47,8 @@ namespace Libreria.Infraestructura.Migrations
                         name: "FK_Agencies_Users_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(
@@ -57,7 +58,7 @@ namespace Libreria.Infraestructura.Migrations
                     TrackNbr = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Weight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    EmployeeId = table.Column<int>(type: "int", nullable: false),
+                    EmployeeId = table.Column<int>(type: "int", nullable: true),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeliveryDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CurrentStatus = table.Column<int>(type: "int", nullable: false),
@@ -73,13 +74,8 @@ namespace Libreria.Infraestructura.Migrations
                         name: "FK_Shipments_Users_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Users",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Shipments_Users_EmployeeId1",
-                        column: x => x.EmployeeId,
-                        principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(
@@ -91,7 +87,7 @@ namespace Libreria.Infraestructura.Migrations
                     TrackNbr = table.Column<int>(type: "int", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CommentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EmployeeId = table.Column<int>(type: "int", nullable: false)
+                    EmployeeId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -100,7 +96,8 @@ namespace Libreria.Infraestructura.Migrations
                         name: "FK_Trackings_Users_EmployeeId",
                         column: x => x.EmployeeId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateIndex(

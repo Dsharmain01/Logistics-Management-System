@@ -1,6 +1,4 @@
-﻿
-
-namespace Libreria.LogicaNegocio.Exceptions.User
+﻿namespace Libreria.LogicaNegocio.Exceptions.User
 {
     public class RepeatedUserException : UserException
     {

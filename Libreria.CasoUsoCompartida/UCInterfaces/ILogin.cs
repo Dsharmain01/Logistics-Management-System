@@ -1,5 +1,4 @@
-﻿
-using Libreria.CasoUsoCompartida.DTOS.Users;
+﻿using Libreria.CasoUsoCompartida.DTOS.Users;
 namespace Libreria.CasoUsoCompartida.UCInterfaces
 {
     public interface ILogin

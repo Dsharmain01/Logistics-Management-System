@@ -1,6 +1,4 @@
-﻿
-
-namespace Libreria.CasoUsoCompartida.UCInterfaces
+﻿namespace Libreria.CasoUsoCompartida.UCInterfaces
 {
     public interface IGetByTrackNbr<T>
     {

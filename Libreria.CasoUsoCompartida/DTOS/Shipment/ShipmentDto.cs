@@ -1,5 +1,4 @@
-﻿
-using static Libreria.LogicaDeNegocio.Entities.Shipment;
+﻿using static Libreria.LogicaDeNegocio.Entities.Shipment;
 
 namespace Libreria.CasoUsoCompartida.DTOS.Shipment
 {
@@ -12,7 +11,7 @@ namespace Libreria.CasoUsoCompartida.DTOS.Shipment
     public record ShipmentDto(
         int TrackingNumber,
         decimal Weight,
-        int EmployeeId,
+        int? EmployeeId,
         DateTime startDate,
         DateTime? DeliveryDate,
         Status CurrentStatus,

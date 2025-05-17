@@ -1,7 +1,5 @@
-﻿
-using Libreria.LogicaNegocio.InterfacesDominio;
+﻿using Libreria.LogicaNegocio.InterfacesDominio;
 using Libreria.LogicaNegocio.Vo;
-
 
 namespace Libreria.LogicaNegocio.Entities
 {

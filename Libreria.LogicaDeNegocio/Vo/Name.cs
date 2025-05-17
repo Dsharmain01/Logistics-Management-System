@@ -1,6 +1,4 @@
-﻿
-using Libreria.LogicaNegocio.Exceptions;
-using Libreria.LogicaNegocio.Exceptions.User;
+﻿using Libreria.LogicaNegocio.Exceptions;
 
 namespace Libreria.LogicaNegocio.Vo
 {
