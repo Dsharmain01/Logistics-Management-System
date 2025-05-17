@@ -33,7 +33,6 @@ namespace Libreria.LogicaNegocio.Entities
 
         public void Validar()
         {
-
         }
 
         public bool Equals(User? other)

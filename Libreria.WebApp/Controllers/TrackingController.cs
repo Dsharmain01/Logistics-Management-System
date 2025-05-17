@@ -1,6 +1,5 @@
 ﻿using Libreria.CasoUsoCompartida.DTOS.Tracking;
 using Libreria.CasoUsoCompartida.UCInterfaces;
-using Libreria.LogicaDeNegocio.Entities;
 using Libreria.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Libreria.WebApp.Filtros;

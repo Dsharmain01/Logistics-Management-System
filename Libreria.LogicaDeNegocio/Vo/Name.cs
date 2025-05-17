@@ -1,5 +1,6 @@
 ﻿
 using Libreria.LogicaNegocio.Exceptions;
+using Libreria.LogicaNegocio.Exceptions.User;
 
 namespace Libreria.LogicaNegocio.Vo
 {
@@ -7,13 +8,29 @@ namespace Libreria.LogicaNegocio.Vo
     {
         public string Value { get; }
 
-        public Name (string value)
+        public Name(string value)
         {
-            if (string.IsNullOrEmpty(value))
-            
-                throw new NameException("Name cannot be null or empty");
-                Value = value; 
-            
+            Value = value;
+            Validar();
+        }
+        private void Validar()
+        {
+            if (string.IsNullOrEmpty(Value))
+            {
+                throw new NameException("Last name cannot be null or empty");
+            }
+            if (Value.Length < 2)
+            {
+                throw new NameException("Last name must be at least 2 characters long");
+            }
+            if (Value.Length > 50)
+            {
+                throw new NameException("Last name cannot exceed 50 characters");
+            }
+            if (Value.Any(char.IsDigit))
+            {
+                throw new NameException("Last name cannot contain numbers");
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             obj.Validar();
             _context.Shipments.Add(obj);
             _context.SaveChanges();
-            return obj.Id;
+            return obj.TrackNbr;
         }
 
         public IEnumerable<Shipment> GetAll()
@@ -29,24 +29,24 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             return _context.Shipments.ToList();
         }
 
-        public Shipment GetById(int id)
+        public Shipment GetById(int trackNbr)
         {
             Shipment unS = _context.Shipments
-               .FirstOrDefault(shipment => shipment.Id == id);
+               .FirstOrDefault(shipment => shipment.TrackNbr == trackNbr);
             if (unS == null)
             {
-                throw new NotFoundException($"No se encontro el id {id}");
+                throw new NotFoundException($"No se encontro el id {trackNbr}");
             }
             return unS;
         }
 
-        public void Modify(Shipment obj, int id)
+        public void Modify(Shipment obj, int trackNbr)
         {
-            var existingShipment = GetById(id);
+            var existingShipment = GetById(trackNbr);
 
             if (existingShipment == null) throw new Exception("Shipment no encontrado");
 
-            existingShipment.TrackNbr = obj.TrackNbr;
+
             existingShipment.Weight = obj.Weight;
             existingShipment.EmployeeId = obj.EmployeeId;
             existingShipment.CustomerEmail = obj.CustomerEmail;

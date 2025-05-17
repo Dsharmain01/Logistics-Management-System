@@ -40,10 +40,17 @@ namespace Libreria.WebApp.Controllers
             _getAllAgency = getAllAgency;
         }
 
+
+
         [AdminAndWorkerFilter]
-        public IActionResult Index()
+        public IActionResult Index(int? trackingNumber)
         {
             var shipments = _getAll.Execute();
+            if (trackingNumber.HasValue)
+            {
+                shipments = shipments.Where(s => s.TrackingNumber == trackingNumber.Value).ToList();
+            }
+                    
             return View(shipments);
         }
 
@@ -66,13 +73,12 @@ namespace Libreria.WebApp.Controllers
                 string? postalAddress = shipment.TipoEnvio == TipoEnvio.URGENT ? shipment.PostalAddress : null;
 
                 var shipmentDto = new ShipmentDto(
-                    shipment.Id,
                     shipment.TrackingNumber,
                     shipment.Weight,
                     shipment.EmployeeId,
                     shipment.StartDate = DateTime.Now,
                     shipment.DeliveryDate,
-                    LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS,
+                    Shipment.Status.IN_PROGRESS,
                     shipment.CustomerEmail,
                     shipment.TipoEnvio,
                     pickupAgency,
@@ -85,26 +91,38 @@ namespace Libreria.WebApp.Controllers
             catch (TrackingNumberException)
             {
                 ViewBag.Message = "El número de seguimiento no es válido.";
+                return View(shipment);
+
             }
             catch (WeightException)
             {
                 ViewBag.Message = "El peso del envío no es válido.";
+                return View(shipment);
+
             }
             catch (EmployeeNotFoundException)
             {
                 ViewBag.Message = "El empleado asignado no existe.";
+                return View(shipment);
+
             }
             catch (DeliveryDateException)
             {
                 ViewBag.Message = "La fecha de entrega no es válida.";
+                return View(shipment);
+
             }
             catch (StatusException)
             {
                 ViewBag.Message = "El estado del envío no es válido.";
+                return View(shipment);
+
             }
             catch (RepeatedShipmentException)
             {
                 ViewBag.Message = "El envío ya existe.";
+                return View(shipment);
+
             }
             catch (Exception ex)
             {
@@ -152,13 +170,12 @@ namespace Libreria.WebApp.Controllers
                     return RedirectToAction("Index");
 
                 DateTime deliveryDate = DateTime.Now;
-                var status = LogicaDeNegocio.Entities.Shipment.Status.FINALIZED;
+                var status = Shipment.Status.FINALIZED;
 
                 string? pickupAgency = existingShipment.TipoEnvio == TipoEnvio.COMMON ? existingShipment.PickupAgency : null;
                 string? postalAddress = existingShipment.TipoEnvio == TipoEnvio.URGENT ? existingShipment.PostalAddress : null;
 
                 var shipmentDto = new ShipmentDto(
-                    existingShipment.Id,
                     existingShipment.TrackingNumber,
                     existingShipment.Weight,
                     existingShipment.EmployeeId,

@@ -29,38 +29,43 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         {
             var users = new List<User>
             {
-            new Admin(0, new Name("Pedro"), new LastName("Pascal"), new Email("pedro@gmail.com"), new Password("admin123")),
-            new Admin(0, new Name("Jose"), new LastName("Silva"), new Email("jose@gmail.com"), new Password("admin123")),
-            new Admin(0, new Name("Juan"), new LastName("Pérez"), new Email("juan@gmail.com"), new Password("admin123")),
-            new Worker(0, new Name("Fernanda"), new LastName("Gómez"), new Email("fernanda@gmail.com"), new Password("worker123")),
-            new Worker(0, new Name("Matias"), new LastName("Silveira"), new Email("matias@gmail.com"), new Password("worker123")),
-            new Worker(0, new Name("Ana"), new LastName("Gómez"), new Email("ana@gmail.com"), new Password("worker123")),
-            new Worker(0, new Name("Carlos"), new LastName("López"), new Email("carlos@gmail.com"), new Password("worker456")),
-            new Worker(0, new Name("María"), new LastName("Fernández"), new Email("maria@gmail.com"), new Password("worker789")),
-            new Worker(0, new Name("Luis"), new LastName("Martínez"), new Email("luis@gmail.com"), new Password("worker101")),
-            new Worker(0, new Name("Sofía"), new LastName("García"), new Email("sofia@gmail.com"), new Password("worker102")),
+                // Administrador precargado
+                new Admin(0, new Name("Administrador"), new LastName("Principal"), new Email("administrador@gmail.com"), new Password("Gerente2025.")),
+
+                // Otros administradores
+                new Admin(0, new Name("Carlos"), new LastName("Ramírez"), new Email("carlos.ramirez@gmail.com"), new Password("Admin+123")),
+                new Admin(0, new Name("Lucía"), new LastName("Fernández"), new Email("lucia.fernandez@gmail.com"), new Password("Lucia#2023")),
+
+                // Trabajadores
+                new Worker(0, new Name("Javier"), new LastName("Santos"), new Email("javier.santos@gmail.com"), new Password("Worker+456")),
+                new Worker(0, new Name("Elena"), new LastName("Ruiz"), new Email("elena.ruiz@gmail.com"), new Password("Elena#789")),
+                new Worker(0, new Name("Pablo"), new LastName("Gómez"), new Email("pablo.gomez@gmail.com"), new Password("Pablo+101")),
+                new Worker(0, new Name("Sofía"), new LastName("García"), new Email("sofia.garcia@gmail.com"), new Password("Sofia#102")),
+                new Worker(0, new Name("Ana"), new LastName("Martínez"), new Email("ana.martinez@gmail.com"), new Password("Ana+456")),
+                new Worker(0, new Name("Luis"), new LastName("López"), new Email("luis.lopez@gmail.com"), new Password("Luis#789")),
+                new Worker(0, new Name("María"), new LastName("Gómez"), new Email("maria.gomez@gmail.com"), new Password("Maria+2023")),
+                new Worker(0, new Name("Matías"), new LastName("Silveira"), new Email("matias.silveira@gmail.com"), new Password("Matias#2024"))
             };
 
             _context.Users.AddRange(users);
             _context.SaveChanges();
-
         }
 
         private void Shipments()
         {
             var shipments = new List<Shipment>
-        {
-        new Common(0, 12345, 10.5m, 2, DateTime.Now, null, "lucia@gmail.com", "1"), // Cliente: Lucía Méndez
-        new Common(0, 67890, 5.2m, 3, DateTime.Now, null, "javier@gmail.com", "2"), // Cliente: Javier Santos
-        new Common(0, 11111, 7.8m, 4, DateTime.Now, null, "elena@gmail.com", "3"), // Cliente: Elena Ruiz
-        new Common(0, 22222, 3.4m, 5, DateTime.Now, null, "pablo@gmail.com", "4"), // Cliente: Pablo Gómez
-        new Common(0, 33333, 6.1m, 1, DateTime.Now, null, "lucia@gmail.com", "2"), // Cliente: Lucía Méndez
-        new Urgent(0, 44444, 8.9m, 2, DateTime.Now, null, "javier@gmail.com", postalAddress: "Calle Falsa 456"), // Cliente: Javier Santos
-        new Urgent(0, 55555, 4.7m, 3, DateTime.Now, null, "elena@gmail.com", postalAddress: "Av. Siempre Viva 555"), // Cliente: Elena Ruiz
-        new Urgent(0, 66666, 9.3m, 4, DateTime.Now, null, "pablo@gmail.com", postalAddress: "Boulevard Central 80"), // Cliente: Pablo Gómez
-        new Urgent(0, 77777, 2.5m, 5, DateTime.Now, null, "lucia@gmail.com", postalAddress: "Paseo de la Reforma 500"), // Cliente: Lucía Méndez
-        new Urgent(0, 88888, 1.8m, 1, DateTime.Now, null, "javier@gmail.com", postalAddress: "Calle 25 #36")  // Cliente: Javier Santos
-        };
+            {
+                new Common(0, 10.5m, 2, DateTime.Now, null, "lucia.fernandez@gmail.com", "1"), // Cliente: Lucía Fernández
+                new Common(0, 5.2m, 3, DateTime.Now, null, "javier.santos@gmail.com", "2"), // Cliente: Javier Santos
+                new Common(0, 7.8m, 4, DateTime.Now, null, "elena.ruiz@gmail.com", "3"), // Cliente: Elena Ruiz
+                new Common(0, 3.4m, 5, DateTime.Now, null, "pablo.gomez@gmail.com", "4"), // Cliente: Pablo Gómez
+                new Common(0, 6.1m, 1, DateTime.Now, null, "sofia.garcia@gmail.com", "2"), // Cliente: Sofía García
+                new Urgent(0, 8.9m, 2, DateTime.Now, null, "ana.martinez@gmail.com", postalAddress: "Calle Falsa 456"), // Cliente: Ana Martínez
+                new Urgent(0, 4.7m, 3, DateTime.Now, null, "luis.lopez@gmail.com", postalAddress: "Av. Siempre Viva 555"), // Cliente: Luis López
+                new Urgent(0, 9.3m, 4, DateTime.Now, null, "maria.gomez@gmail.com", postalAddress: "Boulevard Central 80"), // Cliente: María Gómez
+                new Urgent(0, 2.5m, 5, DateTime.Now, null, "matias.silveira@gmail.com", postalAddress: "Paseo de la Reforma 500"), // Cliente: Matías Silveira
+                new Urgent(0, 1.8m, 1, DateTime.Now, null, "carlos.ramirez@gmail.com", postalAddress: "Calle 25 #36")  // Cliente: Carlos Ramírez
+            };
 
             _context.Shipments.AddRange(shipments);
             _context.SaveChanges();
@@ -89,23 +94,23 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         private void Trackings()
         {
             var trackings = new List<Tracking>
-    {
-        new Tracking(0, 12345, "En preparación", DateTime.Now.AddHours(-10), 1),
-        new Tracking(0, 12345, "En tránsito hacia destino", DateTime.Now.AddHours(-5), 1),
+            {
+                new Tracking(0, 12345, "En preparación", DateTime.Now.AddHours(-10), 1),
+                new Tracking(0, 12345, "En tránsito hacia destino", DateTime.Now.AddHours(-5), 1),
 
-        new Tracking(0, 67890, "Retirado por agencia", DateTime.Now.AddHours(-4), 2),
-        new Tracking(0, 67890, "En camino al destino", DateTime.Now.AddHours(-2), 2),
+                new Tracking(0, 67890, "Retirado por agencia", DateTime.Now.AddHours(-4), 2),
+                new Tracking(0, 67890, "En camino al destino", DateTime.Now.AddHours(-2), 2),
 
-        new Tracking(0, 11111, "En preparación", DateTime.Now.AddHours(-3), 3),
+                new Tracking(0, 11111, "En preparación", DateTime.Now.AddHours(-3), 3),
 
-        new Tracking(0, 22222, "Listo para enviar", DateTime.Now.AddHours(-2), 4),
-        new Tracking(0, 22222, "Salida del centro logístico", DateTime.Now.AddHours(-1), 4),
+                new Tracking(0, 22222, "Listo para enviar", DateTime.Now.AddHours(-2), 4),
+                new Tracking(0, 22222, "Salida del centro logístico", DateTime.Now.AddHours(-1), 4),
 
-        new Tracking(0, 44444, "Entregado", DateTime.Now, 5),
+                new Tracking(0, 44444, "Entregado", DateTime.Now, 5),
 
-        new Tracking(0, 55555, "En reparto", DateTime.Now.AddMinutes(-20), 1),
-        new Tracking(0, 55555, "Entregado al destinatario", DateTime.Now, 1)
-    };
+                new Tracking(0, 55555, "En reparto", DateTime.Now.AddMinutes(-20), 1),
+                new Tracking(0, 55555, "Entregado al destinatario", DateTime.Now, 1)
+            };
 
             _context.Trackings.AddRange(trackings);
             _context.SaveChanges();

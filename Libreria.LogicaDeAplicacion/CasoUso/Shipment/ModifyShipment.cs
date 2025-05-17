@@ -15,10 +15,10 @@ namespace Libreria.LogicaAplicacion.CasoUso.Usuarios
         }
 
 
-        public void Execute(ShipmentDto shipmentDto, int id)
+        public void Execute(ShipmentDto shipmentDto, int trackNbr)
         {
 
-            _repo.Modify(MapperShipment.FromDto(shipmentDto), shipmentDto.Id);
+            _repo.Modify(MapperShipment.FromDto(shipmentDto), shipmentDto.TrackingNumber);
         }
     }
 }

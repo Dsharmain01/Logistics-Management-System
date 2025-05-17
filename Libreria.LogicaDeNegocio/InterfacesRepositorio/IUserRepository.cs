@@ -13,6 +13,7 @@ namespace Libreria.LogicaNegocio.InterfacesRepositorio
 
     {
         User GetByEmail(string email);
+        bool ExisteEmail(string email);
     }
 }
 

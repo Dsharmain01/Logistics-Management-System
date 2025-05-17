@@ -70,3 +70,15 @@ C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreri
 C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\refint\Libreria.LogicaDeNegocio.dll
 C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.pdb
 C:\Users\user\Desktop\Obligatorio p3 posta\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\ref\Libreria.LogicaDeNegocio.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\bin\Debug\net8.0\Libreria.LogicaDeNegocio.deps.json
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\bin\Debug\net8.0\Libreria.LogicaDeNegocio.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\bin\Debug\net8.0\Libreria.LogicaDeNegocio.pdb
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.sourcelink.json
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\refint\Libreria.LogicaDeNegocio.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.pdb
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\ref\Libreria.LogicaDeNegocio.dll

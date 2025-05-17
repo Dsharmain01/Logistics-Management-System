@@ -15,6 +15,11 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             _context = context;
         }
 
+        public bool ExisteEmail(string email)
+        {
+            return _context.Users.Any(u => u.Email.Value == email);
+        }
+
         public int Add(User obj)
         {
             if (obj == null)

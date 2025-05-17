@@ -6,6 +6,15 @@
 
 <h1>Envíos en proceso</h1>
 
+
+<form method="get" asp-action="Index" asp-controller="Shipment">
+    <div class="form-group">
+        <label for="trackingNumber">Número de Seguimiento</label>
+        <input type="number" id="trackingNumber" name="trackingNumber" class="form-control" placeholder="Ingrese el número de seguimiento" />
+    </div>
+    <button type="submit" class="btn btn-primary">Filtrar</button>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -15,7 +24,6 @@
             <th>@Html.DisplayNameFor(model => model.First().startDate)</th>
             <th>@Html.DisplayNameFor(model => model.First().DeliveryDate)</th>
             <th>@Html.DisplayNameFor(model => model.First().TipoEnvio)</th>
-
             <th></th>
         </tr>
     </thead>
@@ -32,7 +40,7 @@
                 <td>
                     @if (shipment.CurrentStatus == Libreria.LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS) {
                         <form asp-action="Modify" asp-controller="Shipment" method="post" style="display:inline">
-                            <input type="hidden" name="id" value="@shipment.Id" />
+                            <input type="hidden" name="id" value="@shipment.TrackingNumber" />
                             <button type="submit" class="btn btn-primary btn-sm">Finalizar</button>
                         </form>
 

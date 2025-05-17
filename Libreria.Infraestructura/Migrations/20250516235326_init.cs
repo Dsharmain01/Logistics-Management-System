@@ -54,9 +54,8 @@ namespace Libreria.Infraestructura.Migrations
                 name: "Shipments",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    TrackNbr = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TrackNbr = table.Column<int>(type: "int", nullable: false),
                     Weight = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     EmployeeId = table.Column<int>(type: "int", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -69,7 +68,7 @@ namespace Libreria.Infraestructura.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Shipments", x => x.Id);
+                    table.PrimaryKey("PK_Shipments", x => x.TrackNbr);
                     table.ForeignKey(
                         name: "FK_Shipments_Users_EmployeeId",
                         column: x => x.EmployeeId,

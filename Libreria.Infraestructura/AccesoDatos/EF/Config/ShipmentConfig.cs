@@ -8,6 +8,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
     {
         public void Configure(EntityTypeBuilder<Shipment> builder)
         {
+            builder.HasKey(s => s.TrackNbr);
 
             builder.HasOne(shipment => shipment.Employee)
                 .WithMany()
