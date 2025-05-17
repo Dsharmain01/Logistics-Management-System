@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Libreria.Infraestructura.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250516195448_init")]
+    [Migration("20250516235326_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -45,11 +45,11 @@ namespace Libreria.Infraestructura.Migrations
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Shipment", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("TrackNbr")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrackNbr"));
 
                     b.Property<int>("CurrentStatus")
                         .HasColumnType("int");
@@ -72,13 +72,10 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TrackNbr")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Weight")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("Id");
+                    b.HasKey("TrackNbr");
 
                     b.HasIndex("EmployeeId");
 

@@ -8,7 +8,7 @@ namespace Libreria.WebApp.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
-        [StringLength(3, ErrorMessage = "El {0} no puede tener más de {1} caracteres.")]
+        [StringLength(15, ErrorMessage = "El {0} no puede tener más de {1} caracteres.")]
         [Display(Name = "Nombre del Usuario")]
         public string Name { get; set; }
 

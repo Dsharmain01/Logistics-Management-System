@@ -2,7 +2,6 @@
 using static Libreria.LogicaDeNegocio.Entities.Shipment;
 
 public record DtoListedShipment(
-    int Id,
     int TrackingNumber,
     decimal Weight,
     int EmployeeId,

@@ -29,5 +29,6 @@ namespace Libreria.WebApp.Models
 
         public string? PickupAgency { get; set; }
         public string? PostalAddress { get; set; }
+
     }
 }

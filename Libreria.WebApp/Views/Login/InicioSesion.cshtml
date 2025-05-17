@@ -4,6 +4,14 @@
     ViewData["Title"] = "Login";
 }
 
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-danger mt-2">
+        @ViewBag.Message
+    </div>
+}
+
+
 <h2>Login</h2>
 
 <form asp-action="InicioSesion" method="post">
@@ -21,12 +29,6 @@
 </form>
 
 
-@if (ViewBag.Message != null)
-{
-    <div class="alert alert-danger mt-2">
-        @ViewBag.Message
-    </div>
-}
 
 
 @section Scripts {

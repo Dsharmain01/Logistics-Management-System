@@ -1,10 +1,10 @@
 ﻿
+using Libreria.LogicaNegocio.InterfacesDominio;
+
 namespace Libreria.LogicaDeNegocio.Entities
 {
-    public abstract class Shipment
+    public abstract class Shipment : IEntity
     {
-
-        public int Id { get; set; }
         public int TrackNbr { get; set; }
         public decimal Weight { get; set; }
         public Employee Employee { get; set; }
@@ -14,6 +14,11 @@ namespace Libreria.LogicaDeNegocio.Entities
         public DateTime? DeliveryDate { get; set; }
         public Status CurrentStatus { get; set; }
         public string CustomerEmail { get; set; }
+        int IEntity.Id
+        {
+            get => TrackNbr;
+            set => TrackNbr = value;
+        }
 
         public enum Status
         {
@@ -24,7 +29,6 @@ namespace Libreria.LogicaDeNegocio.Entities
         protected Shipment() { }
 
         public Shipment(
-            int id,
             int trackNbr,
             decimal weight,
             int employeeId,
@@ -32,7 +36,6 @@ namespace Libreria.LogicaDeNegocio.Entities
             DateTime? deliveryDate,
             string customerEmail)
         {
-            Id = id;
             TrackNbr = trackNbr;
             Weight = weight;
             EmployeeId = employeeId;

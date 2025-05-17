@@ -5,6 +5,7 @@ using Libreria.LogicaNegocio.Exceptions.User;
 using Microsoft.AspNetCore.Mvc;
 using Libreria.WebApp.Models;
 using Libreria.WebApp.Filtros;
+using Libreria.LogicaNegocio.Vo;
 
 namespace Libreria.WebApp.Controllers
 {
@@ -62,6 +63,12 @@ namespace Libreria.WebApp.Controllers
         {
             try
             {
+                var passwordVo = new Password(user.Password);
+                var nameVo = new Name(user.Name);
+                var lastNameVo = new LastName(user.LastName);
+                var emailVo = new Email(user.Email);
+
+
                 _add.Execute ( new UserDto(user.Id,
                                               user.Name,
                                               user.LastName,
@@ -69,25 +76,21 @@ namespace Libreria.WebApp.Controllers
                                               user.Password));
                 return RedirectToAction("Index", new {message = "Alta Exitosa"});
             }
-            catch (NameException)
+            catch (NameException ex)
             {
-                ViewBag.Message = "El nombre no es valido";
+                ViewBag.Message = ex.Message;
             }
-            catch (EmailException)
+            catch (EmailException ex)
             {
-                ViewBag.Message = "El email no es valido";
+                ViewBag.Message = ex.Message;
             }
-            catch (PasswordException)
+            catch (PasswordException ex)
             {
-                ViewBag.Message = "La contraseña no es valida";
+                ViewBag.Message = ex.Message;
             }
-            catch (LastNameException)
+            catch (LastNameException ex)
             {
-                ViewBag.Message = "El apellido no es valido";
-            }
-            catch (RepeatedUserException)
-            {
-                ViewBag.Message = "El usuario ya existe";
+                ViewBag.Message = ex.Message;
             }
             catch (Exception ex)
             {
@@ -128,6 +131,30 @@ namespace Libreria.WebApp.Controllers
             try
             {
                 _modify.Execute(userDto, user.Id);
+
+            }
+            catch (NameException ex)
+            {
+                ViewBag.Message = ex.Message;
+                return View(user);
+
+            }
+            catch (EmailException ex)
+            {
+                ViewBag.Message = ex.Message;
+                return View(user);
+
+            }
+            catch (PasswordException ex)
+            {
+                ViewBag.Message = ex.Message;
+                return View(user);
+
+            }
+            catch (LastNameException ex)
+            {
+                ViewBag.Message = ex.Message;
+                return View(user);
 
             }
             catch (Exception ex)

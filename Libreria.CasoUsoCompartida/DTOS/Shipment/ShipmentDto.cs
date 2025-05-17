@@ -10,7 +10,6 @@ namespace Libreria.CasoUsoCompartida.DTOS.Shipment
     }
 
     public record ShipmentDto(
-        int Id,
         int TrackingNumber,
         decimal Weight,
         int EmployeeId,

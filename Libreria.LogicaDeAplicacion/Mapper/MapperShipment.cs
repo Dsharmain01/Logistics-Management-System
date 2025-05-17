@@ -11,7 +11,6 @@ namespace Libreria.LogicaAplicacion.Mapper
             {
                 return new Common(
                     0,
-                    shipmentDto.TrackingNumber,
                     shipmentDto.Weight,
                     shipmentDto.EmployeeId,
                     shipmentDto.startDate,
@@ -20,14 +19,13 @@ namespace Libreria.LogicaAplicacion.Mapper
                     shipmentDto.PickupAgency 
                 )
                 {
-                    CurrentStatus = (Shipment.Status)shipmentDto.CurrentStatus
+                    CurrentStatus = shipmentDto.CurrentStatus
                 };
             }
             else if (shipmentDto.TipoEnvio == TipoEnvio.URGENT)
             {
                 return new Urgent(
                     0,
-                    shipmentDto.TrackingNumber,
                     shipmentDto.Weight,
                     shipmentDto.EmployeeId,
                     shipmentDto.startDate,
@@ -36,7 +34,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     shipmentDto.PostalAddress
                 )
                 {
-                    CurrentStatus = (Shipment.Status)shipmentDto.CurrentStatus
+                    CurrentStatus = shipmentDto.CurrentStatus
                 };
             }
 
@@ -49,7 +47,6 @@ namespace Libreria.LogicaAplicacion.Mapper
             if (shipment is Urgent urgent)
             {
                 return new ShipmentDto(
-                    urgent.Id,
                     urgent.TrackNbr,
                     urgent.Weight,
                     urgent.EmployeeId,
@@ -65,7 +62,6 @@ namespace Libreria.LogicaAplicacion.Mapper
             else if (shipment is Common common)
             {
                 return new ShipmentDto(
-                    common.Id,
                     common.TrackNbr,
                     common.Weight,
                     common.EmployeeId,
@@ -91,7 +87,6 @@ namespace Libreria.LogicaAplicacion.Mapper
             string? postalAddress = tipo == TipoEnvio.URGENT ? ((Urgent)shipment).PostalAddress : null;
 
             return new DtoListedShipment(
-                shipment.Id,
                 shipment.TrackNbr,
                 shipment.Weight,
                 shipment.EmployeeId,
@@ -110,7 +105,7 @@ namespace Libreria.LogicaAplicacion.Mapper
         {
             List<DtoListedShipment> shipmentDtos = new List<DtoListedShipment>();
 
-            foreach (var shipment in shipments)
+            foreach (Shipment shipment in shipments)
             {
                 TipoEnvio tipo = shipment is Urgent ? TipoEnvio.URGENT : TipoEnvio.COMMON;
 
@@ -118,7 +113,6 @@ namespace Libreria.LogicaAplicacion.Mapper
                 string? postalAddress = shipment is Urgent urgentShipment ? urgentShipment.PostalAddress : null;
 
                 shipmentDtos.Add(new DtoListedShipment(
-                    shipment.Id,
                     shipment.TrackNbr,
                     shipment.Weight,
                     shipment.EmployeeId,
@@ -134,9 +128,5 @@ namespace Libreria.LogicaAplicacion.Mapper
 
             return shipmentDtos;
         }
-
-
-
-
     }
 }

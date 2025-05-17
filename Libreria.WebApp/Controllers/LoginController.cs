@@ -3,6 +3,7 @@ using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaNegocio.Exceptions.User;
 using Microsoft.AspNetCore.Mvc;
 using Libreria.WebApp.Models;
+using Libreria.LogicaNegocio.Vo;
 
 
 namespace Libreria.WebApp.Controllers
@@ -29,6 +30,7 @@ namespace Libreria.WebApp.Controllers
         {
             try
             {
+                var passwordVo = new Password(loginData.Password);
                 var loginDto = new LoginDto(loginData.Email, loginData.Password);
 
                 var user = _login.Execute(loginDto);
@@ -57,13 +59,13 @@ namespace Libreria.WebApp.Controllers
                 }
 
             }
-            catch (EmailException)
+            catch (EmailException ex)
             {
-                ViewBag.Message = "Email no válido";
+                ViewBag.Message = ex.Message;   
             }
-            catch (PasswordException)
+            catch (PasswordException ex)
             {
-                ViewBag.Message = "Contraseña no válida";
+                ViewBag.Message = ex.Message;
             }
             catch (Exception ex)
             {
