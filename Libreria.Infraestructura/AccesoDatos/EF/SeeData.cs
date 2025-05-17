@@ -55,11 +55,11 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         {
             var shipments = new List<Shipment>
             {
-                new Common(0, 10.5m, 2, DateTime.Now, null, "lucia.fernandez@gmail.com", "1"), // Cliente: Lucía Fernández
-                new Common(0, 5.2m, 3, DateTime.Now, null, "javier.santos@gmail.com", "2"), // Cliente: Javier Santos
-                new Common(0, 7.8m, 4, DateTime.Now, null, "elena.ruiz@gmail.com", "3"), // Cliente: Elena Ruiz
-                new Common(0, 3.4m, 5, DateTime.Now, null, "pablo.gomez@gmail.com", "4"), // Cliente: Pablo Gómez
-                new Common(0, 6.1m, 1, DateTime.Now, null, "sofia.garcia@gmail.com", "2"), // Cliente: Sofía García
+                new Common(0, 10.5m, 2, DateTime.Now, null, "lucia.fernandez@gmail.com", 1), // Cliente: Lucía Fernández
+                new Common(0, 5.2m, 3, DateTime.Now, null, "javier.santos@gmail.com", 2), // Cliente: Javier Santos
+                new Common(0, 7.8m, 4, DateTime.Now, null, "elena.ruiz@gmail.com", 3), // Cliente: Elena Ruiz
+                new Common(0, 3.4m, 5, DateTime.Now, null, "pablo.gomez@gmail.com", 4), // Cliente: Pablo Gómez
+                new Common(0, 6.1m, 1, DateTime.Now, null, "sofia.garcia@gmail.com", 2), // Cliente: Sofía García
                 new Urgent(0, 8.9m, 2, DateTime.Now, null, "ana.martinez@gmail.com", postalAddress: "Calle Falsa 456"), // Cliente: Ana Martínez
                 new Urgent(0, 4.7m, 3, DateTime.Now, null, "luis.lopez@gmail.com", postalAddress: "Av. Siempre Viva 555"), // Cliente: Luis López
                 new Urgent(0, 9.3m, 4, DateTime.Now, null, "maria.gomez@gmail.com", postalAddress: "Boulevard Central 80"), // Cliente: María Gómez

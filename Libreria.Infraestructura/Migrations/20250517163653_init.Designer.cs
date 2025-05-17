@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Libreria.Infraestructura.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250517135622_init")]
+    [Migration("20250517163653_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -140,9 +140,8 @@ namespace Libreria.Infraestructura.Migrations
                 {
                     b.HasBaseType("Libreria.LogicaDeNegocio.Entities.Shipment");
 
-                    b.Property<string>("PickupAgency")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("PickupAgency")
+                        .HasColumnType("int");
 
                     b.HasDiscriminator().HasValue("Common");
                 });
