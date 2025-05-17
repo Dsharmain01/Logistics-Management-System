@@ -10,6 +10,6 @@ public record DtoListedShipment(
     Status CurrentStatus,
     string CustomerEmail,
     TipoEnvio TipoEnvio,
-    string? PickupAgency,         
+    int? PickupAgency,         
     string? PostalAddress
 );

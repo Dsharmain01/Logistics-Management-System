@@ -65,7 +65,16 @@ namespace Libreria.WebApp.Controllers
         {
             try
             {
-                string? pickupAgency = shipment.TipoEnvio == TipoEnvio.COMMON ? shipment.PickupAgency : null;
+                int? pickupAgency = null;
+
+                // Verificar si el tipo de envío es COMMON y convertir PickupAgency a int
+                if (shipment.TipoEnvio == TipoEnvio.COMMON && !string.IsNullOrWhiteSpace(shipment.PickupAgency))
+                {
+                    if (int.TryParse(shipment.PickupAgency, out int parsedValue))
+                    {
+                        pickupAgency = parsedValue;
+                    }
+                }
                 string? postalAddress = shipment.TipoEnvio == TipoEnvio.URGENT ? shipment.PostalAddress : null;
 
                 var shipmentDto = new ShipmentDto(
@@ -128,7 +137,7 @@ namespace Libreria.WebApp.Controllers
                 DateTime deliveryDate = DateTime.Now;
                 var status = Shipment.Status.FINALIZED;
 
-                string? pickupAgency = existingShipment.TipoEnvio == TipoEnvio.COMMON ? existingShipment.PickupAgency : null;
+                int? pickupAgency = existingShipment.TipoEnvio == TipoEnvio.COMMON ? existingShipment.PickupAgency : null;
                 string? postalAddress = existingShipment.TipoEnvio == TipoEnvio.URGENT ? existingShipment.PostalAddress : null;
 
                 var shipmentDto = new ShipmentDto(

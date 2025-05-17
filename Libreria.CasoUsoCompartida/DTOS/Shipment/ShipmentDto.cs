@@ -17,7 +17,7 @@ namespace Libreria.CasoUsoCompartida.DTOS.Shipment
         Status CurrentStatus,
         string CustomerEmail,
         TipoEnvio TipoEnvio,
-        string? PickupAgency,
+        int? PickupAgency,
         string? PostalAddress
     );
 }

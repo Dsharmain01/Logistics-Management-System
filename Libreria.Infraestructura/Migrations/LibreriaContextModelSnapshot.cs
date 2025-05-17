@@ -137,9 +137,8 @@ namespace Libreria.Infraestructura.Migrations
                 {
                     b.HasBaseType("Libreria.LogicaDeNegocio.Entities.Shipment");
 
-                    b.Property<string>("PickupAgency")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("PickupAgency")
+                        .HasColumnType("int");
 
                     b.HasDiscriminator().HasValue("Common");
                 });

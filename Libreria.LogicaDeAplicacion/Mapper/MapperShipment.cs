@@ -82,7 +82,7 @@ namespace Libreria.LogicaAplicacion.Mapper
         {
             TipoEnvio tipo = shipment is Urgent ? TipoEnvio.URGENT : TipoEnvio.COMMON;
 
-            string? pickupAgency = tipo == TipoEnvio.COMMON ? ((Common)shipment).PickupAgency : null;
+            int? pickupAgency = tipo == TipoEnvio.COMMON ? ((Common)shipment).PickupAgency : null;
             string? postalAddress = tipo == TipoEnvio.URGENT ? ((Urgent)shipment).PostalAddress : null;
 
             return new DtoListedShipment(
@@ -107,7 +107,7 @@ namespace Libreria.LogicaAplicacion.Mapper
             {
                 TipoEnvio tipo = shipment is Urgent ? TipoEnvio.URGENT : TipoEnvio.COMMON;
 
-                string? pickupAgency = shipment is Common commonShipment ? commonShipment.PickupAgency : null;
+                int? pickupAgency = shipment is Common commonShipment ? commonShipment.PickupAgency : null;
                 string? postalAddress = shipment is Urgent urgentShipment ? urgentShipment.PostalAddress : null;
 
                 shipmentDtos.Add(new DtoListedShipment(

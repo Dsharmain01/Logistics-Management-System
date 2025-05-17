@@ -64,7 +64,7 @@ namespace Libreria.Infraestructura.Migrations
                     CurrentStatus = table.Column<int>(type: "int", nullable: false),
                     CustomerEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
-                    PickupAgency = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PickupAgency = table.Column<int>(type: "int", nullable: true),
                     PostalAddress = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
