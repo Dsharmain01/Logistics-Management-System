@@ -7,6 +7,7 @@ using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.WebApp.Filtros;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.CasoUsoCompartida.DTOS.Agency;
+using Libreria.LogicaNegocio.Exceptions.Shipment;
 
 namespace Libreria.WebApp.Controllers
 {
@@ -17,7 +18,6 @@ namespace Libreria.WebApp.Controllers
         private IGetAll<DtoListedUser> _getAllUsers;
         private IGetAll<DtoListedAgency> _getAllAgency;
 
-        //private IRemove _remove;
         private IGetById<DtoListedShipment> _getById;
         private IModify<ShipmentDto> _modify;
 
@@ -27,20 +27,16 @@ namespace Libreria.WebApp.Controllers
             IGetAll<DtoListedUser> getAllUsers,
             IGetAll<DtoListedAgency> getAllAgency,
 
-        //IRemove remove,
             IGetById<DtoListedShipment> getById,
             IModify<ShipmentDto> modify)
         {
             _getAll = getAll;
             _add = add;
             _getAllUsers = getAllUsers;
-            //_remove = remove;
             _getById = getById;
             _modify = modify;
             _getAllAgency = getAllAgency;
         }
-
-
 
         [AdminAndWorkerFilter]
         public IActionResult Index(int? trackingNumber)
@@ -88,42 +84,19 @@ namespace Libreria.WebApp.Controllers
                 _add.Execute(shipmentDto);
                 return RedirectToAction("Index");
             }
-            catch (TrackingNumberException)
+
+            catch (WeightException ex)
             {
-                ViewBag.Message = "El número de seguimiento no es válido.";
+                ViewBag.Message = ex.Message;
                 return View(shipment);
 
             }
-            catch (WeightException)
+            catch(EmailException ex)
             {
-                ViewBag.Message = "El peso del envío no es válido.";
+                ViewBag.Message = ex.Message;
                 return View(shipment);
-
             }
-            catch (EmployeeNotFoundException)
-            {
-                ViewBag.Message = "El empleado asignado no existe.";
-                return View(shipment);
 
-            }
-            catch (DeliveryDateException)
-            {
-                ViewBag.Message = "La fecha de entrega no es válida.";
-                return View(shipment);
-
-            }
-            catch (StatusException)
-            {
-                ViewBag.Message = "El estado del envío no es válido.";
-                return View(shipment);
-
-            }
-            catch (RepeatedShipmentException)
-            {
-                ViewBag.Message = "El envío ya existe.";
-                return View(shipment);
-
-            }
             catch (Exception ex)
             {
                 ViewBag.Message = ex.Message;
@@ -134,23 +107,6 @@ namespace Libreria.WebApp.Controllers
 
             return View(shipment); 
         }
-
-
-        //    public IActionResult Detail(int id)
-        //    {
-        //        var shipment = _getById.Execute(id);
-        //        if (shipment == null)
-        //        {
-        //            return RedirectToAction("Index");
-        //        }
-        //        return View(shipment);
-        //    }
-
-        //    public IActionResult Remove(int id)
-        //    {
-        //        _remove.Execute(id);
-        //        return RedirectToAction("Index");
-        //    }
 
         [HttpGet]
         public IActionResult Modify()
@@ -198,8 +154,6 @@ namespace Libreria.WebApp.Controllers
                 return RedirectToAction("Index");
             }
         }
-
-
     }
 }
 

@@ -6,7 +6,6 @@
 
 <h1>Envíos en proceso</h1>
 
-
 <form method="get" asp-action="Index" asp-controller="Shipment">
     <div class="form-group">
         <label for="trackingNumber">Número de Seguimiento</label>
@@ -15,43 +14,53 @@
     <button type="submit" class="btn btn-primary">Filtrar</button>
 </form>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.First().TrackingNumber)</th>
-            <th>@Html.DisplayNameFor(model => model.First().Weight)</th>
-            <th>@Html.DisplayNameFor(model => model.First().CurrentStatus)</th>
-            <th>@Html.DisplayNameFor(model => model.First().startDate)</th>
-            <th>@Html.DisplayNameFor(model => model.First().DeliveryDate)</th>
-            <th>@Html.DisplayNameFor(model => model.First().TipoEnvio)</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var shipment in Model)
-        {
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info" role="alert">
+        No hay envíos disponibles en este momento.
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
             <tr>
-                <td>@shipment.TrackingNumber</td>
-                <td>@shipment.Weight</td>
-                <td>@shipment.CurrentStatus</td>
-                <td>@shipment.startDate.Date.ToShortDateString()</td>
-                <td>@(shipment.DeliveryDate?.ToShortDateString() ?? "-")</td>
-                <td>@(shipment.TipoEnvio)</td>
-                <td>
-                    @if (shipment.CurrentStatus == Libreria.LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS) {
-                        <form asp-action="Modify" asp-controller="Shipment" method="post" style="display:inline">
-                            <input type="hidden" name="id" value="@shipment.TrackingNumber" />
-                            <button type="submit" class="btn btn-primary btn-sm">Finalizar</button>
-                        </form>
-
-                        <form asp-action="AddTracking" asp-controller="Tracking" method="get" style="display:inline">
-                            <input type="hidden" name="TrackingNumber" value="@shipment.TrackingNumber" />
-                            <input type="hidden" name="EmployeeId" value="@shipment.EmployeeId" />
-                            <button type="submit" class="btn btn-primary btn-sm">Add tracking</button>
-                        </form>
-                    }
-                </td>
+                <th>@Html.DisplayNameFor(model => model.First().TrackingNumber)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Weight)</th>
+                <th>@Html.DisplayNameFor(model => model.First().CurrentStatus)</th>
+                <th>@Html.DisplayNameFor(model => model.First().startDate)</th>
+                <th>@Html.DisplayNameFor(model => model.First().DeliveryDate)</th>
+                <th>@Html.DisplayNameFor(model => model.First().TipoEnvio)</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (DtoListedShipment shipment in Model)
+            {
+                <tr>
+                    <td>@shipment.TrackingNumber</td>
+                    <td>@shipment.Weight</td>
+                    <td>@shipment.CurrentStatus</td>
+                    <td>@shipment.startDate.Date.ToShortDateString()</td>
+                    <td>@(shipment.DeliveryDate?.ToShortDateString() ?? "-")</td>
+                    <td>@(shipment.TipoEnvio)</td>
+
+                    <td>
+                        @if (shipment.CurrentStatus == Libreria.LogicaDeNegocio.Entities.Shipment.Status.IN_PROGRESS) {
+                            <form asp-action="Modify" asp-controller="Shipment" method="post" style="display:inline">
+                                <input type="hidden" name="id" value="@shipment.TrackingNumber" />
+                                <button type="submit" class="btn btn-primary btn-sm">Finalizar</button>
+                            </form>
+
+                            <form asp-action="AddTracking" asp-controller="Tracking" method="get" style="display:inline">
+                                <input type="hidden" name="TrackingNumber" value="@shipment.TrackingNumber" />
+                                <input type="hidden" name="EmployeeId" value="@shipment.EmployeeId" />
+                                <button type="submit" class="btn btn-primary btn-sm">Add tracking</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

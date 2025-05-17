@@ -1,5 +1,4 @@
-﻿
-using Libreria.LogicaDeNegocio.InterfacesRepositorio;
+﻿using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
 
@@ -46,7 +45,6 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
             if (existingShipment == null) throw new Exception("Shipment no encontrado");
 
-
             existingShipment.Weight = obj.Weight;
             existingShipment.EmployeeId = obj.EmployeeId;
             existingShipment.CustomerEmail = obj.CustomerEmail;
@@ -63,7 +61,5 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
             _context.SaveChanges();
         }
-
-
     }
 }

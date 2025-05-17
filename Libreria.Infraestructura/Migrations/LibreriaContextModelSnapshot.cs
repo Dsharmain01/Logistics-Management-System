@@ -30,7 +30,7 @@ namespace Libreria.Infraestructura.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("EmployeeId")
+                    b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -63,7 +63,7 @@ namespace Libreria.Infraestructura.Migrations
                         .HasMaxLength(8)
                         .HasColumnType("nvarchar(8)");
 
-                    b.Property<int>("EmployeeId")
+                    b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
@@ -98,7 +98,7 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<DateTime>("CommentDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EmployeeId")
+                    b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
                     b.Property<int>("TrackNbr")
@@ -188,8 +188,7 @@ namespace Libreria.Infraestructura.Migrations
                     b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", null)
                         .WithMany()
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.OwnsOne("Libreria.LogicaNegocio.Vo.Name", "Name", b1 =>
                         {
@@ -243,20 +242,15 @@ namespace Libreria.Infraestructura.Migrations
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Shipment", b =>
                 {
-                    b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", "Employee")
+                    b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", null)
                         .WithMany()
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("Libreria.LogicaNegocio.Entities.User", null)
                         .WithMany()
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_Shipments_Users_EmployeeId1");
-
-                    b.Navigation("Employee");
+                        .OnDelete(DeleteBehavior.SetNull);
                 });
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Tracking", b =>
@@ -264,8 +258,7 @@ namespace Libreria.Infraestructura.Migrations
                     b.HasOne("Libreria.LogicaDeNegocio.Entities.Employee", null)
                         .WithMany()
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
                 });
 
             modelBuilder.Entity("Libreria.LogicaNegocio.Entities.User", b =>

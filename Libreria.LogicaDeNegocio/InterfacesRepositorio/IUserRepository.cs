@@ -1,5 +1,4 @@
-﻿
-using Libreria.LogicaDeNegocio.InterfacesRepositorio;
+﻿using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 using Libreria.LogicaNegocio.Entities;
 
 namespace Libreria.LogicaNegocio.InterfacesRepositorio

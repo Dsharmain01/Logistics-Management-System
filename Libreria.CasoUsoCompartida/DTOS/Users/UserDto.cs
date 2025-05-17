@@ -1,5 +1,4 @@
-﻿
-namespace Libreria.CasoUsoCompartida.DTOS.Users
+﻿namespace Libreria.CasoUsoCompartida.DTOS.Users
 {
     public record UserDto(
         int Id,
@@ -7,5 +6,4 @@ namespace Libreria.CasoUsoCompartida.DTOS.Users
         string LastName,
         string Email,
         string Password);
-
 }

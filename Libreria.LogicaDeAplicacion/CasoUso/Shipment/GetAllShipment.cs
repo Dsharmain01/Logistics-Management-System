@@ -1,8 +1,6 @@
-﻿using Libreria.CasoUsoCompartida.DTOS.Shipment;
-using Libreria.CasoUsoCompartida.UCInterfaces;
+﻿using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaAplicacion.Mapper;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
-
 
 namespace Libreria.LogicaAplicacion.CasoUso.Shipments
 {

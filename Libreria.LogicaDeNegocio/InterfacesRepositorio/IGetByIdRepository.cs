@@ -1,5 +1,4 @@
-﻿
-namespace Libreria.LogicaDeNegocio.InterfacesRepositorio
+﻿namespace Libreria.LogicaDeNegocio.InterfacesRepositorio
 {
     public interface IGetByIdRepository<T>
     {

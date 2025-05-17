@@ -1,8 +1,6 @@
 ﻿using Libreria.LogicaNegocio.Entities;
-using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaNegocio.InterfacesRepositorio;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
-
 
 namespace Libreria.Infraestructura.AccesoDatos.EF
 {
@@ -72,6 +70,5 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             _context.Users.Remove(usuarioEliminar);
             _context.SaveChanges();
         }
-
     }
 }

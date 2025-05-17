@@ -1,5 +1,4 @@
-﻿
-using Libreria.LogicaNegocio.Exceptions;
+﻿using Libreria.LogicaNegocio.Exceptions;
 namespace Libreria.LogicaDeNegocio.Exceptions.Shipment
 {
     public class ShipmentException : LogicaNegocioException
@@ -11,6 +10,5 @@ namespace Libreria.LogicaDeNegocio.Exceptions.Shipment
         public ShipmentException(string message) : base(message)
         {
         }
-    }
-    
+    }  
 }

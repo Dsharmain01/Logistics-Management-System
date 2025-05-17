@@ -1,5 +1,4 @@
-﻿
-namespace Libreria.LogicaDeNegocio.Exceptions.Shipment
+﻿namespace Libreria.LogicaDeNegocio.Exceptions.Shipment
 {
     public class WeightException : ShipmentException
     {

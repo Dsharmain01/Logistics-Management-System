@@ -115,7 +115,5 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             _context.Trackings.AddRange(trackings);
             _context.SaveChanges();
         }
-
-
     }
 }

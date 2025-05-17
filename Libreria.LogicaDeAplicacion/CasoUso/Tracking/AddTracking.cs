@@ -1,6 +1,4 @@
-﻿
-
-using Libreria.CasoUsoCompartida.DTOS.Tracking;
+﻿using Libreria.CasoUsoCompartida.DTOS.Tracking;
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaDeAplicacion.Mapper;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;

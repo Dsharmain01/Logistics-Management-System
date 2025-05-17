@@ -1,5 +1,4 @@
-﻿
-using Libreria.CasoUsoCompartida.DTOS.Users;
+﻿using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.LogicaNegocio.Entities;
 using Libreria.LogicaNegocio.Vo;
 
@@ -7,7 +6,6 @@ namespace Libreria.LogicaAplicacion.Mapper
 {
     internal class MapperUser
     {
-
         public static User FromDto(UserDto userDto)
         {
             return new Worker(
@@ -18,7 +16,6 @@ namespace Libreria.LogicaAplicacion.Mapper
                             new Password(userDto.Password)
                              );
         }
-
 
         public static DtoListedUser ToDto(User user)
         {
@@ -45,6 +42,5 @@ namespace Libreria.LogicaAplicacion.Mapper
             }
             return dtoListedUsers;
         }
-
     }
 }

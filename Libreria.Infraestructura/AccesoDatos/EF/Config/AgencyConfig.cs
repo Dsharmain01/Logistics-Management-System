@@ -1,5 +1,4 @@
 ﻿using Libreria.LogicaDeNegocio.Entities;
-using Libreria.LogicaNegocio.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -22,9 +21,10 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
             });
 
             builder.HasOne<Employee>()
-                .WithMany()
-                .HasForeignKey(agency => agency.EmployeeId)
-                .OnDelete(DeleteBehavior.NoAction);
+             .WithMany()
+             .HasForeignKey(agency => agency.EmployeeId)
+             .OnDelete(DeleteBehavior.SetNull);
+
         }
     }
 }

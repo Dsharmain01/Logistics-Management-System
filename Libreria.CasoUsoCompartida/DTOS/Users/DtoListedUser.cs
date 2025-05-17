@@ -1,5 +1,4 @@
-﻿
-namespace Libreria.CasoUsoCompartida.DTOS.Users
+﻿namespace Libreria.CasoUsoCompartida.DTOS.Users
 {
     public record DtoListedUser (
         int Id,

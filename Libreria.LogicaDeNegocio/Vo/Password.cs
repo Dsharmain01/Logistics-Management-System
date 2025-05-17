@@ -1,5 +1,4 @@
-﻿
-using Libreria.LogicaNegocio.Exceptions.User;
+﻿using Libreria.LogicaNegocio.Exceptions.User;
 
 namespace Libreria.LogicaNegocio.Vo
 {
@@ -39,7 +38,5 @@ namespace Libreria.LogicaNegocio.Vo
                 throw new PasswordException("La contraseña debe contener al menos un carácter especial (+, ., #).");
             }
         }
-
-
     }
 }

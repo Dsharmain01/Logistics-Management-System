@@ -1,9 +1,6 @@
-﻿
-using Libreria.CasoUsoCompartida.DTOS.Users;
-using Libreria.CasoUsoCompartida.UCInterfaces;
+﻿using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaAplicacion.Mapper;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
-using Libreria.LogicaNegocio.InterfacesRepositorio;
 
 namespace Libreria.LogicaAplicacion.CasoUso.Usuarios
 {
@@ -16,9 +13,9 @@ namespace Libreria.LogicaAplicacion.CasoUso.Usuarios
             _repo = repo;
         }
 
-        public DtoListedShipment Execute(int id)
+        public DtoListedShipment Execute(int trackNbr)
         {
-            return MapperShipment.ToListedDto(_repo.GetById(id));
+            return MapperShipment.ToListedDto(_repo.GetById(trackNbr));
         }
     }
 }

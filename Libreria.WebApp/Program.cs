@@ -48,8 +48,6 @@ namespace Libreria.WebApp
             //Inyectar casos de uso del tracking
 
             builder.Services.AddScoped<IAdd<TrackingDto>, AddTracking>();
-            builder.Services.AddScoped<IGetByTrackNbr<DtoListedTracking>, GetByTrackNbr>();
-
 
             //Inyectar caso de uso de agencias
 

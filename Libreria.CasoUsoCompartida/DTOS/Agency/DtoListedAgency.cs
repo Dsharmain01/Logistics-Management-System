@@ -1,14 +1,11 @@
-﻿
-
-using Libreria.LogicaDeNegocio.Vo;
+﻿using Libreria.LogicaDeNegocio.Vo;
 
 namespace Libreria.CasoUsoCompartida.DTOS.Agency
 {
     public record DtoListedAgency(
         int id,
         string name,
-        int employeeId,
+        int? employeeId,
         Ubication ubication
-        );
-    
+        );  
 }

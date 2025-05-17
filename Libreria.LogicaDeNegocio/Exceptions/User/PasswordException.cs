@@ -1,5 +1,4 @@
-﻿
-namespace Libreria.LogicaNegocio.Exceptions.User
+﻿namespace Libreria.LogicaNegocio.Exceptions.User
 {
     
     public class PasswordException : UserException

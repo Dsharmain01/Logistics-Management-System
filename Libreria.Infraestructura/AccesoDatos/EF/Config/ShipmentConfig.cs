@@ -10,10 +10,10 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
         {
             builder.HasKey(s => s.TrackNbr);
 
-            builder.HasOne(shipment => shipment.Employee)
-                .WithMany()
-                .HasForeignKey(shipment => shipment.EmployeeId)
-                .OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne<Employee>()
+             .WithMany()
+             .HasForeignKey(shipment => shipment.EmployeeId)
+              .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

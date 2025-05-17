@@ -1,6 +1,4 @@
-﻿
-
-using Libreria.CasoUsoCompartida.UCInterfaces;
+﻿using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaNegocio.InterfacesRepositorio;
 
 namespace Libreria.LogicaAplicacion.CasoUso.Usuarios
