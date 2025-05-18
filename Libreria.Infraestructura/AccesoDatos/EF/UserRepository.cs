@@ -1,6 +1,8 @@
 ﻿using Libreria.LogicaNegocio.Entities;
 using Libreria.LogicaNegocio.InterfacesRepositorio;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
+using Libreria.LogicaDeNegocio.Entities;
+using System.Net.Http;
 
 namespace Libreria.Infraestructura.AccesoDatos.EF
 {
@@ -62,6 +64,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             existingUser.Email = obj.Email;
             existingUser.Password = obj.Password;
             _context.SaveChanges();
+
         }
 
         public void Remove(int id)

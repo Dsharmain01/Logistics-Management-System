@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Libreria.Infraestructura.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250517163653_init")]
+    [Migration("20250518002832_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -41,6 +41,30 @@ namespace Libreria.Infraestructura.Migrations
                     b.HasIndex("EmployeeId");
 
                     b.ToTable("Agencies");
+                });
+
+            modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.AuditLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuditLogs");
                 });
 
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Shipment", b =>

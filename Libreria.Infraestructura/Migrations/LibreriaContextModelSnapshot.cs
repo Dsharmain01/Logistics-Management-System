@@ -40,6 +40,30 @@ namespace Libreria.Infraestructura.Migrations
                     b.ToTable("Agencies");
                 });
 
+            modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.AuditLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuditLogs");
+                });
+
             modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Shipment", b =>
                 {
                     b.Property<int>("TrackNbr")
