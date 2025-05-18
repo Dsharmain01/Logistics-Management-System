@@ -18,6 +18,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         public DbSet<Urgent> Urgents { get; set; }
         public DbSet<Tracking> Trackings { get; set; }
         public DbSet<Agency> Agencies { get; set; }
+        public DbSet<AuditLog> AuditLogs { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Libreria.WebApp.Models;
 using Libreria.WebApp.Filtros;
 using Libreria.LogicaNegocio.Vo;
+using Libreria.LogicaDeNegocio.Entities;
+using Libreria.Infraestructura.AccesoDatos.EF;
 
 namespace Libreria.WebApp.Controllers
 {
@@ -17,13 +19,15 @@ namespace Libreria.WebApp.Controllers
         private IRemove _remove;
         private IGetById<DtoListedUser> _getById;
         private IModify<UserDto> _modify;
+        private readonly LibreriaContext _context;
 
         public UserController(
             IGetAll<DtoListedUser> getAll, 
             IAdd<UserDto> add, 
             IRemove remove, 
             IGetById<DtoListedUser> getById,
-            IModify<UserDto> modify)
+            IModify<UserDto> modify,
+            LibreriaContext context)
 
         {
             _getAll = getAll;
@@ -31,6 +35,7 @@ namespace Libreria.WebApp.Controllers
             _remove = remove;
             _modify = modify;
             _getById = getById;
+            _context = context;
         }
 
         [AdminFilter]
@@ -74,6 +79,17 @@ namespace Libreria.WebApp.Controllers
                                               user.LastName,
                                               user.Email,
                                               user.Password));
+
+                var audit = new AuditLog
+                {
+                    Action = "Create",
+                    Date = DateTime.Now,
+                    UserId = HttpContext.Session.GetInt32("id").ToString(),
+
+                };
+                _context.AuditLogs.Add(audit);
+                _context.SaveChanges();
+
                 return RedirectToAction("Index", new {message = "Alta Exitosa"});
             }
             catch (NameException ex)
@@ -97,11 +113,22 @@ namespace Libreria.WebApp.Controllers
                 ViewBag.Message = ex.Message;
             }
             return View();
+           
         }
 
         public IActionResult Remove(int id)
         {
             _remove.Execute(id);
+            var audit = new AuditLog
+            {
+                Action = "Remove",
+                Date = DateTime.Now,
+                UserId = HttpContext.Session.GetInt32("id").ToString(),
+
+            };
+            _context.AuditLogs.Add(audit);
+            _context.SaveChanges();
+
             return RedirectToAction("index");
         }
 
@@ -121,6 +148,8 @@ namespace Libreria.WebApp.Controllers
                 Password=user.Password
             };
 
+
+
             return View(vmUser);
         }
 
@@ -131,6 +160,16 @@ namespace Libreria.WebApp.Controllers
             try
             {
                 _modify.Execute(userDto, user.Id);
+
+                var audit = new AuditLog
+                {
+                    Action = "Modify",
+                    Date = DateTime.Now,
+                    UserId = HttpContext.Session.GetInt32("id").ToString(),
+
+                };
+                _context.AuditLogs.Add(audit);
+                _context.SaveChanges();
 
             }
             catch (NameException ex)
@@ -165,5 +204,6 @@ namespace Libreria.WebApp.Controllers
                 return RedirectToAction("Index");
 
         }
+
     }
 }
