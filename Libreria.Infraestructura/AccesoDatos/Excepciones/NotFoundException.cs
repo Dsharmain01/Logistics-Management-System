@@ -1,7 +1,9 @@
-﻿namespace Libreria.Infraestructura.AccesoDatos.Excepciones
+﻿using Libreria.Infraestructura.AccesoDatos.Excepciones;
+
+namespace Libreria.Infraestructura.AccesoDatos.Excepciones
 {
     [Serializable]
-    public class NotFoundException : Exception
+    public class NotFoundException : InfrastructuraException
     {
         public NotFoundException()
         {
@@ -11,8 +13,9 @@
         {
         }
 
-        public NotFoundException(string? message, Exception? innerException) : base(message, innerException)
+        public override int StatusCode()
         {
+            return 404;
         }
     }
 }
