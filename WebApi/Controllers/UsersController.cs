@@ -60,7 +60,7 @@ namespace WebApi.Controllers
             }
             catch (NotFoundException e)
             {
-                return StatusCode(404, e.Message);
+                return StatusCode(e.StatusCode(), e.Error());
             }
             catch (Exception)
             {

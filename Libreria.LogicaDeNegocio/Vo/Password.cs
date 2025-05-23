@@ -33,9 +33,9 @@ namespace Libreria.LogicaNegocio.Vo
                 throw new PasswordException("La contraseña debe contener al menos un número.");
             }
 
-            if (!Value.Any(c => "+.#".Contains(c)))
+            if (!Value.Any(c => "+.#!-".Contains(c)))
             {
-                throw new PasswordException("La contraseña debe contener al menos un carácter especial (+, ., #).");
+                throw new PasswordException("La contraseña debe contener al menos un carácter especial (+, ., #, !, -).");
             }
         }
     }
