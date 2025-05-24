@@ -16,8 +16,9 @@ namespace Libreria.LogicaAplicacion.CasoUso.Usuarios
 
         public void Execute(UserDto userDto, int id)
         {
-
-            _repo.Modify(MapperUser.FromDto(userDto), userDto.Id); 
+            var user = MapperUser.FromDto(userDto);
+            user.Id = id;
+            _repo.Modify(user,id);
         }
     }
 }

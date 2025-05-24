@@ -53,9 +53,9 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             return unU;
         }
 
-        public void Modify(User obj, int id)
+        public void Modify(User obj, int Id)
         {
-            var existingUser = GetById(id);
+            var existingUser = GetById(Id);
 
             if (existingUser == null) throw new Exception("Usuario no encontrado");
 

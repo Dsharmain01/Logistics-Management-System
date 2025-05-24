@@ -1,9 +1,16 @@
-﻿namespace Libreria.CasoUsoCompartida.DTOS.Users
+﻿using System.Text.Json.Serialization;
+
+namespace Libreria.CasoUsoCompartida.DTOS.Users
 {
     public record UserDto(
-        int Id,
-        string Name,
-        string LastName,
-        string Email,
-        string Password);
+            string Name,
+            string LastName,
+            string Email,
+            string Password,
+            string Rol
+        )
+    {
+        [JsonIgnore]
+        public int Id { get; set; } = 0; 
+    }
 }

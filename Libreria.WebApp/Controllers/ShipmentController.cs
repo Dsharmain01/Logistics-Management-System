@@ -67,7 +67,6 @@ namespace Libreria.WebApp.Controllers
             {
                 int? pickupAgency = null;
 
-                // Verificar si el tipo de envío es COMMON y convertir PickupAgency a int
                 if (shipment.TipoEnvio == TipoEnvio.COMMON && !string.IsNullOrWhiteSpace(shipment.PickupAgency))
                 {
                     if (int.TryParse(shipment.PickupAgency, out int parsedValue))
@@ -153,7 +152,7 @@ namespace Libreria.WebApp.Controllers
                     postalAddress
                 );
 
-                _modify.Execute(shipmentDto, id);
+                _modify.Execute(shipmentDto,id);
 
                 return RedirectToAction("Index");
             }

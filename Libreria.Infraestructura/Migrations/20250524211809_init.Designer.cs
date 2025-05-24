@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Libreria.Infraestructura.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250522231640_init")]
+    [Migration("20250524211809_init")]
     partial class init
     {
         /// <inheritdoc />

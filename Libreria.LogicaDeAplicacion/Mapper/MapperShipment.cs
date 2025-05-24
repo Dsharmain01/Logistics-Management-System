@@ -7,16 +7,18 @@ namespace Libreria.LogicaAplicacion.Mapper
     {
         public static Shipment FromDto(ShipmentDto shipmentDto)
         {
+            int trackNbr = shipmentDto.TrackingNumber; // Usar el valor del DTO
+
             if (shipmentDto.TipoEnvio == TipoEnvio.COMMON)
             {
                 return new Common(
-                    0,
+                    trackNbr,
                     shipmentDto.Weight,
                     shipmentDto.EmployeeId,
                     shipmentDto.startDate,
                     shipmentDto.DeliveryDate,
                     shipmentDto.CustomerEmail,
-                    shipmentDto.PickupAgency 
+                    shipmentDto.PickupAgency
                 )
                 {
                     CurrentStatus = shipmentDto.CurrentStatus
@@ -25,7 +27,7 @@ namespace Libreria.LogicaAplicacion.Mapper
             else if (shipmentDto.TipoEnvio == TipoEnvio.URGENT)
             {
                 return new Urgent(
-                    0,
+                    trackNbr,
                     shipmentDto.Weight,
                     shipmentDto.EmployeeId,
                     shipmentDto.startDate,

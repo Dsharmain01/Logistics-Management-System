@@ -39,9 +39,9 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             return unS;
         }
 
-        public void Modify(Shipment obj, int trackNbr)
+        public void Modify(Shipment obj, int trkNbr)
         {
-            var existingShipment = GetById(trackNbr);
+            var existingShipment = GetById(trkNbr);
 
             if (existingShipment == null) throw new Exception("Shipment no encontrado");
 
