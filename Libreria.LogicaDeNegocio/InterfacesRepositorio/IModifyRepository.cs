@@ -2,6 +2,6 @@
 {
     public interface IModifyRepository<T>
     {
-        void Modify(T obj, int id);
+        void Modify(T obj, int Id);
     }
 }

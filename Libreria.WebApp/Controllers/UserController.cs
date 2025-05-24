@@ -74,11 +74,12 @@ namespace Libreria.WebApp.Controllers
                 var emailVo = new Email(user.Email);
 
 
-                _add.Execute ( new UserDto(user.Id,
+                _add.Execute ( new UserDto(
                                               user.Name,
                                               user.LastName,
                                               user.Email,
-                                              user.Password));
+                                              user.Password,
+                                              user.Rol));
 
                 var audit = new AuditLog
                 {
@@ -156,7 +157,7 @@ namespace Libreria.WebApp.Controllers
         [HttpPost]
         public IActionResult Modify(VMUser user)
         {
-            var userDto = new UserDto(user.Id, user.Name, user.LastName, user.Email, user.Password);
+            var userDto = new UserDto(user.Name, user.LastName, user.Email, user.Password, user.Rol);
             try
             {
                 _modify.Execute(userDto, user.Id);
