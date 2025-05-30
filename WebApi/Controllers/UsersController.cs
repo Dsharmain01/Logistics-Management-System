@@ -2,6 +2,7 @@
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Microsoft.AspNetCore.Mvc;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
+using Libreria.LogicaDeNegocio.Entities;
 
 namespace WebApi.Controllers
 {
@@ -52,20 +53,35 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(string id)
         {
             try
             {
-                return Ok(_getById.Execute(id));
+                int idUsuario;
+                int.TryParse(id, out idUsuario);
+
+                if (idUsuario == 0)
+                {
+
+                    throw new BadRequestException("El valor del id es incorrecto");
+
+                }
+                return Ok(_getById.Execute(idUsuario));
             }
             catch (NotFoundException e)
             {
                 return StatusCode(e.StatusCode(), e.Error());
             }
+            catch (BadRequestException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
+            }
             catch (Exception)
             {
+                Error error =
                 return StatusCode(500, "Intente nuevamente");
             }
+
         }
 
         [HttpPost]
@@ -73,7 +89,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                _add.Execute(user);               
+                _add.Execute(user);
                 return Ok();
             }
             catch (Exception)
@@ -100,4 +116,4 @@ namespace WebApi.Controllers
 
 
 
- 
+
