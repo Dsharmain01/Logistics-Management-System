@@ -1,5 +1,6 @@
 ﻿using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
+using Libreria.LogicaDeNegocio.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
@@ -8,11 +9,14 @@ namespace WebApi.Controllers
     {
 
         private IGetById<DtoListedShipment> _getById;
+        private IGetByTrackNbr _getByTrackNbr;
 
         public ShipmentsController(
-            IGetById<DtoListedShipment> getById)
+            IGetById<DtoListedShipment> getById,
+            IGetByTrackNbr getByTrackNbr)
         {
             _getById = getById;
+            _getByTrackNbr = getByTrackNbr;
         }
 
         [HttpGet("{trackNbr}")]
@@ -20,15 +24,32 @@ namespace WebApi.Controllers
         {
             try
             {
-                return Ok(_getById.Execute(trackNbr));
+                if (trackNbr == 0)
+                {
+                    throw new BadRequestException("El valor del id es incorrecto");
+                }
+                var shipment = _getById.Execute(trackNbr);
+                var trackings = _getByTrackNbr.Execute(trackNbr);
+                var result = new
+                {
+                    Shipment = shipment,
+                    Trackings = trackings
+                };
+
+                return Ok(result);
             }
             catch (NotFoundException e)
             {
-                return StatusCode(404, e.Message);
+                return StatusCode(e.StatusCode(), e.Error());
+            }
+            catch (BadRequestException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
             }
             catch (Exception)
             {
-                return StatusCode(500, "Intente nuevamente");
+                Error error = new Error(500, "Intente nuevamente");
+                return StatusCode(500, error); ;
             }
         }
     }

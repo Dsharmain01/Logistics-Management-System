@@ -12,6 +12,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             _context = context;
         }
 
+
         public int Add(Tracking obj)
         {
             if (obj == null)
@@ -22,6 +23,18 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             _context.Trackings.Add(obj);
             _context.SaveChanges();
             return obj.Id;
-        } 
+        }
+
+        public IEnumerable<Tracking> GetByTrackNbr(int trackNbr)
+        {
+            if (trackNbr <= 0)
+            {
+                throw new ArgumentException("El número de tracking debe ser mayor que cero.");
+            }
+
+            return _context.Trackings
+                           .Where(t => t.TrackNbr == trackNbr)
+                           .ToList();
+        }
     }
 }

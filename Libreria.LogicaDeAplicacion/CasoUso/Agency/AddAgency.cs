@@ -12,9 +12,9 @@ namespace Libreria.LogicaDeAplicacion.CasoUso.Agency
         {
             _repo = repo;
         }
-        public void Execute(AgencyDto agencyDto)
+        public int Execute(AgencyDto agencyDto)
         {
-            _repo.Add(MapperAgency.FromDto(agencyDto));
+            return(_repo.Add(MapperAgency.FromDto(agencyDto)));
         }
     }
 }

@@ -36,7 +36,7 @@
       {
         "Name": "user",
         "Type": "Libreria.CasoUsoCompartida.DTOS.Users.UserDto",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -67,7 +67,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

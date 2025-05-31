@@ -15,7 +15,7 @@ namespace Libreria.LogicaAplicacion.CasoUso.Usuarios
             _repo = repo;
         }
 
-        public void Execute(UserDto userDto)
+        public int Execute(UserDto userDto)
 
         {
             if (_repo.ExisteEmail(userDto.Email))
@@ -23,7 +23,7 @@ namespace Libreria.LogicaAplicacion.CasoUso.Usuarios
                 throw new RepeatedUserException("Ya existe un usuario registrado con ese email.");
             }
             var user = MapperUser.FromDto(userDto);
-            _repo.Add(user);
+            return(_repo.Add(user));
         }
     }
 }

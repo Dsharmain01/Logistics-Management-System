@@ -5,16 +5,18 @@ using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 
 namespace Libreria.LogicaDeAplicacion.CasoUso.Tracking
 {
-    public class AddTracking:IAdd<TrackingDto>
+    public class GetByTrackNbr : IGetByTrackNbr
     {
         private ITrackingRepository _repo;
-        public AddTracking(ITrackingRepository repo)
+
+        public GetByTrackNbr(ITrackingRepository repo)
         {
             _repo = repo;
         }
-        public int Execute(TrackingDto trackingDto)
+
+        public IEnumerable<DtoListedTracking> Execute(int trackNbr)
         {
-            return(_repo.Add(MapperTracking.FromDto(trackingDto)));
+            return MapperTracking.ToListaDto(_repo.GetByTrackNbr(trackNbr));
         }
     }
 }

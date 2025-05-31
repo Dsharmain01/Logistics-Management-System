@@ -1,7 +1,9 @@
-﻿namespace Libreria.CasoUsoCompartida.UCInterfaces
+﻿using Libreria.CasoUsoCompartida.DTOS.Tracking;
+
+namespace Libreria.CasoUsoCompartida.UCInterfaces
 {
-    public interface IGetByTrackNbr<T>
+    public interface IGetByTrackNbr
     {
-        IEnumerable<T> Execute(int trackNbr);
+        IEnumerable<DtoListedTracking> Execute(int trackNbr);
     }
 }

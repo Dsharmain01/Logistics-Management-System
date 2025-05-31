@@ -95,21 +95,21 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         {
             var trackings = new List<Tracking>
             {
-                new Tracking(0, 12345, "En preparación", DateTime.Now.AddHours(-10), 1),
-                new Tracking(0, 12345, "En tránsito hacia destino", DateTime.Now.AddHours(-5), 1),
+                new Tracking(0, 2, "En preparación", DateTime.Now.AddHours(-10), 1),
+                new Tracking(0, 2, "En tránsito hacia destino", DateTime.Now.AddHours(-5), 1),
 
-                new Tracking(0, 67890, "Retirado por agencia", DateTime.Now.AddHours(-4), 2),
-                new Tracking(0, 67890, "En camino al destino", DateTime.Now.AddHours(-2), 2),
+                new Tracking(0, 5, "Retirado por agencia", DateTime.Now.AddHours(-4), 2),
+                new Tracking(0, 5, "En camino al destino", DateTime.Now.AddHours(-2), 2),
 
-                new Tracking(0, 11111, "En preparación", DateTime.Now.AddHours(-3), 3),
+                new Tracking(0, 6, "En preparación", DateTime.Now.AddHours(-3), 3),
 
-                new Tracking(0, 22222, "Listo para enviar", DateTime.Now.AddHours(-2), 4),
-                new Tracking(0, 22222, "Salida del centro logístico", DateTime.Now.AddHours(-1), 4),
+                new Tracking(0, 7, "Listo para enviar", DateTime.Now.AddHours(-2), 4),
+                new Tracking(0, 7, "Salida del centro logístico", DateTime.Now.AddHours(-1), 4),
 
-                new Tracking(0, 44444, "Entregado", DateTime.Now, 5),
+                new Tracking(0, 8, "Entregado", DateTime.Now, 5),
 
-                new Tracking(0, 55555, "En reparto", DateTime.Now.AddMinutes(-20), 1),
-                new Tracking(0, 55555, "Entregado al destinatario", DateTime.Now, 1)
+                new Tracking(0, 3, "En reparto", DateTime.Now.AddMinutes(-20), 1),
+                new Tracking(0, 3, "Entregado al destinatario", DateTime.Now, 1)
             };
 
             _context.Trackings.AddRange(trackings);

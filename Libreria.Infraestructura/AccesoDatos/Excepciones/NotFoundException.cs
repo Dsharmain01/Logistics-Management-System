@@ -1,5 +1,4 @@
-﻿using Libreria.Infraestructura.AccesoDatos.Excepciones;
-
+﻿
 namespace Libreria.Infraestructura.AccesoDatos.Excepciones
 {
     [Serializable]
