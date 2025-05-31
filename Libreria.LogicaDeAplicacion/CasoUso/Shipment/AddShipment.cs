@@ -11,9 +11,9 @@ namespace Libreria.LogicaDeAplicacion.CasoUso.Shipment
        {
             _repo = repo;
         }
-        public void Execute(ShipmentDto shipmentDto)
+        public int Execute(ShipmentDto shipmentDto)
         {
-            _repo.Add(MapperShipment.FromDto(shipmentDto));
+           return(_repo.Add(MapperShipment.FromDto(shipmentDto)));
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IAdd <T>
     {
-        void Execute(T obj);
+        int Execute(T obj);
     }
 }
