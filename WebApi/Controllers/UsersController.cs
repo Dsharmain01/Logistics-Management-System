@@ -78,8 +78,8 @@ namespace WebApi.Controllers
             }
             catch (Exception)
             {
-                Error error =
-                return StatusCode(500, "Intente nuevamente");
+                Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
+                return StatusCode(500, error);
             }
 
         }
@@ -111,6 +111,44 @@ namespace WebApi.Controllers
                 return StatusCode(500, "Intente nuevamente");
             }
         }
+
+
+
+        [HttpPut("{Id}")]
+        public IActionResult Modify(int Id, [FromBody] UserDto user)
+        {
+            try
+            {
+
+                if (Id == 0)
+                {
+
+                    throw new BadRequestException("El valor del id es incorrecto");
+
+                }
+
+                if (user.Rol != "Admin" && user.Rol != "Client" && user.Rol != "Worker")
+                {
+                    throw new BadRequestException("El rol debe ser 'Admin', 'Client' o 'Worker'");
+                }
+                _modify.Execute(user, Id);
+                return Ok();
+            }
+            catch (NotFoundException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
+            }
+            catch (BadRequestException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
+            }
+            catch (Exception)
+            {
+                Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
+                return StatusCode(500, error);
+            }
+        }
+
     }
 }
 
