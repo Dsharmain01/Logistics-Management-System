@@ -72,5 +72,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UsersController",
+    "Method": "Modify",
+    "RelativePath": "api/v1/Users/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "user",
+        "Type": "Libreria.CasoUsoCompartida.DTOS.Users.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
