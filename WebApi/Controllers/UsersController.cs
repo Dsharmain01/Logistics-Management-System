@@ -153,24 +153,31 @@ namespace WebApi.Controllers
 
 
 
-        [HttpPut("{Id}")]
-        public IActionResult Modify(int Id, [FromBody] UserDto user)
+        [HttpPut("{Id}/password")]
+        public IActionResult ChangePassword(int Id, [FromBody] UserPasswordDto dto)
         {
             try
             {
-
                 if (Id == 0)
-                {
-
                     throw new BadRequestException("El valor del id es incorrecto");
 
-                }
+                if (string.IsNullOrWhiteSpace(dto.currentPassword) || string.IsNullOrWhiteSpace(dto.newPassword))
+                    throw new BadRequestException("Debe ingresar la contraseña actual y la nueva.");
 
-                if (user.Rol != "Admin" && user.Rol != "Client" && user.Rol != "Worker")
-                {
-                    throw new BadRequestException("El rol debe ser 'Admin', 'Client' o 'Worker'");
-                }
-                _modify.Execute(user, Id);
+                var existingUser = _getById.Execute(Id);
+
+                if (existingUser.Password != dto.currentPassword)
+                    throw new BadRequestException("La contraseña actual es incorrecta.");
+
+                UserDto updatedUser = new UserDto(
+                    existingUser.Name,
+                    existingUser.LastName,
+                    existingUser.Email,
+                    dto.newPassword,
+                    existingUser.Rol
+                );
+
+                _modify.Execute(updatedUser, Id);
                 return Ok();
             }
             catch (NotFoundException e)
@@ -181,6 +188,10 @@ namespace WebApi.Controllers
             {
                 return StatusCode(e.StatusCode(), e.Error());
             }
+            catch (LogicaNegocioException e)
+            {
+                return StatusCode(400, e.Error());
+            }
             catch (Exception)
             {
                 Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
@@ -189,8 +200,8 @@ namespace WebApi.Controllers
         }
 
     }
-}
 
+}
 
 
 

@@ -47,6 +47,46 @@ namespace Libreria.LogicaAplicacion.Mapper
             }
         }
 
+        public static User PasswordFromDto(UserDto userDto)
+        {
+            int id = userDto.Id;
+
+            if (userDto.Rol == "Admin")
+            {
+                return new Admin(
+                    id,
+                    new Name(userDto.Name),
+                    new LastName(userDto.LastName),
+                    new Email(userDto.Email),
+                    new Password(userDto.Password)
+                );
+            }
+            else if (userDto.Rol == "Worker")
+            {
+                return new Worker(
+                    id,
+                    new Name(userDto.Name),
+                    new LastName(userDto.LastName),
+                    new Email(userDto.Email),
+                    new Password(userDto.Password)
+                );
+            }
+            else if (userDto.Rol == "Client")
+            {
+                return new Client(
+                    id,
+                    new Name(userDto.Name),
+                    new LastName(userDto.LastName),
+                    new Email(userDto.Email),
+                    new Password(userDto.Password)
+                );
+            }
+            else
+            {
+                throw new Exception("Rol no valido");
+            }
+        }
+
         public static DtoListedUser ToDto(User user)
         {
             return new DtoListedUser(user.Id,

@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Libreria.CasoUsoCompartida.DTOS.Users.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.UsersController",
     "Method": "GetAll",
     "RelativePath": "api/v1/Users",
@@ -75,8 +91,8 @@
   },
   {
     "ContainingType": "WebApi.Controllers.UsersController",
-    "Method": "Modify",
-    "RelativePath": "api/v1/Users/{Id}",
+    "Method": "ChangePassword",
+    "RelativePath": "api/v1/Users/{Id}/password",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -87,8 +103,8 @@
         "IsRequired": true
       },
       {
-        "Name": "user",
-        "Type": "Libreria.CasoUsoCompartida.DTOS.Users.UserDto",
+        "Name": "dto",
+        "Type": "Libreria.CasoUsoCompartida.DTOS.Users.UserPasswordDto",
         "IsRequired": true
       }
     ],

@@ -46,6 +46,8 @@ namespace WebApi
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IShipmentRepository, ShipmentRepository>();
             builder.Services.AddScoped<ITrackingRepository, TrackingRepository>();
+            builder.Services.AddScoped<ILogin, LoginUser>();
+
 
             builder.Services.AddScoped<SeedData>();
 
