@@ -59,9 +59,9 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
             if (existingUser == null) throw new Exception("Usuario no encontrado");
 
-            existingUser.Name = obj.Name;
-            existingUser.LastName = obj.LastName;
-            existingUser.Email = obj.Email;
+            //existingUser.Name = obj.Name;
+            //existingUser.LastName = obj.LastName;
+            //existingUser.Email = obj.Email;
             existingUser.Password = obj.Password;
             _context.SaveChanges();
 
