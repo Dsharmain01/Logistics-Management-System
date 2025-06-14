@@ -14,6 +14,9 @@ namespace Libreria.LogicaDeNegocio.Entities
         public DateTime? DeliveryDate { get; set; }
         public Status CurrentStatus { get; set; }
         public string CustomerEmail { get; set; }
+
+        public ICollection<Tracking> Trackings { get; set; } = new List<Tracking>();
+
         int IEntity.Id
         {
             get => TrackNbr;

@@ -14,6 +14,11 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
              .WithMany()
              .HasForeignKey(shipment => shipment.EmployeeId)
               .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasMany(s => s.Trackings) 
+                .WithOne() 
+                .HasForeignKey("ShipmentId") 
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

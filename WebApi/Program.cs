@@ -1,10 +1,10 @@
 
-using Libreria.CasoUsoCompartida.DTOS.Tracking;
+using Libreria.CasoUsoCompartida.DTOS.Shipment;
 using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.Infraestructura.AccesoDatos.EF;
-using Libreria.LogicaAplicacion.CasoUso.Shipments;
 using Libreria.LogicaAplicacion.CasoUso.Usuarios;
+using Libreria.LogicaDeAplicacion.CasoUso.Shipment;
 using Libreria.LogicaDeAplicacion.CasoUso.Tracking;
 using Libreria.LogicaDeAplicacion.CasoUso.User;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
@@ -40,6 +40,7 @@ namespace WebApi
 
             //Inyectar casso de uso del tracking
             builder.Services.AddScoped<IGetByTrackNbr, GetByTrackNbr>();
+            builder.Services.AddScoped<IGetShipmentsByCustomer<DtoListedShipment>, GetShipmentsByCustomer>();
 
             //inyectar el repositorio 
 

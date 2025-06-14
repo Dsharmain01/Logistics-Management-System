@@ -6,7 +6,8 @@ namespace Libreria.LogicaDeNegocio.InterfacesRepositorio
         IAddRepository<Shipment>,
         IGetByIdRepository<Shipment>,
         IGetAllRepository<Shipment>,
-        IModifyRepository<Shipment>
+        IModifyRepository<Shipment>,
+        IGetShipmentsByCustomerRepository<Shipment>
     {
     }
 }

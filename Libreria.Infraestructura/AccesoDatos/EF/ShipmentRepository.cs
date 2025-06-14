@@ -1,6 +1,7 @@
 ﻿using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
+using Microsoft.EntityFrameworkCore;
 
 namespace Libreria.Infraestructura.AccesoDatos.EF
 {
@@ -61,5 +62,14 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
             _context.SaveChanges();
         }
+
+        public IEnumerable<Shipment> GetByCustomerEmail(string customerEmail)
+        {
+            return _context.Shipments
+                .Include(s => s.Trackings)
+                .Where(s => s.CustomerEmail == customerEmail)
+                .ToList();
+        }
     }
 }
+
