@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Libreria.Infraestructura.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250601002647_init")]
+    [Migration("20250614221002_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -128,12 +128,17 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ShipmentId")
+                        .HasColumnType("int");
+
                     b.Property<int>("TrackNbr")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeId");
+
+                    b.HasIndex("ShipmentId");
 
                     b.ToTable("Trackings");
                 });
@@ -285,6 +290,11 @@ namespace Libreria.Infraestructura.Migrations
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Libreria.LogicaDeNegocio.Entities.Shipment", null)
+                        .WithMany("Trackings")
+                        .HasForeignKey("ShipmentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Libreria.LogicaNegocio.Entities.User", b =>
@@ -372,6 +382,11 @@ namespace Libreria.Infraestructura.Migrations
 
                     b.Navigation("Password")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Libreria.LogicaDeNegocio.Entities.Shipment", b =>
+                {
+                    b.Navigation("Trackings");
                 });
 #pragma warning restore 612, 618
         }

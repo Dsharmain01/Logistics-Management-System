@@ -10,13 +10,16 @@ namespace WebApi.Controllers
 
         private IGetById<DtoListedShipment> _getById;
         private IGetByTrackNbr _getByTrackNbr;
+        private IGetShipmentsByCustomer<DtoListedShipment> _getShipmentsByClient;
 
         public ShipmentsController(
             IGetById<DtoListedShipment> getById,
-            IGetByTrackNbr getByTrackNbr)
+            IGetByTrackNbr getByTrackNbr,
+            IGetShipmentsByCustomer<DtoListedShipment> getShipmentsByClient)
         {
             _getById = getById;
             _getByTrackNbr = getByTrackNbr;
+            _getShipmentsByClient = getShipmentsByClient;
         }
 
         [HttpGet("{trackNbr}")]
@@ -50,6 +53,46 @@ namespace WebApi.Controllers
             {
                 Error error = new Error(500, "Intente nuevamente");
                 return StatusCode(500, error); ;
+            }
+        }
+
+        [HttpGet("client/{customerEmail}")]
+        public IActionResult GetShipmentsByCustomer(string customerEmail)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(customerEmail))
+                {
+                    throw new BadRequestException("El correo electrónico del cliente no puede estar vacío.");
+                }
+
+                var shipments = _getShipmentsByClient.Execute(customerEmail);
+
+                if (!shipments.Any())
+                {
+                    throw new NotFoundException("No se encontraron envíos para el cliente especificado.");
+                }
+
+                var result = shipments.Select(shipment => new
+                {
+                    Shipment = shipment,
+                    Trackings = _getByTrackNbr.Execute(shipment.TrackingNumber)
+                });
+
+                return Ok(result);
+            }
+            catch (NotFoundException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
+            }
+            catch (BadRequestException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
+            }
+            catch (Exception)
+            {
+                var error = new Error(500, "Ocurrió un error inesperado. Intente nuevamente.");
+                return StatusCode(500, error);
             }
         }
     }

@@ -102,11 +102,18 @@ namespace Libreria.Infraestructura.Migrations
                     TrackNbr = table.Column<int>(type: "int", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CommentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EmployeeId = table.Column<int>(type: "int", nullable: true)
+                    EmployeeId = table.Column<int>(type: "int", nullable: true),
+                    ShipmentId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Trackings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Trackings_Shipments_ShipmentId",
+                        column: x => x.ShipmentId,
+                        principalTable: "Shipments",
+                        principalColumn: "TrackNbr",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Trackings_Users_EmployeeId",
                         column: x => x.EmployeeId,
@@ -129,6 +136,11 @@ namespace Libreria.Infraestructura.Migrations
                 name: "IX_Trackings_EmployeeId",
                 table: "Trackings",
                 column: "EmployeeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trackings_ShipmentId",
+                table: "Trackings",
+                column: "ShipmentId");
         }
 
         /// <inheritdoc />
@@ -141,10 +153,10 @@ namespace Libreria.Infraestructura.Migrations
                 name: "AuditLogs");
 
             migrationBuilder.DropTable(
-                name: "Shipments");
+                name: "Trackings");
 
             migrationBuilder.DropTable(
-                name: "Trackings");
+                name: "Shipments");
 
             migrationBuilder.DropTable(
                 name: "Users");

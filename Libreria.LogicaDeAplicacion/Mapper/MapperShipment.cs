@@ -1,4 +1,5 @@
 ﻿using Libreria.CasoUsoCompartida.DTOS.Shipment;
+using Libreria.CasoUsoCompartida.DTOS.Tracking;
 using Libreria.LogicaDeNegocio.Entities;
 
 namespace Libreria.LogicaAplicacion.Mapper
@@ -128,5 +129,9 @@ namespace Libreria.LogicaAplicacion.Mapper
 
             return shipmentDtos;
         }
+
+       
+    
     }
 }
+

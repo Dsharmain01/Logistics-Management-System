@@ -109,5 +109,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "GetShipmentsByCustomer",
+    "RelativePath": "client/{customerEmail}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerEmail",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
