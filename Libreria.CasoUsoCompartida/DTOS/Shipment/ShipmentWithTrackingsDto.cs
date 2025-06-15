@@ -1,15 +1,16 @@
 ﻿
+using Libreria.CasoUsoCompartida.DTOS.Tracking;
 using static Libreria.LogicaDeNegocio.Entities.Shipment;
 
 namespace Libreria.CasoUsoCompartida.DTOS.Shipment
 {
-    public enum TipoEnvio
+    public enum TipoEnvio1
     {
         COMMON,
         URGENT
     }
 
-    public record ShipmentDto(
+    public record ShipmentWithTrackingsDto(
         int TrackingNumber,
         decimal Weight,
         int? EmployeeId,
@@ -19,7 +20,7 @@ namespace Libreria.CasoUsoCompartida.DTOS.Shipment
         string CustomerEmail,
         TipoEnvio TipoEnvio,
         int? PickupAgency,
-        string? PostalAddress
+        string? PostalAddress,
+       List<TrackingDto> Trackings
     );
 }
-

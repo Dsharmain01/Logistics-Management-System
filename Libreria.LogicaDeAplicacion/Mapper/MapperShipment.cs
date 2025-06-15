@@ -102,6 +102,37 @@ namespace Libreria.LogicaAplicacion.Mapper
             );
         }
 
+        public static ShipmentWithTrackingsDto ToWithTrackingsDto(Shipment shipment)
+        {
+            TipoEnvio tipo = shipment is Urgent ? TipoEnvio.URGENT : TipoEnvio.COMMON;
+
+            int? pickupAgency = tipo == TipoEnvio.COMMON ? ((Common)shipment).PickupAgency : null;
+            string? postalAddress = tipo == TipoEnvio.URGENT ? ((Urgent)shipment).PostalAddress : null;
+
+            var trackings = shipment.Trackings?
+                .Select(t => new TrackingDto(
+                    t.TrackNbr,
+                    t.Comment,
+                    t.CommentDate,
+                    t.EmployeeId
+                )).ToList() ?? new List<TrackingDto>();
+
+            return new ShipmentWithTrackingsDto(
+                shipment.TrackNbr,
+                shipment.Weight,
+                shipment.EmployeeId,
+                shipment.StartDate,
+                shipment.DeliveryDate,
+                shipment.CurrentStatus,
+                shipment.CustomerEmail,
+                tipo,
+                pickupAgency,
+                postalAddress,
+                trackings
+            );
+        }
+
+
         public static IEnumerable<DtoListedShipment> ToListaDto(IEnumerable<Shipment> shipments)
         {
             List<DtoListedShipment> shipmentDtos = new List<DtoListedShipment>();
@@ -130,8 +161,44 @@ namespace Libreria.LogicaAplicacion.Mapper
             return shipmentDtos;
         }
 
-       
-    
+        public static IEnumerable<ShipmentWithTrackingsDto> ToListaWithTrackingsDto(IEnumerable<Shipment> shipments)
+            {
+              var shipmentDtos = new List<ShipmentWithTrackingsDto>();
+
+                foreach (var shipment in shipments)
+                {
+                    TipoEnvio tipo = shipment is Urgent ? TipoEnvio.URGENT : TipoEnvio.COMMON;
+                    int? pickupAgency = shipment is Common commonShipment ? commonShipment.PickupAgency : null;
+                    string? postalAddress = shipment is Urgent urgentShipment ? urgentShipment.PostalAddress : null;
+
+                    // Mapear los trackings
+                    var trackings = shipment.Trackings?
+                        .Select(t => new TrackingDto(
+                            t.TrackNbr,
+                            t.Comment,
+                            t.CommentDate,
+                            t.EmployeeId
+                        )).ToList() ?? new List<TrackingDto>();
+
+                    shipmentDtos.Add(new ShipmentWithTrackingsDto(
+                        shipment.TrackNbr,
+                        shipment.Weight,
+                        shipment.EmployeeId,
+                        shipment.StartDate,
+                        shipment.DeliveryDate,
+                        shipment.CurrentStatus,
+                        shipment.CustomerEmail,
+                        tipo,
+                        pickupAgency,
+                        postalAddress,
+                        trackings
+                    ));
+                }
+
+                return shipmentDtos;
+            }
+        }
     }
-}
+
+
 

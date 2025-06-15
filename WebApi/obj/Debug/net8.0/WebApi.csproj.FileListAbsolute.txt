@@ -442,7 +442,6 @@ C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfoInputs.cache
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfo.cs
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.dll

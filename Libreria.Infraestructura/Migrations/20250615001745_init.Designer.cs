@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Libreria.Infraestructura.Migrations
 {
     [DbContext(typeof(LibreriaContext))]
-    [Migration("20250614221002_init")]
+    [Migration("20250615001745_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -128,9 +128,6 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ShipmentId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TrackNbr")
                         .HasColumnType("int");
 
@@ -138,7 +135,7 @@ namespace Libreria.Infraestructura.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.HasIndex("ShipmentId");
+                    b.HasIndex("TrackNbr");
 
                     b.ToTable("Trackings");
                 });
@@ -293,8 +290,9 @@ namespace Libreria.Infraestructura.Migrations
 
                     b.HasOne("Libreria.LogicaDeNegocio.Entities.Shipment", null)
                         .WithMany("Trackings")
-                        .HasForeignKey("ShipmentId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("TrackNbr")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Libreria.LogicaNegocio.Entities.User", b =>

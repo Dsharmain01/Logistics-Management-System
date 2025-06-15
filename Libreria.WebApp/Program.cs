@@ -42,7 +42,7 @@ namespace Libreria.WebApp
             builder.Services.AddScoped<IGetAll<DtoListedShipment>, GetAllShipment>();
             builder.Services.AddScoped<IAdd<ShipmentDto>, AddShipment>();
             //builder.Services.AddScoped<IRemove, RemoveShipment>();
-            builder.Services.AddScoped<IGetById<DtoListedShipment>, GetByIdShipment>();
+            builder.Services.AddScoped<IGetById<ShipmentWithTrackingsDto>, GetByIdShipment>();
             builder.Services.AddScoped<IModify<ShipmentDto>, ModifyShipment>();
 
             //Inyectar casos de uso del tracking

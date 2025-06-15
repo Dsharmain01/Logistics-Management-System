@@ -32,6 +32,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         public Shipment GetById(int trackNbr)
         {
             Shipment unS = _context.Shipments
+                .Include(s => s.Trackings)
                .FirstOrDefault(shipment => shipment.TrackNbr == trackNbr);
             if (unS == null)
             {
@@ -65,6 +66,7 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
         public IEnumerable<Shipment> GetByCustomerEmail(string customerEmail)
         {
+
             return _context.Shipments
                 .Include(s => s.Trackings)
                 .Where(s => s.CustomerEmail == customerEmail)

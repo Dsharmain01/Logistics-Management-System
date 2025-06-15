@@ -102,15 +102,14 @@ namespace Libreria.Infraestructura.Migrations
                     TrackNbr = table.Column<int>(type: "int", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CommentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EmployeeId = table.Column<int>(type: "int", nullable: true),
-                    ShipmentId = table.Column<int>(type: "int", nullable: true)
+                    EmployeeId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Trackings", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Trackings_Shipments_ShipmentId",
-                        column: x => x.ShipmentId,
+                        name: "FK_Trackings_Shipments_TrackNbr",
+                        column: x => x.TrackNbr,
                         principalTable: "Shipments",
                         principalColumn: "TrackNbr",
                         onDelete: ReferentialAction.Cascade);
@@ -138,9 +137,9 @@ namespace Libreria.Infraestructura.Migrations
                 column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Trackings_ShipmentId",
+                name: "IX_Trackings_TrackNbr",
                 table: "Trackings",
-                column: "ShipmentId");
+                column: "TrackNbr");
         }
 
         /// <inheritdoc />
