@@ -1,4 +1,5 @@
-﻿using Libreria.CasoUsoCompartida.UCInterfaces;
+﻿using Libreria.CasoUsoCompartida.DTOS.Shipment;
+using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
 using Libreria.LogicaDeNegocio.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -8,14 +9,14 @@ namespace WebApi.Controllers
     public class ShipmentsController : Controller
     {
 
-        private IGetById<DtoListedShipment> _getById;
+        private IGetById<ShipmentWithTrackingsDto> _getById;
         private IGetByTrackNbr _getByTrackNbr;
-        private IGetShipmentsByCustomer<DtoListedShipment> _getShipmentsByClient;
+        private IGetShipmentsByCustomer<ShipmentWithTrackingsDto> _getShipmentsByClient;
 
         public ShipmentsController(
-            IGetById<DtoListedShipment> getById,
+            IGetById<ShipmentWithTrackingsDto> getById,
             IGetByTrackNbr getByTrackNbr,
-            IGetShipmentsByCustomer<DtoListedShipment> getShipmentsByClient)
+            IGetShipmentsByCustomer<ShipmentWithTrackingsDto> getShipmentsByClient)
         {
             _getById = getById;
             _getByTrackNbr = getByTrackNbr;
@@ -32,14 +33,7 @@ namespace WebApi.Controllers
                     throw new BadRequestException("El valor del id es incorrecto");
                 }
                 var shipment = _getById.Execute(trackNbr);
-                var trackings = _getByTrackNbr.Execute(trackNbr);
-                var result = new
-                {
-                    Shipment = shipment,
-                    Trackings = trackings
-                };
-
-                return Ok(result);
+                return Ok(shipment);
             }
             catch (NotFoundException e)
             {
@@ -73,13 +67,7 @@ namespace WebApi.Controllers
                     throw new NotFoundException("No se encontraron envíos para el cliente especificado.");
                 }
 
-                var result = shipments.Select(shipment => new
-                {
-                    Shipment = shipment,
-                    Trackings = _getByTrackNbr.Execute(shipment.TrackingNumber)
-                });
-
-                return Ok(result);
+                return Ok(shipments);
             }
             catch (NotFoundException e)
             {

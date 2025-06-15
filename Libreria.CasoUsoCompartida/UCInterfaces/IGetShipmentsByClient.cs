@@ -5,6 +5,6 @@ namespace Libreria.CasoUsoCompartida.UCInterfaces
 {
     public interface IGetShipmentsByCustomer<T>
     {
-        IEnumerable<DtoListedShipment> Execute(string customerEmail);
+        IEnumerable<ShipmentWithTrackingsDto> Execute(string customerEmail);
     }
 }

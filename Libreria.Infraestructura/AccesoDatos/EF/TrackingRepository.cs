@@ -16,14 +16,23 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         public int Add(Tracking obj)
         {
             if (obj == null)
-            {
                 throw new ArgumentNullException("Esta vacio");
-            }
+
             obj.Validar();
-            _context.Trackings.Add(obj);
+
+            var shipment = _context.Shipments
+                .FirstOrDefault(s => s.TrackNbr == obj.TrackNbr);
+
+            if (shipment == null)
+                throw new ArgumentException("No existe un envío con ese número de tracking.");
+
+            shipment.Trackings.Add(obj);
             _context.SaveChanges();
+
             return obj.Id;
         }
+
+
 
         public IEnumerable<Tracking> GetByTrackNbr(int trackNbr)
         {

@@ -125,9 +125,6 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ShipmentId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TrackNbr")
                         .HasColumnType("int");
 
@@ -135,7 +132,7 @@ namespace Libreria.Infraestructura.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.HasIndex("ShipmentId");
+                    b.HasIndex("TrackNbr");
 
                     b.ToTable("Trackings");
                 });
@@ -290,8 +287,9 @@ namespace Libreria.Infraestructura.Migrations
 
                     b.HasOne("Libreria.LogicaDeNegocio.Entities.Shipment", null)
                         .WithMany("Trackings")
-                        .HasForeignKey("ShipmentId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("TrackNbr")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Libreria.LogicaNegocio.Entities.User", b =>

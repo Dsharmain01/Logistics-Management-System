@@ -1,10 +1,11 @@
-﻿using Libreria.CasoUsoCompartida.UCInterfaces;
+﻿using Libreria.CasoUsoCompartida.DTOS.Shipment;
+using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaAplicacion.Mapper;
 using Libreria.LogicaDeNegocio.InterfacesRepositorio;
 
 namespace Libreria.LogicaDeAplicacion.CasoUso.Shipment
 {
-    public class GetShipmentsByCustomer : IGetShipmentsByCustomer<DtoListedShipment>
+    public class GetShipmentsByCustomer : IGetShipmentsByCustomer<ShipmentWithTrackingsDto>
     {
         private IShipmentRepository _repo;
 
@@ -13,9 +14,9 @@ namespace Libreria.LogicaDeAplicacion.CasoUso.Shipment
             _repo = shipmentRepository;
         }
 
-        public IEnumerable<DtoListedShipment> Execute(string customerEmail)
+        public IEnumerable<ShipmentWithTrackingsDto> Execute(string customerEmail)
         {
-            return MapperShipment.ToListaDto(_repo.GetByCustomerEmail(customerEmail)
+            return MapperShipment.ToListaWithTrackingsDto(_repo.GetByCustomerEmail(customerEmail)
                 );
         }
     }

@@ -36,11 +36,11 @@ namespace WebApi
             builder.Services.AddScoped<IRemove, RemoveUser>();
 
             //Inyectar casos de uso del envio
-            builder.Services.AddScoped<IGetById<DtoListedShipment>, GetByIdShipment>();
+            builder.Services.AddScoped<IGetById<ShipmentWithTrackingsDto>, GetByIdShipment>();
 
             //Inyectar casso de uso del tracking
             builder.Services.AddScoped<IGetByTrackNbr, GetByTrackNbr>();
-            builder.Services.AddScoped<IGetShipmentsByCustomer<DtoListedShipment>, GetShipmentsByCustomer>();
+            builder.Services.AddScoped<IGetShipmentsByCustomer<ShipmentWithTrackingsDto>, GetShipmentsByCustomer>();
 
             //inyectar el repositorio 
 
