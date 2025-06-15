@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.logicadeaplicacion\\casouso\\shipment\\getbyidshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|solutionrelative:libreria.logicadeaplicacion\\casouso\\shipment\\getbyidshipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.logicadeaplicacion\\mapper\\mappershipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFC62E12-4DEB-401B-A1C0-6C570ABD610E}|Libreria.LogicaDeAplicacion\\Libreria.LogicaDeAplicacion.csproj|solutionrelative:libreria.logicadeaplicacion\\mapper\\mappershipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.infraestructura\\accesodatos\\ef\\shipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\shipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.logicadenegocio\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\entities\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.logicadenegocio\\interfacesrepositorio\\ishipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{926562B4-C586-4BAD-961E-ACDE84DFFBD1}|Libreria.LogicaDeNegocio\\Libreria.LogicaDeNegocio.csproj|solutionrelative:libreria.logicadenegocio\\interfacesrepositorio\\ishipmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.infraestructura\\accesodatos\\ef\\seedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\seedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12915D41-87EB-42E4-8E44-86F724442281}|Libreria.WebApp\\Libreria.WebApp.csproj|solutionrelative:libreria.webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,92 +43,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GetByIdShipment.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\GetByIdShipment.cs",
-              "RelativeDocumentMoniker": "Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\GetByIdShipment.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\GetByIdShipment.cs",
-              "RelativeToolTip": "Libreria.LogicaDeAplicacion\\CasoUso\\Shipment\\GetByIdShipment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAWwBIAAAA0AAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.WebApp\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Libreria.WebApp\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.WebApp\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Libreria.WebApp\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAmwFcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:47:37.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Shipment.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
-              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
-              "RelativeToolTip": "Libreria.LogicaDeNegocio\\Entities\\Shipment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:35:23.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IShipmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
-              "RelativeDocumentMoniker": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
-              "RelativeToolTip": "Libreria.LogicaDeNegocio\\InterfacesRepositorio\\IShipmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:38:53.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-15T18:16:06.862Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ShipmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\ShipmentsController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\ShipmentsController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\ShipmentsController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\ShipmentsController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:21:25.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MapperShipment.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
-              "RelativeDocumentMoniker": "Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
-              "RelativeToolTip": "Libreria.LogicaDeAplicacion\\Mapper\\MapperShipment.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAADwv4UAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:48:31.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SeeData.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
-              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
-              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:43:47.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ShipmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
-              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
-              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\ShipmentRepository.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowCIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T00:21:19.044Z",
+              "WhenOpened": "2025-06-15T18:15:53.422Z",
               "EditorCaption": ""
             }
           ]

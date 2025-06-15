@@ -26,19 +26,19 @@ namespace WebApi.Controllers
             {
                 if (loginDto == null)
                 {
-                    return BadRequest(new { error = "Debe enviar los datos de login." });
+                    throw new BadRequestException("Debe enviar los datos de login.");
                 }
 
                 if (string.IsNullOrWhiteSpace(loginDto.Email) || string.IsNullOrWhiteSpace(loginDto.Password))
                 {
-                    return BadRequest(new { error = "Email y contraseña son obligatorios." });
+                    throw new BadRequestException( "Email y contraseña son obligatorios." );
                 }
 
                 var user = _login.Execute(loginDto);
 
                 if (user == null)
                 {
-                    return Unauthorized(new { error = "Credenciales incorrectas." });
+                   throw new NotFoundException("Credenciales incorrectas.");
                 }
 
                 return Ok(user);
