@@ -1,8 +1,24 @@
 [
   {
+    "ContainingType": "WebApi.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Libreria.CasoUsoCompartida.DTOS.Users.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.ShipmentsController",
     "Method": "GetById",
-    "RelativePath": "{trackNbr}",
+    "RelativePath": "api/v1/Shipments/{trackNbr}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -16,16 +32,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.LoginController",
-    "Method": "Login",
-    "RelativePath": "api/v1/Login",
-    "HttpMethod": "POST",
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "GetShipmentsByCustomer",
+    "RelativePath": "api/v1/Shipments/client/{customerEmail}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loginDto",
-        "Type": "Libreria.CasoUsoCompartida.DTOS.Users.LoginDto",
+        "Name": "customerEmail",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -105,22 +121,6 @@
       {
         "Name": "dto",
         "Type": "Libreria.CasoUsoCompartida.DTOS.Users.UserPasswordDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApi.Controllers.ShipmentsController",
-    "Method": "GetShipmentsByCustomer",
-    "RelativePath": "client/{customerEmail}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "customerEmail",
-        "Type": "System.String",
         "IsRequired": true
       }
     ],
