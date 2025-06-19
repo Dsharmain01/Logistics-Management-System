@@ -4,7 +4,7 @@ using Libreria.Infraestructura.AccesoDatos.Excepciones;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaNegocio.Exceptions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
+using WebApi.Services;
 
 namespace WebApi.Controllers
 {
@@ -12,11 +12,14 @@ namespace WebApi.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private readonly ILogin _login;
 
-        public LoginController(ILogin login)
+        private readonly ILogin _login;
+        private readonly IJwtGenerator _jwtGenerator;
+
+        public LoginController(ILogin login, IJwtGenerator jwtGenerator)
         {
             _login = login;
+            _jwtGenerator = jwtGenerator;
         }
 
         [HttpPost]
@@ -41,7 +44,9 @@ namespace WebApi.Controllers
                    throw new NotFoundException("Credenciales incorrectas.");
                 }
 
-                return Ok(user);
+                var token = _jwtGenerator.GenerateToken(user);
+
+                return Ok(new { token });
             }
             catch (NotFoundException e)
             {

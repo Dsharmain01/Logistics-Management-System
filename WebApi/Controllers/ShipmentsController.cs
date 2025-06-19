@@ -2,10 +2,14 @@
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
 using Libreria.LogicaDeNegocio.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers
 {
+    [Route("api/v1/[controller]")]
+    [ApiController]
+    [Authorize]
     public class ShipmentsController : Controller
     {
 

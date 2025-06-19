@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaNegocio.Exceptions;
+using Microsoft.AspNetCore.Authorization;
+using static System.Net.WebRequestMethods;
 
 namespace WebApi.Controllers
 {
 
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Token]
     public class UsersController : ControllerBase
     {
 
