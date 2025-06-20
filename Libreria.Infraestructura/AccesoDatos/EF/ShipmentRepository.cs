@@ -26,7 +26,8 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
         public IEnumerable<Shipment> GetAll()
         {
-            return _context.Shipments.ToList();
+            return _context.Shipments
+            .ToList();
         }
 
         public Shipment GetById(int trackNbr)
@@ -70,6 +71,27 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
             return _context.Shipments
                 .Include(s => s.Trackings)
                 .Where(s => s.CustomerEmail == customerEmail)
+                .ToList();
+        }
+        public IEnumerable<Shipment> SearchShipmentByDate(DateTime date1, DateTime date2, string estado, string customerEmail)
+        {
+            return
+             _context.Shipments
+            .AsEnumerable()
+            .Where(s =>s.CustomerEmail == customerEmail && s.StartDate >= date1 && s.StartDate <= date2 && s.CurrentStatus.ToString() == estado)
+            .OrderBy(s => s.TrackNbr)
+            .ToList();
+
+
+
+        }
+
+        public IEnumerable<Shipment> SearchShipmentByComment(string comment, string customerEmail)
+        {
+            return _context.Shipments
+                .Include(s => s.Trackings)
+                .Where(s => s.CustomerEmail == customerEmail && s.Trackings.Any(t => t.Comment.Contains(comment)))
+                .OrderBy(s => s.StartDate)
                 .ToList();
         }
     }

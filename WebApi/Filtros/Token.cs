@@ -7,8 +7,6 @@ namespace WebApi.Filtros
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             var headers = context.HttpContext.Request.Headers;
-            var valorDolar = headers["ValorDolar"].ToString();
-            var lenguaje = headers["Lenguaje"].ToString();
             var token = headers["Token"].ToString();
 
             if (headers.ContainsKey("Authorization"))

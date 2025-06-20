@@ -7,7 +7,9 @@ namespace Libreria.LogicaDeNegocio.InterfacesRepositorio
         IGetByIdRepository<Shipment>,
         IGetAllRepository<Shipment>,
         IModifyRepository<Shipment>,
-        IGetShipmentsByCustomerRepository<Shipment>
+        IGetShipmentsByCustomerRepository<Shipment>,
+        ISearchShipmentByDateRepository<Shipment>,
+        ISearchShipmentByCommentRepository<Shipment>
     {
     }
 }

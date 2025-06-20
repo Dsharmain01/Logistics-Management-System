@@ -17,6 +17,32 @@
   },
   {
     "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "SearchShipmentByDate",
+    "RelativePath": "api/v1/Shipments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date1",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "date2",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
     "Method": "GetById",
     "RelativePath": "api/v1/Shipments/{trackNbr}",
     "HttpMethod": "GET",
@@ -34,15 +60,25 @@
   {
     "ContainingType": "WebApi.Controllers.ShipmentsController",
     "Method": "GetShipmentsByCustomer",
-    "RelativePath": "api/v1/Shipments/client/{customerEmail}",
+    "RelativePath": "api/v1/Shipments/client",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.ShipmentsController",
+    "Method": "SearchByComment",
+    "RelativePath": "api/v1/Shipments/comment",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "customerEmail",
+        "Name": "comment",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

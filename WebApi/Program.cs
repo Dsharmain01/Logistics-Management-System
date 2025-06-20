@@ -1,5 +1,6 @@
 
 using Libreria.CasoUsoCompartida.DTOS.Shipment;
+using Libreria.CasoUsoCompartida.DTOS.Tracking;
 using Libreria.CasoUsoCompartida.DTOS.Users;
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.Infraestructura.AccesoDatos.EF;
@@ -90,6 +91,8 @@ namespace WebApi
 
             //Inyectar casos de uso del envio
             builder.Services.AddScoped<IGetById<ShipmentWithTrackingsDto>, GetByIdShipment>();
+            builder.Services.AddScoped<ISearchShipmentByDate<DtoListedShipment>, SearchShipmentByDate>();
+            builder.Services.AddScoped<ISearchShipmentByComment<ShipmentWithTrackingsDto>,SearchShipmentByComment>();
 
             //Inyectar casso de uso del tracking
             builder.Services.AddScoped<IGetByTrackNbr, GetByTrackNbr>();

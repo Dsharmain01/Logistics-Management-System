@@ -1,4 +1,5 @@
 ﻿using Libreria.CasoUsoCompartida.DTOS.Users;
+using Libreria.LogicaNegocio.Entities;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -23,6 +24,7 @@ namespace WebApi.Services
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.NameId, usuario.Id.ToString() ),
+                new Claim(JwtRegisteredClaimNames.Email,usuario.Email.ToString())
             };
 
             var tokenDescriptor = new SecurityTokenDescriptor
