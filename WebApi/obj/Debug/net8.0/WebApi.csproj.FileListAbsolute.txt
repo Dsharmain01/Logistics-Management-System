@@ -662,3 +662,7 @@ C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-3
 C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\bin\Debug\net8.0\WebApi.xml
 C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\obj\Debug\net8.0\WebApi.xml
+C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\bin\Debug\net8.0\WebApi.xml
+C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\obj\Debug\net8.0\WebApi.xml
