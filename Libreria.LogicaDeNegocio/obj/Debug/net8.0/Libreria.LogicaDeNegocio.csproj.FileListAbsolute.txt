@@ -94,3 +94,4 @@ C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaD
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\refint\Libreria.LogicaDeNegocio.dll
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.pdb
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\ref\Libreria.LogicaDeNegocio.dll
+C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.csproj.AssemblyReference.cache

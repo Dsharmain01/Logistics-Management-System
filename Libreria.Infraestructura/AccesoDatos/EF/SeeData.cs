@@ -1,8 +1,8 @@
 ﻿using Libreria.LogicaDeNegocio.Entities;
+using Libreria.LogicaDeNegocio.Utilitarias;
 using Libreria.LogicaDeNegocio.Vo;
 using Libreria.LogicaNegocio.Entities;
 using Libreria.LogicaNegocio.Vo;
-
 namespace Libreria.Infraestructura.AccesoDatos.EF
 {
     public class SeedData
@@ -29,22 +29,23 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         {
             var users = new List<User>
             {
-                // Administrador precargado
-                new Admin(0, new Name("Administrador"), new LastName("Principal"), new Email("administrador@gmail.com"), new Password("Gerente2025.")),
 
-                // Otros administradores
-                new Admin(0, new Name("Carlos"), new LastName("Ramírez"), new Email("carlos.ramirez@gmail.com"), new Password("Admin+123")),
-                new Admin(0, new Name("Lucía"), new LastName("Fernández"), new Email("lucia.fernandez@gmail.com"), new Password("Lucia#2023")),
+new Admin(0, new Name("Administrador"), new LastName("Principal"), new Email("administrador@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Gerente2025."))),
 
-                // Trabajadores
-                new Worker(0, new Name("Javier"), new LastName("Santos"), new Email("javier.santos@gmail.com"), new Password("Worker+456")),
-                new Worker(0, new Name("Elena"), new LastName("Ruiz"), new Email("elena.ruiz@gmail.com"), new Password("Elena#789")),
-                new Worker(0, new Name("Pablo"), new LastName("Gómez"), new Email("pablo.gomez@gmail.com"), new Password("Pablo+101")),
-                new Worker(0, new Name("Sofía"), new LastName("García"), new Email("sofia.garcia@gmail.com"), new Password("Sofia#102")),
-                new Worker(0, new Name("Ana"), new LastName("Martínez"), new Email("ana.martinez@gmail.com"), new Password("Ana+456")),
-                new Worker(0, new Name("Luis"), new LastName("López"), new Email("luis.lopez@gmail.com"), new Password("Luis#789")),
-                new Worker(0, new Name("María"), new LastName("Gómez"), new Email("maria.gomez@gmail.com"), new Password("Maria+2023")),
-                new Worker(0, new Name("Matías"), new LastName("Silveira"), new Email("matias.silveira@gmail.com"), new Password("Matias#2024"))
+// Otros administradores
+new Admin(0, new Name("Carlos"), new LastName("Ramírez"), new Email("carlos.ramirez@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Admin+123"))),
+new Admin(0, new Name("Lucía"), new LastName("Fernández"), new Email("lucia.fernandez@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Lucia#2023"))),
+
+// Trabajadores
+new Worker(0, new Name("Javier"), new LastName("Santos"), new Email("javier.santos@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Worker+456"))),
+new Worker(0, new Name("Elena"), new LastName("Ruiz"), new Email("elena.ruiz@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Elena#789"))),
+new Worker(0, new Name("Pablo"), new LastName("Gómez"), new Email("pablo.gomez@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Pablo+101"))),
+new Worker(0, new Name("Sofía"), new LastName("García"), new Email("sofia.garcia@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Sofia#102"))),
+new Worker(0, new Name("Ana"), new LastName("Martínez"), new Email("ana.martinez@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Ana+456"))),
+new Worker(0, new Name("Luis"), new LastName("López"), new Email("luis.lopez@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Luis#789"))),
+new Worker(0, new Name("María"), new LastName("Gómez"), new Email("maria.gomez@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Maria+2023"))),
+new Worker(0, new Name("Matías"), new LastName("Silveira"), new Email("matias.silveira@gmail.com"), Password.FromHash(PasswordUtils.HashPassword("Matias#2024")))
+
             };
 
             _context.Users.AddRange(users);

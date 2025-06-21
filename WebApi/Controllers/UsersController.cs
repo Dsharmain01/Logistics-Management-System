@@ -6,6 +6,7 @@ using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaNegocio.Exceptions;
 using Microsoft.AspNetCore.Authorization;
 using static System.Net.WebRequestMethods;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebApi.Controllers
 {
@@ -169,7 +170,10 @@ namespace WebApi.Controllers
 
                 var existingUser = _getById.Execute(Id);
 
-                if (existingUser.Password != dto.currentPassword)
+                var hasher = new PasswordHasher<object>();
+                var result = hasher.VerifyHashedPassword(null, existingUser.Password, dto.currentPassword);
+
+                if (result != PasswordVerificationResult.Success)
                     throw new BadRequestException("La contraseña actual es incorrecta.");
 
                 UserDto updatedUser = new UserDto(

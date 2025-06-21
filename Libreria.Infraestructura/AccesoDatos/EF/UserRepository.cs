@@ -3,6 +3,8 @@ using Libreria.LogicaNegocio.InterfacesRepositorio;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
 using Libreria.LogicaDeNegocio.Entities;
 using System.Net.Http;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
 namespace Libreria.Infraestructura.AccesoDatos.EF
 {
@@ -59,10 +61,9 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
 
             if (existingUser == null) throw new Exception("Usuario no encontrado");
 
-            //existingUser.Name = obj.Name;
-            //existingUser.LastName = obj.LastName;
-            //existingUser.Email = obj.Email;
-            existingUser.Password = obj.Password;
+            var hasher = new PasswordHasher<object>();
+            var newPasswordHash = hasher.HashPassword(null, obj.Password.Value);
+            existingUser.Password = Password.FromHash(newPasswordHash);
             _context.SaveChanges();
 
         }

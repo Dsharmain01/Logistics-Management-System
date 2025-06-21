@@ -2,6 +2,7 @@
 using Libreria.CasoUsoCompartida.UCInterfaces;
 using Libreria.LogicaAplicacion.Mapper;
 using Libreria.LogicaNegocio.InterfacesRepositorio;
+using Microsoft.AspNetCore.Identity;
 
 namespace Libreria.LogicaDeAplicacion.CasoUso.User
 {
@@ -18,12 +19,20 @@ namespace Libreria.LogicaDeAplicacion.CasoUso.User
         {
             var user = _repo.GetByEmail(loginDto.Email);
 
-            if (user == null || user.Password.Value != loginDto.Password)
+            if (user == null)
             {
                 return null;
             }
 
-            return MapperUser.ToDto(user);
+            var hasher = new PasswordHasher<object>();
+            var result = hasher.VerifyHashedPassword(null, user.Password.Value, loginDto.Password);
+
+            if (result == PasswordVerificationResult.Success)
+            {
+                return MapperUser.ToDto(user);
+            }
+
+            return null;
         }
     }
 }

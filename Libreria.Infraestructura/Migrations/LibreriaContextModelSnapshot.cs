@@ -348,14 +348,15 @@ namespace Libreria.Infraestructura.Migrations
                                 .HasForeignKey("UserId");
                         });
 
-                    b.OwnsOne("Libreria.LogicaNegocio.Vo.Password", "Password", b1 =>
+                    b.OwnsOne("Password", "Password", b1 =>
                         {
                             b1.Property<int>("UserId")
                                 .HasColumnType("int");
 
                             b1.Property<string>("Value")
                                 .IsRequired()
-                                .HasColumnType("nvarchar(max)")
+                                .HasMaxLength(256)
+                                .HasColumnType("nvarchar(256)")
                                 .HasColumnName("Password");
 
                             b1.HasKey("UserId");

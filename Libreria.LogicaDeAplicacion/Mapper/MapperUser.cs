@@ -18,7 +18,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     new Name(userDto.Name),
                     new LastName(userDto.LastName),
                     new Email(userDto.Email),
-                    new Password(userDto.Password)
+                    Password.FromPlain(userDto.Password)
                 );
             }
             else if (userDto.Rol == "Worker")
@@ -28,7 +28,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     new Name(userDto.Name),
                     new LastName(userDto.LastName),
                     new Email(userDto.Email),
-                    new Password(userDto.Password)
+                    Password.FromPlain(userDto.Password)
                 );
             }
             else if (userDto.Rol == "Client")
@@ -38,7 +38,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     new Name(userDto.Name),
                     new LastName(userDto.LastName),
                     new Email(userDto.Email),
-                    new Password(userDto.Password)
+                    Password.FromPlain(userDto.Password)
                 );
             }
             else
@@ -58,7 +58,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     new Name(userDto.Name),
                     new LastName(userDto.LastName),
                     new Email(userDto.Email),
-                    new Password(userDto.Password)
+                    Password.FromPlain(userDto.Password)
                 );
             }
             else if (userDto.Rol == "Worker")
@@ -68,7 +68,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     new Name(userDto.Name),
                     new LastName(userDto.LastName),
                     new Email(userDto.Email),
-                    new Password(userDto.Password)
+                    Password.FromPlain(userDto.Password)
                 );
             }
             else if (userDto.Rol == "Client")
@@ -78,7 +78,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     new Name(userDto.Name),
                     new LastName(userDto.LastName),
                     new Email(userDto.Email),
-                    new Password(userDto.Password)
+                    Password.FromPlain(userDto.Password)
                 );
             }
             else
