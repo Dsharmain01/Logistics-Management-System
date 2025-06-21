@@ -26,7 +26,10 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
 
             builder.OwnsOne(u => u.Password, Password =>
             {
-                Password.Property(n => n.Value).HasColumnName("Password");
+                Password.Property(n => n.Value)
+            .HasColumnName("Password")
+            .HasMaxLength(256)
+            .IsRequired();
             });
 
             builder.HasMany<Shipment>()

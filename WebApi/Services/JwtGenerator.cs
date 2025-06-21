@@ -24,7 +24,6 @@ namespace WebApi.Services
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.NameId, usuario.Id.ToString() ),
-                new Claim(JwtRegisteredClaimNames.Email,usuario.Email.ToString())
             };
 
             var tokenDescriptor = new SecurityTokenDescriptor
