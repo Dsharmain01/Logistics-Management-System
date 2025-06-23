@@ -34,11 +34,15 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         {
             Shipment unS = _context.Shipments
                 .Include(s => s.Trackings)
-               .FirstOrDefault(shipment => shipment.TrackNbr == trackNbr);
+                .OrderBy(s=>s.StartDate)
+               .FirstOrDefault(shipment => shipment.TrackNbr == trackNbr)
+               ;
             if (unS == null)
             {
                 throw new NotFoundException($"No se encontro el id {trackNbr}");
             }
+
+            unS.Trackings = unS.Trackings.OrderBy(t => t.CommentDate).ToList();
             return unS;
         }
 
@@ -68,22 +72,36 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         public IEnumerable<Shipment> GetByCustomerEmail(string customerEmail)
         {
 
-            return _context.Shipments
+                return _context.Shipments
                 .Include(s => s.Trackings)
                 .Where(s => s.CustomerEmail == customerEmail)
+                .OrderBy(s => s.StartDate)
                 .ToList();
+         
         }
-        public IEnumerable<Shipment> SearchShipmentByDate(DateTime date1, DateTime date2, string estado, string customerEmail)
+
+        public IEnumerable<Shipment> SearchShipmentByDate(DateTime date1, DateTime date2, string? estado, string customerEmail)
         {
-            return
-             _context.Shipments
-            .AsEnumerable()
-            .Where(s =>s.CustomerEmail == customerEmail && s.StartDate >= date1 && s.StartDate <= date2 && s.CurrentStatus.ToString() == estado)
-            .OrderBy(s => s.TrackNbr)
-            .ToList();
+            IEnumerable<Shipment> shipments = Enumerable.Empty<Shipment>(); 
 
+            if (estado == null)
+            {
+                shipments = _context.Shipments
+                    .AsEnumerable()
+                    .Where(s => s.CustomerEmail == customerEmail && s.StartDate >= date1 && s.StartDate <= date2)
+                    .OrderBy(s => s.TrackNbr)
+                    .ToList();
+            }
+            else
+            {
+                shipments = _context.Shipments
+                    .AsEnumerable()
+                    .Where(s => s.CustomerEmail == customerEmail && s.StartDate >= date1 && s.StartDate <= date2 && s.CurrentStatus.ToString() == estado)
+                    .OrderBy(s => s.TrackNbr)
+                    .ToList();
+            }
 
-
+            return shipments;
         }
 
         public IEnumerable<Shipment> SearchShipmentByComment(string comment, string customerEmail)

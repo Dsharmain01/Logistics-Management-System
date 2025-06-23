@@ -11,7 +11,7 @@ namespace WebApi.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class ShipmentsController : Controller
     {
 
@@ -64,7 +64,7 @@ namespace WebApi.Controllers
                 return StatusCode(500, error); ;
             }
         }
-
+        [Authorize]
         [HttpGet ("by-date")]
         public IActionResult SearchShipmentByDate(DateTime date1, DateTime date2, string? estado)
         {
@@ -77,11 +77,6 @@ namespace WebApi.Controllers
                 if (date1 == default || date2 == default)
                 {
                     throw new BadRequestException("Las fechas proporcionadas son inválidas.");
-                }
-
-                if (string.IsNullOrEmpty(estado))
-                {
-                    throw new BadRequestException("El estado no puede ser vacio");
                 }
 
                 var shipments =_searchShipmentByDate.Execute(date1, date2, estado, unU.Email);
@@ -106,7 +101,7 @@ namespace WebApi.Controllers
                 return StatusCode(500, error);
             }
         }
-
+        [Authorize]
         [HttpGet("by_comment")]
         public IActionResult SearchByComment(string comment)
         {
@@ -143,6 +138,7 @@ namespace WebApi.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetShipments()
         {

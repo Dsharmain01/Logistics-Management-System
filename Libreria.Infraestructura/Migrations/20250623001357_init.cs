@@ -78,7 +78,7 @@ namespace Libreria.Infraestructura.Migrations
                     DeliveryDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CurrentStatus = table.Column<int>(type: "int", nullable: false),
                     CustomerEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
+                    ShipmentType = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
                     PickupAgency = table.Column<int>(type: "int", nullable: true),
                     PostalAddress = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },

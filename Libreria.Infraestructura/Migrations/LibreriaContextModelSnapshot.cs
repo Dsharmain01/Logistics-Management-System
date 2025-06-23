@@ -82,13 +82,13 @@ namespace Libreria.Infraestructura.Migrations
                     b.Property<DateTime?>("DeliveryDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Discriminator")
+                    b.Property<int?>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ShipmentType")
                         .IsRequired()
                         .HasMaxLength(8)
                         .HasColumnType("nvarchar(8)");
-
-                    b.Property<int?>("EmployeeId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
@@ -102,7 +102,7 @@ namespace Libreria.Infraestructura.Migrations
 
                     b.ToTable("Shipments");
 
-                    b.HasDiscriminator().HasValue("Shipment");
+                    b.HasDiscriminator<string>("ShipmentType").HasValue("Shipment");
 
                     b.UseTphMappingStrategy();
                 });

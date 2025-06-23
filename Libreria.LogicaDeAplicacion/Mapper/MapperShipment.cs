@@ -8,7 +8,7 @@ namespace Libreria.LogicaAplicacion.Mapper
     {
         public static Shipment FromDto(ShipmentDto shipmentDto)
         {
-            int trackNbr = shipmentDto.TrackingNumber; // Usar el valor del DTO
+            int trackNbr = shipmentDto.TrackingNumber; 
 
             if (shipmentDto.TipoEnvio == TipoEnvio.COMMON)
             {
@@ -18,6 +18,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     shipmentDto.EmployeeId,
                     shipmentDto.startDate,
                     shipmentDto.DeliveryDate,
+                    shipmentDto.CurrentStatus,
                     shipmentDto.CustomerEmail,
                     shipmentDto.PickupAgency
                 )
@@ -33,6 +34,7 @@ namespace Libreria.LogicaAplicacion.Mapper
                     shipmentDto.EmployeeId,
                     shipmentDto.startDate,
                     shipmentDto.DeliveryDate,
+                    shipmentDto.CurrentStatus,
                     shipmentDto.CustomerEmail,
                     shipmentDto.PostalAddress
                 )

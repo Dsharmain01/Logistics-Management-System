@@ -46,7 +46,7 @@ namespace WebApi.Controllers
 
                 var token = _jwtGenerator.GenerateToken(user);
 
-                return StatusCode(200,new {user, token });
+                return StatusCode(200, new {user, token });
             }
             catch (NotFoundException e)
             {

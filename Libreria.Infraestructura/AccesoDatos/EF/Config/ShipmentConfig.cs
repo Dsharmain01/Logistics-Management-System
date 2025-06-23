@@ -16,10 +16,16 @@ namespace Libreria.Infraestructura.AccesoDatos.EF.Config
                 .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(s => s.Trackings)
-                .WithOne() 
-                .HasForeignKey(t => t.TrackNbr) 
+                .WithOne()
+                .HasForeignKey(t => t.TrackNbr)
                 .HasPrincipalKey(s => s.TrackNbr)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            // Configuración de discriminador para la herencia TPH
+            builder.HasDiscriminator<string>("ShipmentType")
+                .HasValue<Common>("Common")
+                .HasValue<Urgent>("Urgent");
         }
+
     }
 }

@@ -37,6 +37,7 @@ namespace Libreria.LogicaDeNegocio.Entities
             int? employeeId,
             DateTime? startDate,
             DateTime? deliveryDate,
+            Status status,
             string customerEmail)
         {
             TrackNbr = trackNbr;
@@ -44,6 +45,7 @@ namespace Libreria.LogicaDeNegocio.Entities
             EmployeeId = employeeId;
             StartDate = startDate ?? DateTime.Now;
             DeliveryDate = deliveryDate;
+            CurrentStatus = status;
             CustomerEmail = customerEmail;
         }
 
