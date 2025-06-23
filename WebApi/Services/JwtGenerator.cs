@@ -23,7 +23,7 @@ namespace WebApi.Services
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.NameId, usuario.Id.ToString() ),
+                new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString())
             };
 
             var tokenDescriptor = new SecurityTokenDescriptor

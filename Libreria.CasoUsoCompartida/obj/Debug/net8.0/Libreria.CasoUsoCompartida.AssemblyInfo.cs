@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Libreria.CasoUsoCompartida")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89a421054d8d654459922068b04d5ec8739bddc1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+048c023e111794c19ea50b9de01c353335e9d0ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("Libreria.CasoUsoCompartida")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Libreria.CasoUsoCompartida")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
