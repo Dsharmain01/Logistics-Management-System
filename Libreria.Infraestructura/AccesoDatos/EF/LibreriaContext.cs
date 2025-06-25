@@ -20,14 +20,14 @@ namespace Libreria.Infraestructura.AccesoDatos.EF
         public DbSet<Agency> Agencies { get; set; }
         public DbSet<AuditLog> AuditLogs { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer(@"
-                Data Source=(localdb)\MSSQLLocalDB;
-                Initial Catalog=Libreria;
-                Integrated Security=True");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    base.OnConfiguring(optionsBuilder);
+        //    optionsBuilder.UseSqlServer(@"
+        //        Data Source=(localdb)\MSSQLLocalDB;
+        //        Initial Catalog=Libreria;
+        //        Integrated Security=True");
+        //}
 
         public LibreriaContext(DbContextOptions options) : base(options)
         {

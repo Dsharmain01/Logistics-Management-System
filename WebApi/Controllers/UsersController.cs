@@ -4,8 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Libreria.Infraestructura.AccesoDatos.Excepciones;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaNegocio.Exceptions;
-using Microsoft.AspNetCore.Authorization;
-using static System.Net.WebRequestMethods;
 using Microsoft.AspNetCore.Identity;
 
 namespace WebApi.Controllers

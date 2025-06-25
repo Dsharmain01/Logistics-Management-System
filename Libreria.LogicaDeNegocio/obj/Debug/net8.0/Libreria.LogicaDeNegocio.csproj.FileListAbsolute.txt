@@ -95,3 +95,4 @@ C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaD
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.pdb
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\ref\Libreria.LogicaDeNegocio.dll
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\Libreria.LogicaDeNegocio\obj\Debug\net8.0\Libreria.LogicaDeNegocio.csproj.AssemblyReference.cache

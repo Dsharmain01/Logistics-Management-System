@@ -670,3 +670,8 @@ C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\bin\Debug
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\user\Desktop\Obligatorio\N3G-Obligatorio-325990-216026\WebApi\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Usuario\Desktop\ObligatorioPosta\P3Obligatorio\N3G-OBLIGATORIO-216026-325990\WebApi\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
