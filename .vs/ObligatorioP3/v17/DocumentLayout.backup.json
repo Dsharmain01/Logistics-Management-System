@@ -1,42 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\",
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\services\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\services\\jwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\services\\ijwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\services\\ijwtgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\filtros\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\filtros\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\controllers\\tokenattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\tokenattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\shipmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|c:\\users\\usuario\\desktop\\obligatorioposta\\p3obligatorio\\n3g-obligatorio-216026-325990\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E506CA75-F002-4D21-919E-87C8F1F023D6}|WebApi\\WebApi.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|c:\\users\\user\\desktop\\obligatorio\\n3g-obligatorio-325990-216026\\libreria.infraestructura\\accesodatos\\ef\\seedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0E762E5-05BE-4D09-AB34-86CD611A23F7}|Libreria.Infraestructura\\Libreria.Infraestructura.csproj|solutionrelative:libreria.infraestructura\\accesodatos\\ef\\seedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,15 +26,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -66,119 +50,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Token.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Filtros\\Token.cs",
-              "RelativeDocumentMoniker": "WebApi\\Filtros\\Token.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Filtros\\Token.cs",
-              "RelativeToolTip": "WebApi\\Filtros\\Token.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:26:25.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "SeeData.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "RelativeDocumentMoniker": "Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "RelativeToolTip": "Libreria.Infraestructura\\AccesoDatos\\EF\\SeeData.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:26:22.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TokenAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\TokenAttribute.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\TokenAttribute.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\TokenAttribute.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\TokenAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:25:54.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShipmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\ShipmentsController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\ShipmentsController.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\ShipmentsController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\ShipmentsController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:25:34.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:24:43.578Z",
+              "WhenOpened": "2025-06-26T01:55:08.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "JwtGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Services\\JwtGenerator.cs",
-              "RelativeDocumentMoniker": "WebApi\\Services\\JwtGenerator.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Services\\JwtGenerator.cs",
-              "RelativeToolTip": "WebApi\\Services\\JwtGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAowL0AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:23:33.683Z",
+              "WhenOpened": "2025-06-26T00:50:46.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShipmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\ShipmentsController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\ShipmentsController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\ShipmentsController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\ShipmentsController.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAhwKEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T00:10:36.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IJwtGenerator.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Services\\IJwtGenerator.cs",
-              "RelativeDocumentMoniker": "WebApi\\Services\\IJwtGenerator.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Services\\IJwtGenerator.cs",
-              "RelativeToolTip": "WebApi\\Services\\IJwtGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Obligatorio\\N3G-Obligatorio-325990-216026\\WebApi\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwDIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:23:33.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\Program.cs",
-              "RelativeToolTip": "WebApi\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwE8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T00:21:22.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "WebApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ObligatorioPosta\\P3Obligatorio\\N3G-OBLIGATORIO-216026-325990\\WebApi\\appsettings.json",
-              "RelativeToolTip": "WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-25T00:20:55.198Z",
+              "WhenOpened": "2025-06-26T00:07:00.216Z",
               "EditorCaption": ""
             }
           ]

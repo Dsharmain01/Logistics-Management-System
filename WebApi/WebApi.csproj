@@ -40,6 +40,7 @@
 	<PropertyGroup>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<WarningLevel>5</WarningLevel>
+		<OutputType>WinExe</OutputType>
 	</PropertyGroup>
 
 </Project>

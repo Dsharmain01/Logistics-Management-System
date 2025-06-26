@@ -5,6 +5,7 @@ using Libreria.Infraestructura.AccesoDatos.Excepciones;
 using Libreria.LogicaDeNegocio.Entities;
 using Libreria.LogicaNegocio.Exceptions;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace WebApi.Controllers
 {
@@ -37,28 +38,28 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            try
-            {
-                var model = _getAll.Execute();
-                if (model.Count() == 0)
-                {
-                    throw new NoContentException("No hay usuarios registrados en la base de datos");
-                }
-                return Ok(model);
-            }
-            catch (NoContentException e)
-            {
-                return StatusCode(e.StatusCode(), e.Error());
-            }
-            catch (Exception)
-            {
-                Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
-                return StatusCode(500, error);
-            }
-        }
+        //[HttpGet]
+        //public IActionResult GetAll()
+        //{
+        //    try
+        //    {
+        //        var model = _getAll.Execute();
+        //        if (model.Count() == 0)
+        //        {
+        //            throw new NoContentException("No hay usuarios registrados en la base de datos");
+        //        }
+        //        return Ok(model);
+        //    }
+        //    catch (NoContentException e)
+        //    {
+        //        return StatusCode(e.StatusCode(), e.Error());
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
+        //        return StatusCode(500, error);
+        //    }
+        //}
 
         [HttpGet("{id}")]
         public IActionResult GetById(string id)
@@ -90,83 +91,86 @@ namespace WebApi.Controllers
 
         }
 
-        [HttpPost]
-        public IActionResult Create([FromBody] UserDto? user)
+        //[HttpPost]
+        //public IActionResult Create([FromBody] UserDto? user)
+        //{
+        //    try
+        //    {
+        //        if (user.Rol != "Admin" && user.Rol != "Client" && user.Rol != "Worker")
+        //        {
+        //            throw new BadRequestException("El rol debe ser 'Admin', 'Client' o 'Worker'");
+        //        }
+        //        if (user == null)
+        //        {
+        //            throw new BadRequestException("El objeto usuario vino vacio");
+        //        }
+        //        int idUsuario = _add.Execute(user);
+        //        return CreatedAtAction("GetByID", new { id = idUsuario }, _getById.Execute(idUsuario));
+        //    }
+        //    catch (BadRequestException e)
+        //    {
+        //        return StatusCode(e.StatusCode(), e.Error());
+        //    }
+        //    catch (LogicaNegocioException e)
+        //    {
+        //        return StatusCode(400, e.Error());
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
+        //        return StatusCode(500, error);
+        //    }
+        //}
+
+        //[HttpDelete("{id}")]
+        //public IActionResult Delete(string id)
+        //{
+        //    try
+        //    {
+        //        int idUsuario;
+        //        int.TryParse(id, out idUsuario);
+
+        //        if (idUsuario == 0)
+        //        {
+
+        //            throw new BadRequestException("El valor del id es incorrecto");
+
+        //        }
+        //        _remove.Execute(idUsuario);
+        //        return Ok();
+        //    }
+        //    catch (NotFoundException e)
+        //    {
+        //        return StatusCode(e.StatusCode(), e.Error());
+        //    }
+        //    catch (BadRequestException e)
+        //    {
+        //        return StatusCode(e.StatusCode(), e.Error());
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
+        //        return StatusCode(500, error);
+        //    }
+        //}
+
+
+
+        [HttpPut("/password")]
+        public IActionResult ChangePassword([FromBody] UserPasswordDto dto)
         {
             try
             {
-                if (user.Rol != "Admin" && user.Rol != "Client" && user.Rol != "Worker")
-                {
-                    throw new BadRequestException("El rol debe ser 'Admin', 'Client' o 'Worker'");
-                }
-                if (user == null)
-                {
-                    throw new BadRequestException("El objeto usuario vino vacio");
-                }
-                int idUsuario = _add.Execute(user);
-                return CreatedAtAction("GetByID", new { id = idUsuario }, _getById.Execute(idUsuario));
-            }
-            catch (BadRequestException e)
-            {
-                return StatusCode(e.StatusCode(), e.Error());
-            }
-            catch (LogicaNegocioException e)
-            {
-                return StatusCode(400, e.Error());
-            }
-            catch (Exception)
-            {
-                Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
-                return StatusCode(500, error);
-            }
-        }
+                var id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var idUser = int.TryParse(id, out int idParsed) ? idParsed : 0;
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
-        {
-            try
-            {
-                int idUsuario;
-                int.TryParse(id, out idUsuario);
-
-                if (idUsuario == 0)
-                {
-
-                    throw new BadRequestException("El valor del id es incorrecto");
-
-                }
-                _remove.Execute(idUsuario);
-                return Ok();
-            }
-            catch (NotFoundException e)
-            {
-                return StatusCode(e.StatusCode(), e.Error());
-            }
-            catch (BadRequestException e)
-            {
-                return StatusCode(e.StatusCode(), e.Error());
-            }
-            catch (Exception)
-            {
-                Error error = new Error(500, "Hubo un problema. Prueba nuevamente");
-                return StatusCode(500, error);
-            }
-        }
-
-
-
-        [HttpPut("{Id}/password")]
-        public IActionResult ChangePassword(int Id, [FromBody] UserPasswordDto dto)
-        {
-            try
-            {
-                if (Id == 0)
-                    throw new BadRequestException("El valor del id es incorrecto");
+                if (idUser == 0)
+                    throw new TokenInvalidoException("El token es incorrecto");
 
                 if (string.IsNullOrWhiteSpace(dto.currentPassword) || string.IsNullOrWhiteSpace(dto.newPassword))
                     throw new BadRequestException("Debe ingresar la contraseña actual y la nueva.");
 
-                var existingUser = _getById.Execute(Id);
+                var existingUser = _getById.Execute(idUser);
 
                 var hasher = new PasswordHasher<object>();
                 var result = hasher.VerifyHashedPassword(null, existingUser.Password, dto.currentPassword);
@@ -182,8 +186,8 @@ namespace WebApi.Controllers
                     existingUser.Rol
                 );
 
-                _modify.Execute(updatedUser, Id);
-                return Ok();
+                _modify.Execute(updatedUser, idUser);
+                return Ok("Se modificó correctamente la contraseña");
             }
             catch (NotFoundException e)
             {
