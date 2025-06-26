@@ -85,32 +85,6 @@
   },
   {
     "ContainingType": "WebApi.Controllers.UsersController",
-    "Method": "GetAll",
-    "RelativePath": "api/v1/Users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApi.Controllers.UsersController",
-    "Method": "Create",
-    "RelativePath": "api/v1/Users",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "user",
-        "Type": "Libreria.CasoUsoCompartida.DTOS.Users.UserDto",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApi.Controllers.UsersController",
     "Method": "GetById",
     "RelativePath": "api/v1/Users/{id}",
     "HttpMethod": "GET",
@@ -127,33 +101,12 @@
   },
   {
     "ContainingType": "WebApi.Controllers.UsersController",
-    "Method": "Delete",
-    "RelativePath": "api/v1/Users/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "WebApi.Controllers.UsersController",
     "Method": "ChangePassword",
-    "RelativePath": "api/v1/Users/{Id}/password",
+    "RelativePath": "password",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
       {
         "Name": "dto",
         "Type": "Libreria.CasoUsoCompartida.DTOS.Users.UserPasswordDto",

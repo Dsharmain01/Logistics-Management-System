@@ -74,6 +74,9 @@ namespace WebApi.Controllers
                 var idUser = int.TryParse(id, out int idParsed) ? idParsed : 0;
                 var unU = _getUserById.Execute(idUser);
 
+                if (string.IsNullOrEmpty(id))
+                    throw new TokenInvalidoException("Token inválido o no presente.");
+
                 if (date1 == default || date2 == default)
                 {
                     throw new BadRequestException("Las fechas proporcionadas son inválidas.");
@@ -86,6 +89,10 @@ namespace WebApi.Controllers
                     throw new NotFoundException("No se encontraron envíos en el rango de fechas especificado.");
                 }
                 return Ok(shipments);
+            }
+            catch(TokenInvalidoException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
             }
             catch (NotFoundException e)
             {
@@ -112,6 +119,9 @@ namespace WebApi.Controllers
                 var idUser = int.TryParse(id, out int idParsed) ? idParsed : 0;
                 var unU = _getUserById.Execute(idUser);
 
+                if (string.IsNullOrEmpty(id))
+                    throw new TokenInvalidoException("Token inválido o no presente.");
+
                 if (string.IsNullOrWhiteSpace(comment))
                 {
                     throw new BadRequestException("El comentario no puede estar vacío.");
@@ -122,6 +132,10 @@ namespace WebApi.Controllers
                     throw new NotFoundException("No se encontraron envíos con el comentario especificado.");
                 }
                 return Ok(shipments);
+            }
+            catch(TokenInvalidoException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
             }
             catch (NotFoundException e)
             {
@@ -148,6 +162,12 @@ namespace WebApi.Controllers
                 var idUser = int.TryParse(id, out int idParsed) ? idParsed : 0;
                 var unU = _getUserById.Execute(idUser);
 
+
+                if (string.IsNullOrEmpty(id))
+                {
+                    throw new TokenInvalidoException("Token inválido o no presente.");
+                }
+
                 if (string.IsNullOrWhiteSpace(unU.Email))
                 {
                     throw new BadRequestException("El correo electrónico del cliente no puede estar vacío.");
@@ -161,6 +181,10 @@ namespace WebApi.Controllers
                 }
 
                 return Ok(shipments);
+            }
+            catch (TokenInvalidoException e)
+            {
+                return StatusCode(e.StatusCode(), e.Error());
             }
             catch (NotFoundException e)
             {

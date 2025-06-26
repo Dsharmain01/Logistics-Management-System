@@ -41,14 +41,14 @@ namespace WebApi.Controllers
 
                 if (user == null)
                 {
-                   throw new NotFoundException("Credenciales incorrectas.");
+                   throw new TokenInvalidoException("Credenciales incorrectas.");
                 }
 
                 var token = _jwtGenerator.GenerateToken(user);
 
                 return StatusCode(200, new {user, token });
             }
-            catch (NotFoundException e)
+            catch (TokenInvalidoException e)
             {
                 return StatusCode(e.StatusCode(), e.Error());
             }
