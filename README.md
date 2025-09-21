@@ -17,8 +17,5 @@ A C# application for managing shipments, deliveries, and inventory for a logisti
 2. Open the solution in Visual Studio
 3. Build and run the project
 
-## Screenshots
-(Insert screenshots of the app here)
-
 ## Author
 Sharmain Quinteros - Matias Silveira
